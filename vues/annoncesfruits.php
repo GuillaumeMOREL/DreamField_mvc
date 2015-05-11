@@ -2,7 +2,7 @@
  <!--   <h2>
     	Choisissez vos fruits dans la liste proposée:
     </h2>  -->
-    <p>
+    <p id="intro_annoncesfruits">
     	Nous vous conseillons en premier lieu de cocher les differents fruits que vous souhaitez acheter
     	afin de vous creer une liste de course qui vous permettra de ne rien oublier,
     	et qui nous aidera à choisir le vendeur le plus adapter à votre demande.

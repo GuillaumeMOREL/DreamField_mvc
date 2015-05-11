@@ -57,11 +57,6 @@
 	margin-bottom:5%;
 }
 
-#form{
-	margin-left: 100px;
-	display:inline-block;
-}
-
 .redirection-label{
 	width: 210px;
 	margin:10px;
@@ -69,8 +64,11 @@
 }
 
 .champ-input_redirection{
+	float:right;
 	border:1px solid;
 	border-radius:5px;
+	padding:3px ;
+
 }
 
 #tel{
@@ -99,9 +97,6 @@
 
 }
 
-input{
-	padding:3px ;
-}
 
 /*///////////////////////////////////////////////////////////////////////////////////*/
 

@@ -18,10 +18,6 @@
               <br />
               <br />
 
-
-
-
-
               <label for="NomProduit">Selectionnez le nom de votre denrée</label><br /><br />
            
             <select name="NomProduit" id="NomProduit">
@@ -165,7 +161,7 @@
                   <option value="kg">Kg</option>
               </optgroup>
                    <optgroup label="Quantité" >
-                   <option value="quantite">Sans Unité  </option>    
+                   <option value="quantite"> Sans Unité </option>    
               </optgroup>
               </select>
 
@@ -197,9 +193,3 @@
 
  
 </div>
-
-
-
-
-
-

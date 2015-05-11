@@ -7,15 +7,14 @@ require("controleurs/database_connect.php");
 <html>
 <head>
     <meta charset="utf-8" />   
-    <link rel="Stylesheet" href="static/css/Style_final.css" />
+    <link rel="Stylesheet" href="static/css/Style_accueil.css" />
     <link rel="Stylesheet" href="static/css/Style_annoncesfruits.css" />
     <link rel="Stylesheet" href="static/css/Style_connexion.css" />
     <link rel="Stylesheet" href="static/css/Style_contacter.css" />
     <link rel="Stylesheet" href="static/css/Style_redirection.css" />
     <link rel="Stylesheet" href="static/css/Style_DeposerAnnonce.css" />
     <link rel="Stylesheet" href="static/css/Style-panier.css" />
-    <link rel="Stylesheet" href="static/css/Style-panier.css" />
-    <link rel="Stylesheet" href="static/css/Style-panier.css" />
+    <link rel="Stylesheet" href="static/css/Style-redirection.css" />
     <link rel="Stylesheet" href="static/css/header.css" />
     <link rel="Stylesheet" href="static/css/footer.css" />
 

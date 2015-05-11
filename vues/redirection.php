@@ -37,8 +37,8 @@
               <input type="tel" name="tel" id="tel" maxlength="10" minlength="10"/>
               <br />
               <br />
-              <label  for="pass" class="redirection-label" class="grand"> class="redirection-label"Mot de passe :</label>
-              <input type="password" name="pass" id="pass" class="champ-input_redirection" minlength="6" /input>
+              <label  for="pass" class="redirection-label" class="grand"> Mot de passe :</label>
+              <input type="password" name="pass" id="pass" class="champ-input_redirection" minlength="6" />
               <br />
               <br />
               <label  for="passverif" class="redirection-label" class="grand">Confirmez votre mot de passe :</label>
@@ -73,7 +73,7 @@
                 <br />
 
           <div id="validation-co">
-            <input type="submit" name="valider" value="Connexion" />
+            <input type="submit" name="valider" value="Connexion" class="champ-input_redirection"/>
           </div>
       </p>
       </form>
