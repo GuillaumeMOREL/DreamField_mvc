@@ -1,0 +1,37 @@
+body{
+	font-family: helvetica;
+}
+
+#container{
+	height:630px;
+	padding:40px;
+}
+
+section{
+	
+	text-align: center;
+	background-color: #C3D6DA;
+	border-radius: 5px;
+	display:block;
+	margin-left: 25%;
+	margin-right: 25%;
+}
+
+h1{
+	margin-left: 10px;
+}
+
+p{
+	
+	margin-left: 100px;
+}
+
+li{
+	display:block;
+	text-decoration: none;
+}
+
+.tel{
+	text-align: left;
+	margin-left: 30%;
+}

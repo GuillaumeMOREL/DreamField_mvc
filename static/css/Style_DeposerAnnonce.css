@@ -1,0 +1,25 @@
+body{
+	font-family: helvetica;
+	/*height: 100%; */
+}
+
+.formulaire-depot{
+	float:center;
+	height:100%;
+	width:450px;
+	border-radius: 5px;
+	background-color: #C3D6DA;
+	padding:50px;
+	margin: 0 auto;
+	margin-top: 150px;
+}
+
+textarea{
+	width:450px;
+	height: 150px;
+}
+h6{
+	margin-top: -10px;
+	margin-bottom: -10px;
+
+}

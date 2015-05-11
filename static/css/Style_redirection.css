@@ -1,0 +1,107 @@
+
+	body{
+		font-family: helvetica;
+		/*height: 100%; */
+	}
+	*{
+		margin: 0px;
+		padding: 0px;
+		border: 0px;
+		text-decoration: none;
+		list-style-type: none;
+		color: black;
+	}
+
+
+/*///////////////////////////////////////////////////////////////////////////////////*/
+
+#milieu{
+	width:1000px;
+	height:700px;
+	margin: 0 auto;
+	margin-top: 100px;
+
+}
+
+.formulaire-ins{
+	float:left;
+	background-color: #C3D6DA;
+	border-radius: 5px;
+	margin-left: 10px;
+	height:650px;
+	width:530px;
+
+}
+
+.formulaire-co{
+	float:right;
+	height:140px;
+	width:343px;
+	border-radius: 5px;
+	margin:10px;
+	margin-top: 200px;
+	background-color: #C3D6DA;
+	padding:10px;
+	padding-top:50px;
+
+}
+
+#formulaire-ins-titre{
+	margin-top: 5%;
+	margin-left: 5%;
+	margin-bottom:5%;
+}
+
+.parcourir{
+	margin-left: 5%;
+	margin-bottom:5%;
+}
+
+#form{
+	margin-left: 100px;
+	display:inline-block;
+}
+
+label{
+	width: 210px;
+	margin:10px;
+	float: left;
+}
+
+.champ{
+	border:1px solid;
+	border-radius:5px;
+}
+
+#tel{
+	border:1px solid;
+	border-radius:5px;
+}
+
+.champ-co{
+	width:130px;
+}
+
+#cond-uti{
+	color:blue;
+}
+
+.valider{
+	margin-left: 80px;
+	margin-top:20px;
+	border-radius:1px;
+}
+
+#validation-co{
+	width:60px;
+	height:30px;
+	margin-left: 30px;
+
+}
+
+input{
+	padding:3px ;
+}
+
+/*///////////////////////////////////////////////////////////////////////////////////*/
+

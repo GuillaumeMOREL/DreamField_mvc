@@ -1,0 +1,121 @@
+	body{
+		font-family: helvetica;
+		/*height: 100%; */
+	}
+	*{
+		margin: 0px;
+		padding: 0px;
+		border: 0px;
+		text-decoration: none;
+		list-style-type: none;
+		color: black;
+	}
+	
+#toggle{height:300px; width: 230px; background-color: white; border:1px solid black; margin:1em;text-align:center}
+#toggle p{text-align:center;padding:0} 
+
+	/********************************* MAIN BODY ************************/
+	/************* CARROUSEL ****************/
+
+	#main_body{
+			padding: 4em 0em 6em 0em;
+	}  
+
+	.photo_carrousel{
+		height: 470px;
+		width: 100%;
+	}
+
+	#carrousel{
+		position:relative;
+		margin-bottom: 3em;
+		border-bottom: 1px black solid;
+	}
+
+	#carrousel ul li{
+		position: absolute;
+	}
+
+	/******************** PROMOTION ******************/
+	 #bandeau_promotions{
+		overflow: hidden;
+		padding-top: 30em; 
+		padding-bottom: 3em;
+		}
+
+	#bandeau_promotions img
+		{
+			margin-bottom: 2em;
+		}
+		
+	#bandeau_promotions #title a
+		{
+			font-family: helvetica;
+			letter-spacing: 1px;
+			margin-bottom: 2em;
+			padding-top: 1em;
+		}
+
+		#bandeau_promotions .subtitle
+		{
+			font-family: helvetica;
+			font-size: 12px;
+		} 
+
+		#bandeau_promotions #promo1 {
+			display: inline-block;
+			width: 200px;
+			padding-right: 50px; 
+		}
+		
+		#bandeau_promotions #promo2 {
+			display: inline-block;
+			width: 200px;
+			padding-right: 50px;
+		}
+		
+		#bandeau_promotions #promo3 {
+			display: inline-block;
+			width: 200px;
+			padding-right: 50px;
+		}
+
+		#bandeau_promotions #promo4 {
+		display: inline-block;
+			width: 200px;
+		}
+
+	.produit{
+		height: 150px;
+		width: 150px;
+	}
+
+	/********************* DESCRIPTION ASSOC ************************/
+	#description_association{
+		overflow: hidden;
+		padding-top: 6em;
+		border-top: 1px solid #E5E5E5;
+	}
+
+	#description_association .title
+	{
+		margin-bottom: 2em;
+	}
+
+	#content{
+		float: left;
+		width: 400px;
+	}
+
+	#logo-webdesign{
+		margin-right: 60px;
+		border-left: .5px black solid;
+		float: right;
+		width: 400px;
+	}
+
+
+
+	
+
+
