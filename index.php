@@ -16,6 +16,9 @@ require("controleurs/database_connect.php");
     <link rel="Stylesheet" href="static/css/Style-panier.css" />
     <link rel="Stylesheet" href="static/css/Style-panier.css" />
     <link rel="Stylesheet" href="static/css/Style-panier.css" />
+    <link rel="Stylesheet" href="static/css/header.css" />
+    <link rel="Stylesheet" href="static/css/footer.css" />
+
     <title> DREAMFIELD</title>
 </head>
 
@@ -43,7 +46,7 @@ require("controleurs/database_connect.php");
       
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>  
         <script src="static/js/carrousel.js"></script> 
-         <script src="static/js/insverif.js"></script>
+        <script src="static/js/insverif.js"></script>
 </body>
 </html>
  

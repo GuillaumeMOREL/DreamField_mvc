@@ -12,7 +12,7 @@ body{
 	color: black;
 }
 
-.milieu{
+.milieu_co{
 	margin-top: 20px;
 	width:300px;
 	height:400px;
@@ -21,7 +21,7 @@ body{
 
 }
 
-.formulaire-co{
+.formulaire_co{
 	float:center;
 	height:150px;
 	width:300px;
@@ -34,32 +34,25 @@ body{
 
 }
 
-#form{
+#form_co{
 	margin-left: 100px;
 	display:inline-block;
 }
 
-label{
-	width: 210px;
+#pass_co, #mail_co{
+	border:1px solid;
+	border-radius:5px;
+	width: 340px;
 	float: left;
 }
 
-.champ{
-	border:1px solid;
-	border-radius:5px;
-}
-
-.champ-co{
-	width:130px;
-}
-
-#validation-co{
+#validation_co{
 	width:50px;
 	height:30px;
 	border-radius: 1px;
 }
 
-input{
+.champ_input_co{
 	padding:3px ;
 }
 

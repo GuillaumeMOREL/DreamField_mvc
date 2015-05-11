@@ -15,7 +15,7 @@
 
 /*///////////////////////////////////////////////////////////////////////////////////*/
 
-#milieu{
+#milieu_redirection{
 	width:1000px;
 	height:700px;
 	margin: 0 auto;
@@ -23,7 +23,7 @@
 
 }
 
-.formulaire-ins{
+.formulaire-ins_redirection{
 	float:left;
 	background-color: #C3D6DA;
 	border-radius: 5px;
@@ -33,7 +33,7 @@
 
 }
 
-.formulaire-co{
+.formulaire-co_redirection{
 	float:right;
 	height:140px;
 	width:343px;
@@ -46,7 +46,7 @@
 
 }
 
-#formulaire-ins-titre{
+#formulaire_ins_titre{
 	margin-top: 5%;
 	margin-left: 5%;
 	margin-bottom:5%;
@@ -62,13 +62,13 @@
 	display:inline-block;
 }
 
-label{
+.redirection-label{
 	width: 210px;
 	margin:10px;
 	float: left;
 }
 
-.champ{
+.champ-input_redirection{
 	border:1px solid;
 	border-radius:5px;
 }
@@ -78,7 +78,7 @@ label{
 	border-radius:5px;
 }
 
-.champ-co{
+.champ-co_redirection{
 	width:130px;
 }
 
