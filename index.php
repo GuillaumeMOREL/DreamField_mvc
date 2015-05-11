@@ -13,7 +13,9 @@ require("controleurs/database_connect.php");
     <link rel="Stylesheet" href="static/css/Style_contacter.css" />
     <link rel="Stylesheet" href="static/css/Style_redirection.css" />
     <link rel="Stylesheet" href="static/css/Style_DeposerAnnonce.css" />
-     <link rel="Stylesheet" href="static/css/Style-panier.css" />
+    <link rel="Stylesheet" href="static/css/Style-panier.css" />
+    <link rel="Stylesheet" href="static/css/Style-panier.css" />
+    <link rel="Stylesheet" href="static/css/Style-panier.css" />
     <title> DREAMFIELD</title>
 </head>
 
