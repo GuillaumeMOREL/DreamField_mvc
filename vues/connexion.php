@@ -1,20 +1,21 @@
-  <div class="milieu_co">
+  <div class="milieu_connexion">
 
-    <div class="formulaire_co">
+    <div class="formulaire_connexion">
 
-      <form id="form_co" method="post" action="identifiants.php">
+      <form id="form_connexion" method="post" action="identifiants.php">
         <p>
-          <label for="mail" class="champ_label"> Email :</label>
-          <input type="email" name="mail" id="mail_co" class="champ_input_co" size="30" placeholder="Ex :azerty@gmail.com " />
+          <label for="mail" class="label_connexion"> Email :</label>
+          <input type="email" name="mail" id="mail_connexion" class="champ_input_connexion" size="30" placeholder="Ex :azerty@gmail.com " />
           <br />
           <br />
-          <label for="pass" class="champ-label" >Mot de passe :</label>
-          <input type="password" name="pass" id="pass_co" class="champ_input_co" minlength="6" />
+          <br />
+          <label for="pass" class="label_connexion" >Mot de passe :</label>
+          <input type="password" name="pass" id="pass_connexion" class="champ_input_connexion" minlength="6" />
           <br />
           <br />
 
-            <div id="validation_co">
-              <input type="submit" name="valider" value="Connexion" class="champ_input_co" />
+            <div id="validation_connexion">
+              <input type="submit" name="valider" value="Connexion" class="champ_input_connexion" />
             </div>
             
         </p>

@@ -12,46 +12,45 @@ body{
 	color: black;
 }
 
-.milieu_co{
+.milieu_connexion{
 	margin-top: 20px;
-	width:300px;
+	width:400px;
 	height:400px;
 	margin:100px;
 	margin: 0 auto;
 
 }
 
-.formulaire_co{
-	float:center;
+.formulaire_connexion{
 	height:150px;
-	width:300px;
+	width:330px;
 	border-radius: 5px;
 	background-color: #C3D6DA;
 	padding:50px;
-	padding-left:0px; 
+	padding-top: 70px;
 	margin: 0 auto;
 	margin-top: 150px;
-
 }
 
-#form_co{
-	margin-left: 100px;
-	display:inline-block;
+#form_connexion{
+	width:343px;
+	height:102px;
 }
 
-#pass_co, #mail_co{
-	border:1px solid;
-	border-radius:5px;
-	width: 340px;
+.label_connexion{
+	width: 130px;
 	float: left;
 }
 
-#validation_co{
+#validation_connexion{
 	width:50px;
 	height:30px;
+	padding-left: 30px;
 	border-radius: 1px;
 }
 
-.champ_input_co{
-	padding:3px ;
+.champ_input_connexion{
+	float:right;
+	border:1px solid;
+	border-radius:5px;
 }
