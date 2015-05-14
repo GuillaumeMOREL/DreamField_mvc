@@ -1,5 +1,5 @@
 <div id="milieu_redirection">
-<div class="formulaire-ins_redirection">
+<div class="formulaire_inscription">
 <div id="formulaire-ins-titre"><h4>Pour vous inscrire, remplissez ce formulaire:</h4></div>
 
   <div class="photo_redirection">

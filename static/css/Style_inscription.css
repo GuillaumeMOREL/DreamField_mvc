@@ -1,0 +1,60 @@
+
+#milieu_inscription{
+	height:700px;
+	width:530px;
+	margin: 0 auto;
+	margin-top: 100px;
+
+}
+
+.formulaire_inscription{
+	float:left;
+	background-color: #C3D6DA;
+	border-radius: 5px;
+	margin-left: 0 auto;
+	height:650px;
+	width:530px;
+}
+
+#formulaire-titre_inscription{
+	margin-top: 20px;
+	margin-left:90px;
+}
+
+.photo_inscription{
+	margin-top:20px;
+}
+
+.parcourir{
+	margin-left: 5%;
+	margin-bottom:5%;
+}
+
+.label_inscription{
+	width: 210px;
+	float: left;
+	margin-left: 20px;
+}
+
+.champ-input_inscription{
+	float:right;
+	border:1px solid;
+	border-radius:5px;
+	padding:3px ;
+	margin-right: 20px;
+}
+
+#conditions{
+	margin-right: 150px;
+}
+
+.valider{
+	margin-left: 80px;
+	margin-top:20px;
+	border-radius:1px;
+}
+
+.validation_inscription{
+	border:1px solid;
+	border-radius:6px;
+}

@@ -12,7 +12,8 @@ require("controleurs/database_connect.php");
     <link rel="Stylesheet" href="static/css/Style_connexion.css" />
     <link rel="Stylesheet" href="static/css/Style_contacter.css" />
     <link rel="Stylesheet" href="static/css/Style_redirection.css" />
-    <link rel="Stylesheet" href="static/css/Style_DeposerAnnonce.css" />
+    <link rel="Stylesheet" href="static/css/Style_deposerAnnonce.css" />
+    <link rel="Stylesheet" href="static/css/Style_inscription.css" />
     <link rel="Stylesheet" href="static/css/Style-panier.css" />
     <link rel="Stylesheet" href="static/css/Style-redirection.css" />
     <link rel="Stylesheet" href="static/css/header.css" />
