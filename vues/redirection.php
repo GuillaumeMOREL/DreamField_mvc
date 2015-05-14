@@ -1,13 +1,15 @@
 <div id="milieu_redirection">
 <div class="formulaire-ins_redirection">
-<p id="formulaire-ins-titre">Pour vous inscrire, remplissez ce formulaire:</p>
+<div id="formulaire-ins-titre"><h4>Pour vous inscrire, remplissez ce formulaire:</h4></div>
 
-  <div class=""><p class="parcourir" > Ajouter une photo de profil (JPG, PNG ou GIF | max. 15 Ko) :</p>
+  <div class="photo_redirection">
+    <p class="parcourir" > Ajouter une photo de profil (JPG, PNG ou GIF | max. 15 Ko) :</p>
     <form class="parcourir" method="post" action="photo.php" enctype="multipart/form-data">
       <input type="file" name="photo" id="photo" />
-  </form></div>
+    </form>
+  </div>
 
-  <form method="post" action="traitement.php">
+  <form method="post" action="traitement.php" class="form_redirection">
     <p>
               <label for="prenom" class="label_redirection">Prénom :</label>
               <input type="text" name="prenom" id="prenom" class="champ-input_redirection" placeholder="Ex : Guillaume" size="30" maxlength="10" />
@@ -34,7 +36,7 @@
               <br />
               <br />
               <label  for="tel" class="label_redirection" class="grand"> Numero de telephone :</label>
-              <input type="tel" name="tel" id="tel" maxlength="10" minlength="10"/>
+              <input type="tel" name="tel" id="tel" class="champ-input_redirection" maxlength="10" minlength="10"/>
               <br />
               <br />
               <label  for="pass" class="label_redirection" class="grand"> Mot de passe :</label>
@@ -45,6 +47,7 @@
               <input type="password" name="passverif" id="passverif" class="champ-input_redirection" minlength="6"/>
               <br />
               <br />
+              <br />
               <label  for="conditions" class="label_redirection" class="grand">J'accepte les <a href="" id="cond-uti">conditions d'utilisations</a></label>
               <input type="checkbox" name="conditions" id="conditions" class="champ-input_redirection"/>
               <br />
@@ -52,8 +55,9 @@
 
         <div class="valider">
           <p>Appuyez sur valider pour confirmer l'inscription</p>
-          <input id="validation-ins" type="submit" name="valider" value="Valider l'inscription" />
-          <input type="reset" id="rafraichir" value="Rafraîchir" />
+          <br />
+          <input class="validation-ins_redirection" type="submit" name="valider" value="Valider l'inscription" />
+          <input class="validation-ins_redirection" type="reset" id="rafraichir" value="Rafraîchir" />
         </div>
     </p>
   </form>
@@ -69,6 +73,7 @@
                 <br />
                 <label for="pass" class="champ-co_redirection" class="label_redirection" >Mot de passe :</label>
                 <input type="password" name="pass" id="pass" class="champ-input_redirection" minlength="6" /input>
+                <br />
                 <br />
                 <br />
 

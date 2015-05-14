@@ -46,10 +46,13 @@
 
 }
 
-#formulaire_ins_titre{
-	margin-top: 5%;
-	margin-left: 5%;
-	margin-bottom:5%;
+#formulaire-ins-titre{
+	margin-top: 20px;
+	margin-left:90px;
+}
+
+.photo_redirection{
+	margin-top:20px;
 }
 
 .parcourir{
@@ -59,8 +62,8 @@
 
 .label_redirection{
 	width: 210px;
-	margin:10px;
 	float: left;
+	margin-left: 20px;
 }
 
 .champ-input_redirection{
@@ -68,16 +71,16 @@
 	border:1px solid;
 	border-radius:5px;
 	padding:3px ;
-
+	margin-right: 20px;
 }
 
-#tel{
-	border:1px solid;
-	border-radius:5px;
+#conditions{
+	margin-right: 150px;
 }
 
 .champ-co_redirection{
 	width:130px;
+	margin-left: 20px;
 }
 
 #cond-uti{
@@ -90,10 +93,15 @@
 	border-radius:1px;
 }
 
+.validation-ins_redirection{
+	border:1px solid;
+	border-radius:6px;
+}
+
 #validation-co{
 	width:60px;
 	height:30px;
-	margin-left: 30px;
+	margin-left: 50px;
 
 }
 

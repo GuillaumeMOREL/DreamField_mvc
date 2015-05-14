@@ -48,7 +48,3 @@ require("controleurs/database_connect.php");
         <script src="static/js/insverif.js"></script>
 </body>
 </html>
- 
-    
-
-
