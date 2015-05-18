@@ -1,7 +1,7 @@
 
  <!--   <h2>
     	Choisissez vos fruits dans la liste proposée:
-    </h2>  -->
+    </h2> 
     <p id="intro_annoncesfruits">
     	Nous vous conseillons en premier lieu de cocher les differents fruits que vous souhaitez acheter
     	afin de vous creer une liste de course qui vous permettra de ne rien oublier,

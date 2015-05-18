@@ -14,7 +14,6 @@ require("controleurs/database_connect.php");
     <link rel="Stylesheet" href="static/css/Style_redirection.css" />
     <link rel="Stylesheet" href="static/css/Style_deposerAnnonce.css" />
     <link rel="Stylesheet" href="static/css/Style_inscription.css" />
-    <link rel="Stylesheet" href="static/css/Style-panier.css" />
     <link rel="Stylesheet" href="static/css/Style-redirection.css" />
     <link rel="Stylesheet" href="static/css/header.css" />
     <link rel="Stylesheet" href="static/css/footer.css" />
@@ -52,5 +51,6 @@ require("controleurs/database_connect.php");
         <script src="static/js/carrousel.js"></script> 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
         <script src="static/js/insverif.js"></script>
+        <script src="static/js/offres_sauvegardees.js"></script>
 </body>
 </html>
