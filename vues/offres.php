@@ -1,23 +1,41 @@
-
- <!--   <h2>
+   <h2>
     	Choisissez vos fruits dans la liste proposée:
     </h2> 
     <p id="intro_annoncesfruits">
-    	Nous vous conseillons en premier lieu de cocher les differents fruits que vous souhaitez acheter
-    	afin de vous creer une liste de course qui vous permettra de ne rien oublier,
-    	et qui nous aidera à choisir le vendeur le plus adapter à votre demande.
+	Sélectionnez vos fruits et/ou légumes
     </p>
     
-    <p> Trouver un produit dans la liste des <a href="#fruits" id="choix"> FRUITS </a><a href="#legumes" id="choix"> LEGUMES </a>  <a href="#regions" id="choix"> REGIONS </a></P>
+    <p> Trouver un produit dans la liste des <a href="#fruits" id="choix"> FRUITS </a><a href="#legumes" id="choix"> LEGUMES </a>  <a href="#regions" id="choix"> REGIONS </a></p>
     
+
+
     <h2 id="fruits"> FRUITS </h2>
-    <section>
+
+
+<?php
+
+
+    while($categorie = $fruits -> fetch()){
+    
+?>
+    <section>   
+<a href=""><img src="<?php echo $categorie['chemin_photo'];?>" alt="abricot" tilte="Cliquez ici pour voir les differentes ventes d'abricots" /></a> </br>
+	<h3> <?php echo $categorie['nom_produit'];?> </h3>
+	<input type="checkbox" name="ListeAbricot" id="ListeAbricot" title="cette liste permet de vous rappeler ce que vous devez acheter"/>
+	Ajouter au panier 
+	</section>
+<?php
+} 
+
+$fruits->closeCursor();
+?>
+	<!-- <section>
+	<section> 
 	<a href=""><img src="static/img/photo_fruit_legume/abricot.jpg" alt="abricot" title="Cliquez ici pour voir les differentes ventes d'abricots" /></a> </br>
 	<h3> ABRICOTS </h3>
 	<input type="checkbox" name="ListeAbricot" id="ListeAbricot" title="cette liste permet de vous rappeler ce que vous devez acheter"/>
 	Ajouter au panier 
 	</section>
-	<section>
 	<a href=""><a href=""><a href=""><img src="static/img/photo_fruit_legume/banane.jpg" alt="banane" title="Cliquez ici pour voir les differentes ventes de bananes" /></a> </br>
 	<h3> BANANES </h3>
 	<input type="checkbox" name="ListeBanane" id="ListeBanane" title="cette liste permet de vous rappeler ce que vous devez acheter"/>

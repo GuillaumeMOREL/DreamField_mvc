@@ -42,7 +42,7 @@ $(document).ready(function()
               <div id="menu" class="container">
                 <ul>
                       <li id="current_page_item"><a href="?page=accueil"  class="menu-text" >Accueil</a></li>
-                      <li><a href="?page=annoncesfruits" class="menu-text" >Offres</a></li>
+                      <li><a href="?page=offres" class="menu-text" >Offres</a></li>
                       <li><a href="?page=deposerAnnonce" class="menu-text" >Déposer une annonce</a></li>
                       <li><a href="?page=recettes" class="menu-text" >Recette</a></li> 
                       <li><a href="?page=redirection" class="menu-text" >Forum</a></li>

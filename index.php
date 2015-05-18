@@ -8,7 +8,7 @@ require("controleurs/database_connect.php");
 <head>
     <meta charset="utf-8" />   
     <link rel="Stylesheet" href="static/css/Style_accueil.css" />
-    <link rel="Stylesheet" href="static/css/Style_annoncesfruits.css" />
+    <link rel="Stylesheet" href="static/css/Style_offres.css" />
     <link rel="Stylesheet" href="static/css/Style_connexion.css" />
     <link rel="Stylesheet" href="static/css/Style_contacter.css" />
     <link rel="Stylesheet" href="static/css/Style_redirection.css" />
@@ -31,7 +31,8 @@ require("controleurs/database_connect.php");
 			include("controleurs/accueil.php");
 		}
 		else if (isset($_GET['page'])&& !empty($_GET['page']) && is_file('controleurs/'.$_GET['page'].'.php')) {
-			include("controleurs/".$_GET["page"].".php");
+			
+            include("controleurs/".$_GET["page"].".php");
 		}
 		else {
 			include("vues/404.php");
