@@ -40,12 +40,17 @@ require("controleurs/database_connect.php");
 
 		?>
 
-      <footer>
+        <div id="logo-fl">
+            <a href="#"><img src="static/img/logo/fleche.png" id="logo-fleche" ></a>
+        </div>
+
+    <footer>
         <?php include("vues/footer.php"); ?> 
-      </footer>
+    </footer>
       
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>  
         <script src="static/js/carrousel.js"></script> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
         <script src="static/js/insverif.js"></script>
 </body>
 </html>
