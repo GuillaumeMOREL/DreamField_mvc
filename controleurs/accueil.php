@@ -1,4 +1,4 @@
 <?php
 
 
-require('vues/accueil_final.php');
+require('vues/accueil.php');
