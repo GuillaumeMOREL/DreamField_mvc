@@ -19,9 +19,9 @@
     
 ?>
     <section>   
-<a href=""><img src="<?php echo $categorie['chemin_photo'];?>" alt="abricot" tilte="Cliquez ici pour voir les differentes ventes d'abricots" /></a> </br>
+	<img src="<?php echo $categorie['chemin_photo'];?>" alt="<?php echo $categorie['nom_produit'];?>" tilte="Cliquez ici pour voir les differentes ventes d'abricots" /></a> </br>
 	<h3> <?php echo $categorie['nom_produit'];?> </h3>
-	<input type="checkbox" name="ListeAbricot" id="ListeAbricot" title="cette liste permet de vous rappeler ce que vous devez acheter"/>
+	<input type="checkbox" name="<?php echo $categorie['nom_produit'];?>" title="cette liste permet de vous rappeler ce que vous devez acheter"/>
 	Ajouter au panier 
 	</section>
 <?php
