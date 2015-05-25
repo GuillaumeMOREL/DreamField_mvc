@@ -117,52 +117,6 @@
     </g>
 </svg>
 
-  <style>
-    #map {        
-      max-width: 100%;
-      max-height: 100%;
-    }
-    #map path {
-      fill:#86AAE0;
-      stroke:#FFFFFF;
-      stroke-width:0.6;
-      transition: fill 0.2s, stroke 0.3s;
-    }
-    #map path:hover {
-      fill: #365B93;
-      stroke: #365B93;
-    }
-    #map .separator {
-      stroke: #333;
-      fill: none;
-      stroke-width:1.5;
-    }
-    #map .separator:hover {
-      stroke: #ccc;
-      fill: none;
-    }
-  </style>
-
-<script>
-  
-  document.addEventListener('DOMContentLoaded', function(){
-    map = this.getElementById('map');
-    paths = map.getElementsByTagName('path');
-
-    for (var i = 0; i < paths.length; i++) {
-      paths[i].addEventListener("click", function(e){
-        console.log("Dpt: "+e.target.getAttribute('data-num'));
-        var id = e.target.getAttribute('data-num');
-        window.location.href="?page=vendeur&departement="+id+"";
-      })
-    }
-
-  });
-
-</script>
-
-
-
 
   <div id="bandeau_promotions" class="container">
     <div id="title">

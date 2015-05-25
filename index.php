@@ -15,6 +15,7 @@ require("controleurs/database_connect.php");
     <link rel="Stylesheet" href="static/css/Style_deposerAnnonce.css" />
     <link rel="Stylesheet" href="static/css/Style_inscription.css" />
     <link rel="Stylesheet" href="static/css/Style-redirection.css" />
+    <link rel="Stylesheet" href="static/css/Style-vendeurs.css" />
     <link rel="Stylesheet" href="static/css/header.css" />
     <link rel="Stylesheet" href="static/css/footer.css" />
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
@@ -51,8 +52,8 @@ require("controleurs/database_connect.php");
       
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>  
         <script src="static/js/carrousel.js"></script> 
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
         <script src="static/js/insverif.js"></script>
         <script src="static/js/offres_sauvegardees.js"></script>
+        <script src="static/js/recuperer-le-dep.js"></script>
 </body>
 </html>
