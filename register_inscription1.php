@@ -1,7 +1,7 @@
 <?php
 try
 {
-	$bdd = new PDO('mysql:host=localhost;dbname=dreamfield', 'root', '');
+	$bdd = new PDO('mysql:host=localhost;dbname=dreamfield', 'root', 'root');
 }
 catch(Exception $e)
 {
@@ -32,7 +32,7 @@ if (!empty($prenom) AND !empty($nom) AND !empty($adresse) AND !empty($codepost) 
 	  {
         if($pass == $passverif)
        {
-       	 header('Location: connexion.php?message=<font color ="red"> vos identifiants ont été bien enregistrés.Vous pouvez vous connecter </font>');
+       	 header('Location: connexion.php?message=<font color ="red"> Vos identifiants ont été bien enregistrés.Vous pouvez vous connecter </font>');
 	    $req = $bdd-> prepare('INSERT INTO utilisateurs(prenom, nom, adresse, codepost, mail, tel, pass, passverif, conditions, ville) VALUES(?,?,?,?,?,?,?,?,?,?)');
 	    $req->execute(array($prenom, $nom, $adresse, $codepost,$mail, $tel, $pass, $passverif, $conditions, $ville));
         }
@@ -53,7 +53,7 @@ if (!empty($prenom) AND !empty($nom) AND !empty($adresse) AND !empty($codepost) 
 	    }
 	}
 	else {
-	   header('Location: inscription.php?msg=<font color ="red">tous les champs doivent être remplis </font>');
+	   header('Location: inscription.php?msg=<font color ="red">Tous les champs doivent être remplis </font>');
  	}
  }
  	?>

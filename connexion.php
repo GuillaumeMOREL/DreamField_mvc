@@ -19,28 +19,33 @@
 
       <form id="form" method="post" action="login.php">
         <p>
-    <?php
-if (isset($_GET['mssg'])) 
-   {
-     echo $_GET['mssg'];
-   }
-else 
-   {
 
-   }
-?>
-<?php
-if(isset($_GET['message']))
-  {
-    echo $_GET['message'];
-  }
-else
-{
+  <?php
+  
+    if (isset($_GET['mssg'])) 
+       {
+         echo $_GET['mssg'];
+       }
+    else 
+       {
 
-}
-?>
+       }
+  ?>
+  <?php
+
+    if(isset($_GET['message']))
+      {
+        echo $_GET['message'];
+      }
+    else
+      {
+
+      }
+  ?>
+
 <br />
 <br />
+
           <label for="mail" class="champ-co"> Email :</label>
           <input type="email" name="mailconnect" id="mail" class="champ" size="30" placeholder="Ex :azerty@gmail.com " />
           <br />

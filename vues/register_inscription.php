@@ -1,7 +1,7 @@
 <?php
 try
 {
-	$bdd = new PDO('mysql:host=localhost;dbname=dreamfield', 'root', '');
+	$bdd = new PDO('mysql:host=localhost;dbname=dreamfield', 'root', 'root');
 }
 catch(Exception $e)
 {
@@ -26,17 +26,17 @@ echo 'Le jeu a bien été ajouté !';
 // if (isset ($_POST['valider'])) {
 if (empty($_POST['prenom']) OR empty($_POST['nom']) OR empty($_POST['adresse']) OR empty($_POST['codepost']) OR empty($_POST['mail']) OR empty($_POST['tel']) OR empty($_POST['pass']) OR empty($_POST['passverif']) OR empty($_POST['conditions']) OR empty($_POST['ville'])) 
 	{
-		header('location: inscription.php?error=empty');
+		header('location: /vues/inscription.php?error=empty');
 	}
 	    $req= $bdd-> prepare('SELECT count(mail) AS nbre_mail FROM utulisateurs WHERE mail= ?');
 	    $req->execute(array($_POST['mail']));
 	    $result = $req->fetch();
 
 if ($result['nbre_mail'] > 0) {
-	header('location: inscription.php?error=existe');
+	header('location: /vues/inscription.php?error=existe');
 }
 elseif ($_POST['pass'] != $_POST['passverif']) {
-	header('Location: inscription.php?error=different');
+	header('Location: /vues/inscription.php?error=different');
 }
 	else {/*
 		$nom= htmlspecialchars(trim($_POST['nom']));

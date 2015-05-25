@@ -1,19 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8" />   
-<link rel="Stylesheet" href="/css/membre.css" />
-<title> DREAMFIELD</title>
-</head>
-  <body>
-    <header>
-      <?php include("include/header.php"); ?>
-    </header>
+
 <?php
 session_start();
 try
   {
-    $bdd = new PDO('mysql:host=localhost;dbname=DreamField', 'root', '');
+    $bdd = new PDO('mysql:host=localhost;dbname=dreamfield', 'root', 'root');
   }
   catch (Exception $e)
   {
@@ -37,13 +27,5 @@ try
     <h3> Adresse         : <?php echo $userinfo['adresse']; ?></h3>
     <h3> Code postal     : <?php echo $userinfo['codepost']; ?></h3>
     <h3> E-mail          : <?php echo $userinfo['mail']; ?></h3>
-
-    <footer>
-      <?php include("include/footer.php"); ?>
-    </footer>  
    </div>
-  </body>
-</html>
-<?php
-}
-?>
+</body>
