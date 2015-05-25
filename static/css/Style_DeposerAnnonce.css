@@ -1,6 +1,5 @@
 body{
 	font-family: helvetica;
-	/*height: 100%; */
 }
 
 .formulaire-depot{
@@ -15,11 +14,18 @@ body{
 }
 
 textarea{
-	width:450px;
+	min-width:450px;
 	height: 150px;
+	max-width: 450px;
 }
-h6{
-	margin-top: -10px;
-	margin-bottom: -10px;
-
+em{
+	font-size: 10px;
+}
+.choix{
+	display: block;
+	float: left;
+}
+#resultat{
+	padding-left: 5px;
+	margin-top: -15px;
 }

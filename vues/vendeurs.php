@@ -1,13 +1,20 @@
 <div class="liste-offres">
-	<a href="#redirige sur profil du vendeurs ac l'offre" title="requete pr trouver le titre">
-	<div class="box"> 
+
+    <?php 
+
+    while($utilisateur = $vendeurs->fetch()){
+
+
+    ?>
+	<a href="#redirige sur profil du vendeurs ac l'offre" title="<?php echo $annonces['id_annonce'];?>">
+	<div class="box_vendeurs"> 
 		<div class="date">
 			<div>Jour</div>
 			<div>Heure</div>
 		</div>	
 		<div class="image">
 			<div class="image-and-nb">
-				<img src="aller chercher image du produit de l'utilisateur" alt="titre de l'offre"/>
+				<img src="aller chercher image du produit de l'utilisateur" alt="<?php echo $annonces['id_annonce'];?>"/>
 				<div class="nb">
 					<div class="top-radius">&nbsp</div>
 					<div class="value radius">1</div>
@@ -27,3 +34,5 @@
 	<div class="clear"></div>
 	
 
+}
+?>

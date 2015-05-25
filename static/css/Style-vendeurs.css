@@ -1,4 +1,52 @@
 .liste-offres{
 	width: 900px;
 	float: left;
+	font-size:12px;
+	font-family: helvetica;
+}
+.liste-offres a{
+	cursor:pointer;
+	font-weight: bold;
+	color: silver;
+}
+.liste-offres div{
+	display: block;
+}
+
+.liste-offres a:visited{
+	color:#936;
+	text-decoration: none;
+}
+
+.liste-offres a:link{
+	text-decoration: none;
+}
+
+.liste-offres a:first-child .box_vendeurs{
+	padding-top: 5px;
+	border: 0;
+}
+.liste-offres a .box_vendeurs{
+	border-top: 1px solid #CCC;
+}
+.liste-offres .box_vendeurs .date{
+	float: left;
+	width: 90px;
+	color: black;
+	font-weight: normal;
+	padding: 20px 20px 0 0;
+}
+.liste-offres .box_vendeurs .image{
+	float: left;
+	width: 200px;
+	padding: 20px 0;
+}
+.liste-offres .box_vendeurs .detail{	
+	float: left;
+	width: 420px;
+	padding: 20px 0;
+	overflow: hidden;
+}
+.clear{
+	clear: both;
 }
