@@ -17,6 +17,7 @@ require("controleurs/database_connect.php");
     <link rel="Stylesheet" href="static/css/Style-redirection.css" />
     <link rel="Stylesheet" href="static/css/header.css" />
     <link rel="Stylesheet" href="static/css/footer.css" />
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 
     <title> DREAMFIELD</title>
 </head>

@@ -18,7 +18,7 @@
     <section class="section_fruit_legume">   
 	<img class="img_fruit_legume" src="<?php echo $categorie['chemin_photo'];?>" alt="<?php echo $categorie['nom_produit'];?>" title="Cliquez ici pour voir les differentes ventes de ce produit" /></a> </br>
 	<h3> <?php echo $categorie['nom_produit'];?> </h3>
-	<input type="checkbox" name="<?php echo $categorie['nom_produit'];?>" title="cette liste permet de vous rappeler ce que vous devez acheter"/>
+	<input type="checkbox" value="<?php echo $categorie['nom_produit'];?>"  name="fruits[]" title="cette liste permet de vous rappeler ce que vous devez acheter"/>
 	Ajouter au panier 
 	</section>
 <?php
@@ -39,7 +39,7 @@ $fruits->closeCursor();
     <section class="section_fruit_legume">   
 	<img class="img_fruit_legume" src="<?php echo $categorie['chemin_photo'];?>" alt="<?php echo $categorie['nom_produit'];?>" title="Cliquez ici pour voir les differentes ventes de ce produit" /></a> </br>
 	<h3> <?php echo $categorie['nom_produit'];?> </h3>
-	<input type="checkbox" name="<?php echo $categorie['nom_produit'];?>" title="cette liste permet de vous rappeler ce que vous devez acheter"/>
+	<input type="checkbox" name="legumes[]" title="cette liste permet de vous rappeler ce que vous devez acheter"/>
 	Ajouter au panier 
 	</section>
 <?php
@@ -51,6 +51,25 @@ $legumes->closeCursor();
 
 	<h2 id="h2_fruit_legume_region"> RÉGIONS </h2>
 
+<form method="post" action="traitement.php">
+   <p>
+       <label for="region">Dans quel région habitez-vous ?</label><br />
+       <select name="regions" id="regions">
+           <optgroup label="">
 
+           	<?php
+    while($carte_de_france = $region -> fetch()){
+?>
+               <option value="<?php echo $carte_de_france['region'];?>"><?php echo $carte_de_france['region'];?></option>
+               <?php
+}
+
+$region->closeCursor();
+?>
+
+           </optgroup>
+       </select>
+   </p>
+</form>
 	
    

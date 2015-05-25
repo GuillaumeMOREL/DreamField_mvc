@@ -1,15 +1,7 @@
-<div id="main_body">
-  <div id="carrousel" class="container">
-    <ul>
-      <li ><img class="photo_carrousel" src="static/img/photo_carrousel/fruit_2.jpg" /></li>
-      <li ><img class="photo_carrousel" src="static/img/photo_carrousel/potager_1.jpg" /></li>
-      <li ><img class="photo_carrousel" src="static/img/photo_carrousel/montage_carrousel.jpg" /></li>  
-    </ul>   
-  </div>
-
-<!--   <div ><h2 style="line-height: 650px;">Choississez un département pour voir vos offres</h2></div> -->
+  <h1>Choississez un département pour voir vos offres </h1>
   
-<svg style="margin-top: 450px;margin-left: 270px; paddind-bottom=3em;"  id="map" width="492px" height="543px" viewBox="0 0 492 543" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+<svg style="margin-top: 315px;margin-left: 300px;" id="map" width="492px" height="543px" viewBox="0 0 492 543" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <title>Slice 1</title>
     <description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description>
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
@@ -160,50 +152,3 @@
   });
 
 </script>
-
-
-
-
-  <div id="bandeau_promotions" class="container">
-    <div id="title">
-      <a href="offres.html"><h2> Promotions </h2> </a>
-    </div>
-
-    <div id="promo1"> <a href=""><img class="produit" src="static/img/photo_fruit_legume/pomme.jpg" alt="" />
-      <h2 class="subtitle"> Mr. X </h2>
-      <p> PRODUITS- descriptions, prix</p> </a>
-    </div>
-
-    <div id="promo2"> <a href=""><img class="produit" src="static/img/photo_fruit_legume/melon.jpg" alt="" />
-      <h2 class="subtitle"> Mr. Y </h2>
-      <p> PRODUITS- descriptions, prix</p> </a>
-    </div>
-
-    <div id="promo3"> <a href=""><img class="produit" src="static/img/photo_fruit_legume/brocoli.jpg" alt="" />
-      <h2 class="subtitle"> Me. K </h2>
-      <p> PRODUITS- descriptions, prix</p> </a>
-    </div>
-
-    <div id="promo4"> <a href=""><img class="produit" src="static/img/photo_fruit_legume/framboise.jpg" alt="" />
-      <h2 class="subtitle"> Me. L </h2>
-      <p> PRODUITS- descriptions, prix</p> </a>
-    </div>
-  </div>
-
-    <div id="description_association" class="container">
-    <div id="content">
-      <div class="title">
-        <h2>Notre société </h2>
-      </div>
-      <p> WEbDesign est une association a but non-lucratif. 
-      Notre but ? Vous satisfaire ! </p> 
-      </br> 
-      </br>
-      <a href="#" class="">Learn More</a>
-    </div>
-    <div>
-      <div><a href="qui_sommes_nous.html"> <img id="logo-webdesign" src="static/img/logo/webdesign.png" /> </div>
-      </a>
-    </div>
-  </div>            
-</div>
