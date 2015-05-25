@@ -133,17 +133,17 @@
     });
 
     reset.click(function(){
-      champ.css({ // on remet le style des champs comme on l'avait défini dans le style CSS
+      prenom.css({ // on remet le style des champs comme on l'avait défini dans le style CSS
         borderColor : '#ccc',
         color : '#555'
       });
       erreur.css('display', 'none'); // on prend soin de cacher le message d'erreur
     });
 
-    function verifier(champ){
-      if(champ.val() == ""){ // si le champ est vide
+    function verifier(prenom){
+      if(prenom.val() == ""){ // si le champ est vide
         erreur.css('display', 'block'); // on affiche le message d'erreur
-        champ.css({ // on rend le champ rouge
+        prenom.css({ // on rend le champ rouge
           borderColor : 'red',
           color : 'red'
         });
