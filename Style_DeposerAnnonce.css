@@ -1,0 +1,31 @@
+body{
+	font-family: helvetica;
+}
+
+.formulaire-depot{
+	float:center;
+	height:100%;
+	width:450px;
+	border-radius: 5px;
+	background-color: #C3D6DA;
+	padding:50px;
+	margin: 0 auto;
+	margin-top: 150px;
+}
+
+textarea{
+	min-width:450px;
+	height: 150px;
+	max-width: 450px;
+}
+em{
+	font-size: 10px;
+}
+.choix{
+	display: block;
+	float: left;
+}
+#resultat{
+	padding-left: 5px;
+	margin-top: -15px;
+}
