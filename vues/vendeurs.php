@@ -2,7 +2,7 @@
 
     <?php 
 
-    while($utilisateur = $vendeurs->fetch()){
+    while($annonces = $DepartementVendeurs->fetch()){
 
 
     ?>

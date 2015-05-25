@@ -1,8 +1,11 @@
 <?php
 require('modeles/vendeurs.php');
 
-$vendeurs = getVendeursParDepartements($bdd);
+$DepartementVendeur = getVendeursParDepartements($bdd);
 
+$IdVendeur = getIdVendeurs($bdd);
+
+$PhotoProduitVendeur = getImageProduitEnVente($bdd);
 
 require('vues/vendeurs.php');
 

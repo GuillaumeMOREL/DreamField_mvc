@@ -1,25 +1,7 @@
-<!DOCTYPE html>
-<html>
     <?php
     // Tout début du code PHP. Situé en haut de la page web
     ini_set("display_errors",0);error_reporting(0);
     ?>
-<head>
-<meta charset="utf-8" />   
-<link rel="Stylesheet" href="Style_DeposerAnnonce.css" />
-<title> DREAMFIELD</title>
-</head>
-
-
-<body>
-
-<header>
-<?php include("include/header.php"); ?>
-</header>
-
-
-
-
 
 <div class="formulaire-depot">
 <p id="formulaire-depot-titre">Afin de déposer une annonce, remplissez ce formulaire:</p>
@@ -340,15 +322,3 @@ if (
 }
 ?>
 
-
-
-
-<footer>
-<?php include("include/footer.php"); ?>
-</footer>
-
-
-</body>
-
-
-</html>

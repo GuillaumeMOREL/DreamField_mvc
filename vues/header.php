@@ -6,7 +6,7 @@
       <a class="connection_inscription_panier" href="?page=connexion">Se connecter</a>
       <a class="connection_inscription_panier" href="?page=inscription">S'inscrire </a>
 
-      <a class="connection_inscription_panier" style="cursor:pointer" id="toggler" href="?page=panier"> Mon Panier (0) </a>
+      <a class="connection_inscription_panier" style="cursor:pointer" id="toggler"> Mon Panier (0) </a>
       <div id="toggle" style="display:none;  z-index: 1;"> Votre panier est vide.</div>
 
         <script type='text/javascript'>
@@ -18,7 +18,7 @@
            $('#toggle').hide();
            // toggle() lorsque le lien avec l'ID #toggler est cliqué
 
-           $('a#toggler').on('click',function()
+           $('as#toggler').on('click',function()
           {
               
                var offset = $('#toggler').offset();
