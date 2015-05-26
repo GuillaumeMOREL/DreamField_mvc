@@ -33,12 +33,12 @@ if(!empty($mailconnect) AND !empty($passconnect))
      }
 else
         {
-      //    header('Location: connexion.php?mssg=<font color ="red"> mot de pass ou mail incorrect! </font>');
+         header('Location: connexion.php?mssg=mot de pass ou mail incorrect!');
         }
 	}
 else
       {
-      //header('Location: connexion.php?mssg=<font color ="red">tous les champs doivent être remplis! </font>');
+      header('Location: connexion.php?mssg=tous les champs doivent être remplis!');
       }
     }
 ?>

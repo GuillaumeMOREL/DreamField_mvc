@@ -65,7 +65,7 @@ else
               <br />
               <br />
               <label class="grand" for="pass">Mot de passe :</label>
-              <input type="password" name="pass" id="pass" class="champ" minlength="6" /input>
+              <input type="password" name="pass" id="pass" class="champ" minlength="6" />
               <br />
               <br />
               <label class="grand" for="passverif">Confirmez votre mot de passe :</label>
