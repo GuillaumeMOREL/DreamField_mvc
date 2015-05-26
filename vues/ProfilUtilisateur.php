@@ -1,14 +1,6 @@
 
 <?php
-session_start();
-try
-  {
-    $bdd = new PDO('mysql:host=localhost;dbname=dreamfield', 'root', 'root');
-  }
-  catch (Exception $e)
-  {
-      die('Erreur : ' . $e->getMessage());
-  }
+
   if(isset($_GET['id']) AND $_GET['id'] > 0)
      {
        $getid = intval($_GET['id']);

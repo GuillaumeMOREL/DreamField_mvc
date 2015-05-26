@@ -1,16 +1,10 @@
 
-
-<div id="milieu_inscription">
-<div class="formulaire_inscription">
-<div id="formulaire-titre_inscription"><h4>Pour vous inscrire, remplissez ce formulaire:</h4></div>
-
-
   <div class="photo_inscription">
     <p class="parcourir" > Ajouter une photo de profil (JPG, PNG ou GIF | max. 15 Ko) :</p>
     <form class="parcourir" method="post" action="?page=photo" enctype="multipart/form-data" >
       <input type="file" name="photo" id="photo" />
 
-<?php
+ <?php
 if (isset($_GET['msg'])) 
 {
   echo $_GET['msg'];
@@ -19,12 +13,8 @@ else
    {
 
    }
-?>
-
-    </form>
-  </div>
-
-  <form method="post" action="register_inscription1.php">
+?> 
+  <form method="post" action="register_inscription.php">
     <p>
               <label for="prenom" class="label_inscription">Prénom :</label>
               <input type="text" name="prenom" id="prenom" class="champ-input_inscription" class="champ" placeholder="Ex : Guillaume" size="30" maxlength="10" />

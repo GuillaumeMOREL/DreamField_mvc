@@ -5,29 +5,28 @@
       <form id="form_connexion" method="post" action="login.php">
         <p>
 
-            <?php
-  
-    if (isset($_GET['mssg'])) 
-       {
-         echo $_GET['mssg'];
-       }
-    else 
-       {
+      <?php
+if (isset($_GET['mssg'])) 
+   {
+     echo $_GET['mssg'];
+   }
+else 
+   {
 
-       }
-  ?>
-  <?php
+   }
+?>
+<?php
+if(isset($_GET['message']))
+  {
+    echo $_GET['message'];
+  }
+else
+{
 
-    if(isset($_GET['message']))
-      {
-        echo $_GET['message'];
-      }
-    else
-      {
-
-      }
-  ?>
-
+}
+?>
+<br />
+<br />
           <label for="mail" class="label_connexion" class="champ" id="mail"> Email :</label>
           <input type="email" name="mail" id="mailconnect" class="champ_input_connexion" class="champ" size="30" placeholder="Ex :azerty@gmail.com " />
           <br />
