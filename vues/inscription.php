@@ -6,15 +6,16 @@
     <form class="parcourir" method="post" action="" enctype="multipart/form-data" >
       <input type="file" name="photo" id="photo" />
 
-<!-- <?php
+ <?php
 if (isset($_GET['msg'])) 
 {
   echo $_GET['msg'];
 }
 ?> -->
 </form> </div>
-  <form method="post" action="?page=inscription">
-  <!--  <form method="post" action="?page=register_inscription"> -->
+ <!-- <form method="post" action="?page=inscription"> -->
+    <form method="post" action="?page=register_inscription2"> 
+
     <p>
               <label for="prenom" class="label_inscription">Prénom :</label>
               <input type="text" name="prenom" id="prenom" class="champ-input_inscription" class="champ" placeholder="Ex : Guillaume" size="30" maxlength="10" />
