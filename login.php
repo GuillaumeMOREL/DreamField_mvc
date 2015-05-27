@@ -1,11 +1,13 @@
+
 <?php
 require("controleurs/database_connect.php");
+
 if(isset($_POST['formeconnexion']))
     {
 
       $mailconnect = htmlspecialchars($_POST['mailconnect']);
       $passconnect = sha1($_POST['passconnect']);
-      //echo $passconnect;
+      
 
 if(!empty($mailconnect) AND !empty($passconnect))
 	{
@@ -22,19 +24,19 @@ if(!empty($mailconnect) AND !empty($passconnect))
         //echo "passé";
          $_SESSION['id']   = $resultuser['I_D'];
          $_SESSION['mail'] = $resultuser['mail'];
-        print_r($_SESSION);
+        //print_r($_SESSION);
         header('Location: index.php?page=ProfilUtilisateur&message=Bravo!');
 
         //header('Location: index.php?page=ProfilUtilisateur&id='.$_SESSION['id']);
 
      }else  {
        //echo "passé";
-         header('Location: index.php?page=connexion&mssg=mot de pass ou mail incorrect!');
+         header('Location: index.php?page=connexion&message=mot de pass ou mail incorrect!');
         }
 
 	}else {
     echo "passé";
-      header('Location: index.php?page=connexion&mssg=tous les champs doivent être remplis!');
+      header('Location: index.php?page=connexion&message=tous les champs doivent être remplis!');
       }
     }
 
