@@ -1,20 +1,19 @@
-
-  <div class="photo_inscription">
+<div id="milieu_inscription">
+<div class="formulaire_inscription">
+<div class="photo_inscription">
     <p class="parcourir" > Ajouter une photo de profil (JPG, PNG ou GIF | max. 15 Ko) :</p>
-    <form class="parcourir" method="post" action="?page=photo" enctype="multipart/form-data" >
+    <form class="parcourir" method="post" action="" enctype="multipart/form-data" >
       <input type="file" name="photo" id="photo" />
 
- <?php
+<!-- <?php
 if (isset($_GET['msg'])) 
 {
   echo $_GET['msg'];
 }
-else 
-   {
-
-   }
-?> 
-  <form method="post" action="register_inscription.php">
+?> -->
+</form> </div>
+  <form method="post" action="?page=inscription">
+  <!--  <form method="post" action="?page=register_inscription"> -->
     <p>
               <label for="prenom" class="label_inscription">Prénom :</label>
               <input type="text" name="prenom" id="prenom" class="champ-input_inscription" class="champ" placeholder="Ex : Guillaume" size="30" maxlength="10" />
@@ -28,12 +27,8 @@ else
               <input type="text" name="adresse" id="adresse" class="champ-input_inscription" class="champ" size="30" placeholder="Ex :2 bis rue du long des bois"/>
               <br />
               <br />
-              <label for="codepost" class="label_inscription"> Code postal :</label>
-              <input type="number" name="codepost" id="codepost" class="champ-input_inscription" class="champ" laceholder="Ex : 78690" min="10000" max="96000"/>
-              <br />
-              <br />
-              <label for="ville" class="label_inscription">  Ville :</label>
-              <input type="text" name="ville" id="ville" class="champ-input_inscription" class="champ" placeholder="Ex :Saint-Louis "  size="30" />
+              <label for="numero_departement" class="label_inscription"> Numéro du département :</label>
+              <input type="number" name="numero_departement" id="numero_departement" class="champ-input_inscription" class="champ" laceholder="Ex : 78" min="01" max="95"/>
               <br />
               <br />
               <label for="mail" class="label_inscription"> Email :</label>
@@ -69,5 +64,3 @@ else
 </div>
  
 </div>
-
-

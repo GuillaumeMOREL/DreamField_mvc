@@ -1,8 +1,8 @@
-  <div class="milieu_connexion">
+<div class="milieu_connexion">
 
     <div class="formulaire_connexion">
 
-      <form id="form_connexion" method="post" action="login.php">
+      <form id="form_connexion" method="post" action="?page=login">
         <p>
 
       <?php
@@ -28,7 +28,7 @@ else
 <br />
 <br />
           <label for="mail" class="label_connexion" class="champ" id="mail"> Email :</label>
-          <input type="email" name="mail" id="mailconnect" class="champ_input_connexion" class="champ" size="30" placeholder="Ex :azerty@gmail.com " />
+          <input type="email" name="mailconnect" id="mail" class="champ_input_connexion" class="champ" size="30" placeholder="Ex :azerty@gmail.com " />
           <br />
           <br />
           <br />
@@ -46,5 +46,3 @@ else
       </form>
     </div> 
   </div>
-
- 

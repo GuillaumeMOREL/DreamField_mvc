@@ -1,54 +1,76 @@
 <?php
 
-require('vues/inscription.php');
+require('modeles/function_inscription.php'); 
+
+	$email = getMail($bdd);
+	$InfoUser = registerInfoUser($bdd);
+
+
+if (isset($_GET['msg'])) 
+{
+  echo $_GET['msg'];
+}
+
 if(isset($_POST['valider']))
 {
 	$prenom =htmlspecialchars($_POST['prenom']);
 	$nom =htmlspecialchars($_POST['nom']);
 	$adresse =htmlspecialchars($_POST['adresse']);
-	$codepost =htmlspecialchars($_POST['codepost']);
+	$numero_departement =htmlspecialchars($_POST['numero_departement']);
 	$mail =htmlspecialchars($_POST['mail']);
 	$tel =htmlspecialchars($_POST['tel']);
 	$pass =sha1($_POST['pass']);
 	$passverif =sha1($_POST['passverif']);
-	$ville =htmlspecialchars($_POST['ville']);
     $conditions= htmlspecialchars($_POST['conditions']);
-if (!empty($prenom) AND !empty($nom) AND !empty($adresse) AND !empty($codepost) AND !empty($mail) AND !empty($tel) AND !empty($pass) AND !empty($passverif) AND !empty($conditions) AND !empty($ville)) 
+if (!empty($prenom) AND !empty($nom) AND !empty($adresse) AND !empty($numero_departement) AND !empty($mail) AND !empty($tel) AND !empty($pass) AND !empty($passverif) AND !empty($conditions)) 
 {
 	
 	$passlength = strlen($pass);
 	if($passlength <= 80)
 	{
-		$inscription = $verifInscription($bdd);
+		$email;
+	/*	$reqmail = $bdd-> prepare('SELECT count(mail) AS nbre_mail FROM utilisateurs WHERE mail= ?');
+	    $reqmail->execute(array($mail));
+	    $result = $reqmail->fetch();   */
+
+
+
 
 	 if($result ['nbre_mail'] == 0)
 	  {
         if($pass == $passverif)
        {
-       	 header('Location: connexion.php?message=<font color ="red"> Vos identifiants ont été bien enregistrés.Vous pouvez vous connecter </font>'); 
-
-       	 $ajoutDansBdd = $ajoutInfoUtilisateur(bdd);
-
-
+       	 header('Location: index.php?page=connexion&message=vos identifiants ont été bien enregistrés.Vous pouvez vous connecter');
+	
+       	 	$InfoUser;
+	/*    $req = $bdd-> prepare('INSERT INTO utilisateurs(prenom, nom, adresse, numero_departement, mail, tel, pass, passverif, conditions) VALUES(?,?,?,?,?,?,?,?,?)');
+	  
+	    $req->execute(array($prenom, $nom, $adresse, $numero_departement,$mail, $tel, $pass, $passverif, $conditions));  */
+        }
+       
          else
           {
-         	header('Location: inscription.php?msg=<font color ="red">Vos mots de passe ne sont pas identiques </font>');
+         	header('Location: index.php?page=inscription&message=msg=<font color ="red">Vos mots de passe ne sont pas identiques </font>');
           }
       }
          else
           {
-            header('Location: inscription.php?msg=<font color = "red">Ce mail existe déjà </font>');
+            header('Location: index.php?page=inscription&msg=Ce mail existe déjà !');
           }
       }
 	    else
 	    {
-          header('Location: inscription.php?msg=<font color ="red"> votre mot de passe est trop long </font>');
+          header('Location: index.php?page=inscription&msg=votre mot de passe est trop long!');
 	    }
 	}
 	else {
-	   header('Location: inscription.php?msg=<font color ="red">Tous les champs doivent être remplis </font>');
+	   header('Location: index.php?page=inscription&msg=tous les champs doivent être remplis!');
  	}
  }
 
 
-require('modeles/register_inscription.php');
+
+ 
+require('vues/inscription.php');
+
+?>
