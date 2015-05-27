@@ -21,7 +21,8 @@
     <form class="parcourir" method="post" action="photo.php" enctype="multipart/form-data" >
     
       <input type="file" name="photo" id="photo" /></br>
-        <?php
+
+<?php
 if (isset($_GET['msg'])) 
 {
   echo $_GET['msg'];
@@ -31,6 +32,7 @@ else
 
    }
 ?>
+
   </form></div>
 
   <form id="form" method="post" action="register_inscription1.php">

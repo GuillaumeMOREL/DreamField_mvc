@@ -1,11 +1,9 @@
 <?php
-require('modeles/vendeurs.php');
+require('modeles/afficher-vendeurs-par-dep.php');
 
-$DepartementVendeur = getVendeursParDepartements($bdd);
-
-$IdVendeur = getIdVendeurs($bdd);
-
-$PhotoProduitVendeur = getImageProduitEnVente($bdd);
+/*$annonce = getInfoAnnonce($bdd); */
+$id = htmlspecialchars($_GET['id']);
+$dn = getVendeurParDepartement($bdd,$id);
 
 require('vues/vendeurs.php');
 

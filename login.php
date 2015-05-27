@@ -2,7 +2,7 @@
 session_start();
 try
 	{
-		$bdd = new PDO('mysql:host=localhost;dbname=dreamfield', 'root', '');
+		$bdd = new PDO('mysql:host=localhost;dbname=dreamfield', 'root', 'root');
 	}
 	catch (Exception $e)
 	{
@@ -29,7 +29,7 @@ if(!empty($mailconnect) AND !empty($passconnect))
          $_SESSION['id']   = $resultuser['I_D'];
          $_SESSION['mail'] = $resultuser['mail'];
         //print_r($_SESSION);
-        header("Location: profilUtilisateur.php?id=".$_SESSION['id']);
+        header("Location: /vues/ProfilUtilisateur.php?id=".$_SESSION['id']);
      }
 else
         {

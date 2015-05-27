@@ -2,21 +2,44 @@
 
     <div class="formulaire_connexion">
 
-      <form id="form_connexion" method="post" action="identifiants.php">
+      <form id="form_connexion" method="post" action="login.php">
         <p>
+
+      <?php
+if (isset($_GET['mssg'])) 
+   {
+     echo $_GET['mssg'];
+   }
+else 
+   {
+
+   }
+?>
+<?php
+if(isset($_GET['message']))
+  {
+    echo $_GET['message'];
+  }
+else
+{
+
+}
+?>
+<br />
+<br />
           <label for="mail" class="label_connexion" class="champ" id="mail"> Email :</label>
-          <input type="email" name="mail" id="mail" class="champ_input_connexion" class="champ" size="30" placeholder="Ex :azerty@gmail.com " />
+          <input type="email" name="mail" id="mailconnect" class="champ_input_connexion" class="champ" size="30" placeholder="Ex :azerty@gmail.com " />
           <br />
           <br />
           <br />
           <label for="pass" class="label_connexion" class="champ" id="pass">Mot de passe :</label>
-          <input type="password" name="pass" id="pass" class="champ_input_connexion" class="champ" minlength="6" />
+          <input type="password" name="passconnect" id="pass" class="champ_input_connexion" class="champ" minlength="6" />
           <br />
           <br />
           <br />
           
             <div id="validation_connexion">
-              <input type="submit" name="valider" value="Connexion" class="champ_input_connexion" class="validation"/>
+              <input type="submit" name="formeconnexion" value="Connexion" class="champ_input_connexion" class="validation"/>
             </div>
             
         </p>
