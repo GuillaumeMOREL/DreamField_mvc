@@ -45,7 +45,6 @@
           <li><a href="?page=aide" class="menu-text" >Aide</a></li>
           <li id="recherche">
 
-<<<<<<< Updated upstream
 <?php
 if(isset($_POST['requete']) && $_POST['requete'] != NULL) // on vérifie d'abord l'existence du POST et aussi si la requete n'est pas vide.
 {
@@ -97,8 +96,6 @@ else
 }
 // et voilà, c'est fini !
 ?>-->
-=======
->>>>>>> Stashed changes
 
             <form id="search" method="post">
               <input id="search_data" name="saisie" type="search" placeholder="Recherche..." required />

@@ -34,8 +34,8 @@ require("controleurs/database_connect.php");
 		}
 		else if (isset($_GET['page'])&& !empty($_GET['page']) && is_file('controleurs/'.$_GET['page'].'.php')) {
 			
-            include("controleurs/" .".php");
-		}
+           include("controleurs/".$_GET["page"].".php");
+        }
 		else {
 			include("vues/404.php");
 		}
