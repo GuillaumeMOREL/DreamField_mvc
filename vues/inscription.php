@@ -9,12 +9,13 @@
  <?php
 if (isset($_GET['msg'])) 
 {
+  
   echo $_GET['msg'];
 }
-?> -->
+?> 
 </form> </div>
  <!-- <form method="post" action="?page=inscription"> -->
-    <form method="post" action="?page=register_inscription2"> 
+    <form method="post" action="register_inscription.php"> 
 
     <p>
               <label for="prenom" class="label_inscription">Prénom :</label>

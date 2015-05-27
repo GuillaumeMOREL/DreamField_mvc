@@ -1,7 +1,8 @@
 
+
 <?php
 
-require('modeles/function_inscription.php'); 
+/*require('modeles/function_inscription.php'); 
 
 	$email = getMail($bdd);
 	$InfoUser = registerInfoUser($bdd);
@@ -32,7 +33,7 @@ if (!empty($prenom) AND !empty($nom) AND !empty($adresse) AND !empty($numero_dep
 		$email;
 	/*	$reqmail = $bdd-> prepare('SELECT count(mail) AS nbre_mail FROM utilisateurs WHERE mail= ?');
 	    $reqmail->execute(array($mail));
-	    $result = $reqmail->fetch();   */
+	    $result = $reqmail->fetch();   
 
 
 
@@ -44,9 +45,9 @@ if (!empty($prenom) AND !empty($nom) AND !empty($adresse) AND !empty($numero_dep
        	 header('Location: index.php?page=connexion&message=vos identifiants ont été bien enregistrés.Vous pouvez vous connecter');
 	
        	 	$InfoUser;
-	/*    $req = $bdd-> prepare('INSERT INTO utilisateurs(prenom, nom, adresse, numero_departement, mail, tel, pass, passverif, conditions) VALUES(?,?,?,?,?,?,?,?,?)');
+	    $req = $bdd-> prepare('INSERT INTO utilisateurs(prenom, nom, adresse, numero_departement, mail, tel, pass, passverif, conditions) VALUES(?,?,?,?,?,?,?,?,?)');
 	  
-	    $req->execute(array($prenom, $nom, $adresse, $numero_departement,$mail, $tel, $pass, $passverif, $conditions));  */
+	    $req->execute(array($prenom, $nom, $adresse, $numero_departement,$mail, $tel, $pass, $passverif, $conditions));  
         }
        
          else
@@ -68,7 +69,7 @@ if (!empty($prenom) AND !empty($nom) AND !empty($adresse) AND !empty($numero_dep
 	   header('Location: index.php?page=inscription&msg=tous les champs doivent être remplis!');
  	}
  }
-
+*/
 
 
  

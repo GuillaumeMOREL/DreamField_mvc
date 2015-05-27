@@ -45,6 +45,10 @@
           <li><a href="?page=aide" class="menu-text" >Aide</a></li>
           <li id="recherche">
 
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
             <form id="search" method="post">
               <input id="search_data" name="saisie" type="search" placeholder="Recherche..." required />
               <a name="go" type="submit" id="logo-search" class="menu-text" value=""/><img src="static/img/logo/logo-recherche.png" id="logo-recherche"/></a>

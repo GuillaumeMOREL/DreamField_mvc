@@ -1,6 +1,6 @@
 
 <?php
-require('modeles/function_ProfilUtilisateur.php');
+/*require('modeles/function_ProfilUtilisateur.php');
 
 
 
@@ -17,6 +17,7 @@ require('modeles/function_ProfilUtilisateur.php');
 
     if(isset($_SESSION['id']) AND $userinfo['I_D'] == $_SESSION['id'])
     {
+    	*/
  
 
 require('vues/ProfilUtilisateur.php');

@@ -1,5 +1,7 @@
+<?php
 
-<!--<?php
+require("controleurs/database_connect.php");
+
   if(isset($_GET['id']) AND $_GET['id'] > 0)
      {
        $getid = intval($_GET['id']); 
@@ -7,7 +9,7 @@
        $requser->execute(array($getid));
        $userinfo = $requser->fetch();
     
-?>  -->
+?>  
 <br />
 <br />
   <div class="profil" align ="center">
@@ -21,7 +23,7 @@
     <br />
 
 
- <!--   <?php
+   <?php
     if(isset($_SESSION['id']) AND $userinfo['I_D'] == $_SESSION['id'])
     {
     ?> -->
@@ -29,11 +31,11 @@
     <br />
     <br />
     <a href="?page=Deconnexion"> Se déconnecter </a>
- <!--   <?php  
+  <?php  
     }
-    ?> -->
+    ?> 
 </div> 
 
-<!-- <?php
+ <?php
   }
 ?>
