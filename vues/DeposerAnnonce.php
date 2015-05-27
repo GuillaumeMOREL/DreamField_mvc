@@ -206,7 +206,6 @@
 
 <?php
 if(isset($_POST['valider'])) {
-include ("Depot_register.php");
 
 
 if (
@@ -300,10 +299,10 @@ if (
 {
 
   echo "<script type='text/javascript'>document.location.replace('ProfilUtilisateur.php');</script>";
-  $req = $bdd->prepare('INSERT INTO `DREAMFIELD`.`offres` (`nom_produit`, `ProduitAutre`, `nbPoidsQuant`, `PoidsQuant`, `dateexpiration`, `remarque`, `prix`, `troc`) VALUES (:nom_produit, :ProduitAutre, :nbPoidsQuant, :PoidsQuant, :dateexpiration, :remarque, :prix, :troc)');
+  $req = $bdd->prepare('INSERT INTO `DREAMFIELD`.`annonces` (`nom_produits`, `ProduitAutre`, `nbPoidsQuant`, `PoidsQuant`, `dateexpiration`, `remarque`, `prix`, `troc`) VALUES (:nom_produits, :ProduitAutre, :nbPoidsQuant, :PoidsQuant, :dateexpiration, :remarque, :prix, :troc)');
   $req->execute(array(
     
-    'nom_produit' => $_POST['nom_produit'],
+    'nom_produits' => $_POST['nom_produits'],
     'ProduitAutre' => $_POST['ProduitAutre'],
     'nbPoidsQuant' => $_POST['nbPoidsQuant'],
     'PoidsQuant' => $_POST['PoidsQuant'],

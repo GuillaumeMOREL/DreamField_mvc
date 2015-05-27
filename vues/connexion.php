@@ -1,3 +1,4 @@
+
 <div class="milieu_connexion">
 
     <div class="formulaire_connexion">
@@ -5,14 +6,10 @@
       <form id="form_connexion" method="post" action="?page=login">
         <p>
 
-      <?php
+<!--      <?php
 if (isset($_GET['mssg'])) 
    {
      echo $_GET['mssg'];
-   }
-else 
-   {
-
    }
 ?>
 <?php
@@ -20,11 +17,9 @@ if(isset($_GET['message']))
   {
     echo $_GET['message'];
   }
-else
-{
-
-}
 ?>
+
+ -->
 <br />
 <br />
           <label for="mail" class="label_connexion" class="champ" id="mail"> Email :</label>
