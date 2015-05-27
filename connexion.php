@@ -45,7 +45,7 @@
 
 <br />
 <br />
-
+<!--test-->
           <label for="mail" class="champ-co"> Email :</label>
           <input type="email" name="mailconnect" id="mail" class="champ" size="30" placeholder="Ex :azerty@gmail.com " />
           <br />

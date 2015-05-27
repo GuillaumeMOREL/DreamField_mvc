@@ -45,7 +45,7 @@
           <li><a href="?page=aide" class="menu-text" >Aide</a></li>
           <li id="recherche">
 
-<?
+<?php
 if(isset($_POST['requete']) && $_POST['requete'] != NULL) // on vérifie d'abord l'existence du POST et aussi si la requete n'est pas vide.
 {
 mysql_connect('localhost','root','');
