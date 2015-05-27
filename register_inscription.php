@@ -18,9 +18,9 @@ if(isset($_POST['valider']))
 	{
 		$passlength = strlen($pass);
 
-		if($passlength <= 80)
+		if($passlength <= 20)
 		{
-			echo "passe";
+			//echo "passe";
 			$reqmail = $bdd-> prepare('SELECT count(mail) AS nbre_mail FROM utilisateurs WHERE mail= ?');
 	    	$reqmail->execute(array($mail));
 	    	$result = $reqmail->fetch();   
@@ -33,10 +33,10 @@ if(isset($_POST['valider']))
          			header('Location: index.php?page=inscription&msg=<font color ="red">Vos mots de passe ne sont pas identiques </font>');
         	
         		} else {
-	   			$req = $bdd-> prepare('INSERT INTO utilisateurs(prenom, nom, adresse, numero_departement, mail, tel, pass, passverif, conditions) VALUES(?,?,?,?,?,?,?,?,?)');
-	   			$req->execute(array($prenom, $nom, $adresse, $numero_departement,$mail, $tel, $pass, $passverif, $conditions));  
+	   				$req = $bdd-> prepare('INSERT INTO utilisateurs(prenom, nom, adresse, numero_departement, mail, tel, pass, passverif, conditions) VALUES(?,?,?,?,?,?,?,?,?)');
+	   				$req->execute(array($prenom, $nom, $adresse, $numero_departement,$mail, $tel, $pass, $passverif, $conditions));  
 
-	   		header('Location: index.php?page=connexion&msg=vos identifiants ont été bien enregistrés.Vous pouvez vous connecter');
+	   				header('Location: index.php?page=connexion&msg=vos identifiants ont été bien enregistrés.Vous pouvez vous connecter');
        			}
        
        		}else  {
@@ -48,7 +48,7 @@ if(isset($_POST['valider']))
 	    }
 
 	}else {
-	   header('Location: ?page=inscription&msg=tous les champs doivent être remplis!');
+	   header('Location: index.php?page=inscription&msg=tous les champs doivent être remplis!');
  	}
 }
 ?>
