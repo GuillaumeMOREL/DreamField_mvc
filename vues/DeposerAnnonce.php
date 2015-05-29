@@ -326,7 +326,7 @@ if (
   )
 {
 
-  echo "<script type='text/javascript'>document.location.replace('ProfilUtilisateur.php');</script>";
+  echo "<script type='text/javascript'>document.location.replace('http://localhost/dreamfield_mvc/?page=ProfilUtilisateur.php');</script>";
   $req = $bdd->prepare('INSERT INTO `DREAMFIELD`.`annonces` (`nom_produit`, `ProduitAutre`, `nbPoidsQuant`, `PoidsQuant`, `dateexpiration`, `remarque`, `prix`, `troc`) VALUES (:nom_produit, :ProduitAutre, :nbPoidsQuant, :PoidsQuant, :dateexpiration, :remarque, :prix, :troc)');
   $req->execute(array(
     
