@@ -59,21 +59,6 @@
       }
     });
 
-    ville.keyup(function(){
-      if($(this).val().length < 5){ // si la chaîne de caractères est inférieure à 5
-        $(this).css({ // on rend le champ rouge
-          borderColor : 'red',
-          color : 'red'
-        });
-      }
-      else{
-            $(this).css({ // si tout est bon, on le rend vert
-            borderColor : 'green',
-            color : 'green'
-        });
-      }
-    });
-
     tel.keyup(function(){
       if($(this).val().length < 10){ // si la chaîne de caractères est inférieure à 10
         $(this).css({ // on rend le champ rouge

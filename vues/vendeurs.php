@@ -1,4 +1,3 @@
-
 <div class="liste-offres">
 
 <?php

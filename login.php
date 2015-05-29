@@ -1,4 +1,3 @@
-
 <?php
 require("controleurs/database_connect.php");
 
@@ -31,13 +30,11 @@ if(!empty($mailconnect) AND !empty($passconnect))
 
      }else  {
        //echo "passé";
-         header('Location: index.php?page=connexion&message=mot de pass ou mail incorrect!');
+         header('Location: index.php?page=connexion&message=Mot de pass ou mail incorrect!');
         }
 
 	}else {
     echo "passé";
-      header('Location: index.php?page=connexion&message=tous les champs doivent être remplis!');
+      header('Location: index.php?page=connexion&message=Tous les champs doivent être remplis!');
       }
     }
-
-?>

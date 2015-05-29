@@ -1,6 +1,3 @@
-
-
-
 <div class="milieu_connexion">
 
     <div class="formulaire_connexion">
@@ -8,14 +5,12 @@
       <form id="form_connexion" method="post" action="login.php">
         <p>
 
-      <?php
-if (isset($_GET['message'])) 
-   {
-     echo $_GET['message'];
-   }
+<?php
+  if (isset($_GET['message'])) 
+     {
+       echo $_GET['message'];
+     }
 ?>
-
-
  
 <br />
 <br />

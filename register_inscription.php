@@ -18,7 +18,7 @@ if(isset($_POST['valider']))
 	{
 		$passlength = strlen($pass);
 
-		if($passlength <= 20)
+		if($passlength >= 20)
 		{
 			//echo "passe";
 			$reqmail = $bdd-> prepare('SELECT count(mail) AS nbre_mail FROM utilisateurs WHERE mail= ?');
@@ -36,7 +36,7 @@ if(isset($_POST['valider']))
 	   				$req = $bdd-> prepare('INSERT INTO utilisateurs(prenom, nom, adresse, numero_departement, mail, tel, pass, passverif, conditions) VALUES(?,?,?,?,?,?,?,?,?)');
 	   				$req->execute(array($prenom, $nom, $adresse, $numero_departement,$mail, $tel, $pass, $passverif, $conditions));  
 
-	   				header('Location: index.php?page=connexion&msg=vos identifiants ont été bien enregistrés.Vous pouvez vous connecter');
+	   				header('Location: index.php?page=connexion&msg=Vos identifiants ont été bien enregistrés.Vous pouvez vous connecter');
        			}
        
        		}else  {
@@ -44,11 +44,11 @@ if(isset($_POST['valider']))
        		  }
 
     	}else  {
-          	header('Location: index.php?page=inscription&msg=votre mot de passe est trop long!');
+          	header('Location: index.php?page=inscription&msg=Votre mot de passe est trop long!');
 	    }
 
 	}else {
-	   header('Location: index.php?page=inscription&msg=tous les champs doivent être remplis!');
+	   header('Location: index.php?page=inscription&msg=Tous les champs doivent être remplis!');
  	}
 }
 ?>

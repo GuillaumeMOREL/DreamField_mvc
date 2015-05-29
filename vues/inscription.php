@@ -1,11 +1,11 @@
-
 <div id="milieu_inscription">
 <div class="formulaire_inscription">
 <div class="photo_inscription">
     <p class="parcourir" > Ajouter une photo de profil (JPG, PNG ou GIF | max. 15 Ko) :</p>
     <form class="parcourir" method="post" action="" enctype="multipart/form-data" >
       <input type="file" name="photo" id="photo" />
-
+<br/>
+<br/>
  <?php
 if (isset($_GET['msg'])) 
 {
@@ -15,7 +15,7 @@ if (isset($_GET['msg']))
 ?> 
 </form> </div>
  <!-- <form method="post" action="?page=inscription"> -->
-    <form method="post" action="register_inscription.php"> 
+    <form method="post" name="formuleire-ins_inscription" outsubmit="return verifMail()" action="register_inscription.php"> 
 
     <p>
               <label for="prenom" class="label_inscription">Prénom :</label>
