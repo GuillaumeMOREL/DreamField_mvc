@@ -1,14 +1,20 @@
 -- phpMyAdmin SQL Dump
--- version 4.2.10
+-- version 4.1.14
 -- http://www.phpmyadmin.net
 --
--- Client :  localhost:8889
--- Généré le :  Mer 27 Mai 2015 à 20:16
--- Version du serveur :  5.5.38
--- Version de PHP :  5.6.2
+-- Client :  127.0.0.1
+-- Généré le :  Mer 27 Mai 2015 à 18:09
+-- Version du serveur :  5.6.17
+-- Version de PHP :  5.5.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
 
 --
 -- Base de données :  `dreamfield`
@@ -20,20 +26,20 @@ SET time_zone = "+00:00";
 -- Structure de la table `annonces`
 --
 
-CREATE TABLE `annonces` (
-`id_annonce` int(11) NOT NULL,
-  `nom_produit` varchar(45) NOT NULL,
-  `ProduitAutre` varchar(45) NOT NULL,
-  `nbPoidsQuant` int(5) NOT NULL,
-  `prix` int(5) NOT NULL,
-  `dateexpiration` date NOT NULL,
-  `PoidsQuant` varchar(20) NOT NULL,
-  `remarque` varchar(100) NOT NULL,
-  `troc` varchar(30) NOT NULL,
-  `I_D` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `annonces` (
+  `id_annonce` int(11) NOT NULL AUTO_INCREMENT,
+  `titre` varchar(11) NOT NULL,
+  `categorie` varchar(45) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL,
+  `nom_produits` varchar(45) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL,
+  `description` text NOT NULL,
+  `quantite` tinyint(11) NOT NULL,
+  `prix` tinyint(11) NOT NULL,
+  `date_offre` date NOT NULL,
+  `nom_vendeurs` varchar(20) NOT NULL,
+  `prenom_vendeurs` varchar(20) NOT NULL,
   `photo_offre` varchar(80) NOT NULL,
-  `departement_annonce` int(2) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  PRIMARY KEY (`id_annonce`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -41,11 +47,12 @@ CREATE TABLE `annonces` (
 -- Structure de la table `carte_de_france`
 --
 
-CREATE TABLE `carte_de_france` (
-`id_departement` int(10) NOT NULL,
+CREATE TABLE IF NOT EXISTS `carte_de_france` (
+  `id_departement` int(10) NOT NULL AUTO_INCREMENT,
   `region` varchar(50) CHARACTER SET utf8 NOT NULL,
-  `departement` varchar(50) CHARACTER SET utf8 NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2223 DEFAULT CHARSET=latin1;
+  `departement` varchar(50) CHARACTER SET utf8 NOT NULL,
+  PRIMARY KEY (`id_departement`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2223 ;
 
 --
 -- Contenu de la table `carte_de_france`
@@ -79,12 +86,13 @@ INSERT INTO `carte_de_france` (`id_departement`, `region`, `departement`) VALUES
 -- Structure de la table `categorie`
 --
 
-CREATE TABLE `categorie` (
-`id_produit` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `categorie` (
+  `id_produit` int(11) NOT NULL AUTO_INCREMENT,
   `categorie_produit` varchar(100) NOT NULL,
   `nom_produit` varchar(100) NOT NULL,
-  `chemin_photo` varchar(100) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=98 DEFAULT CHARSET=utf8;
+  `chemin_photo` varchar(100) NOT NULL,
+  PRIMARY KEY (`id_produit`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=98 ;
 
 --
 -- Contenu de la table `categorie`
@@ -192,14 +200,64 @@ INSERT INTO `categorie` (`id_produit`, `categorie_produit`, `nom_produit`, `chem
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `commentaires`
+--
+
+CREATE TABLE IF NOT EXISTS `commentaires` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_sujet` int(11) NOT NULL,
+  `titre` varchar(30) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL,
+  `contenu` varchar(255) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL,
+  `username` varchar(20) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+
+--
+-- Contenu de la table `commentaires`
+--
+
+INSERT INTO `commentaires` (`id`, `id_sujet`, `titre`, `contenu`, `username`) VALUES
+(1, 1, 'Aucune idée', 'Je ne sais pas du tout... :s', 'Tristan Martel'),
+(2, 1, 'Moi je sais', 'Juste un lien -> openclassrooms.com :p', 'Ta maman'),
+(3, 3, 'Chauuuuuuuddddd', 'Jsuis chaud vieu ! ;)', 'Mathurin Ramart'),
+(4, 2, 'De bonnes pommes', 'Elles sont trop BONNES !!!! Tous des salopes ! <3', 'Paul Roger');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `forum`
+--
+
+CREATE TABLE IF NOT EXISTS `forum` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `titre` varchar(30) NOT NULL,
+  `username` varchar(20) NOT NULL,
+  `question` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+--
+-- Contenu de la table `forum`
+--
+
+INSERT INTO `forum` (`id`, `titre`, `username`, `question`) VALUES
+(1, 'Mon premier sujet', 'Mathurin', 'Comment on fait un forum ?'),
+(2, 'Qualité des pommes', 'Thomas Martin', 'Vos pommes sont-elles de première fraicheur ?'),
+(3, 'Un ptit CS ? :p', 'Guillaume Foix', 'ça vous dit une partie ?');
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `forum_categorie`
 --
 
-CREATE TABLE `forum_categorie` (
-`cat_id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `forum_categorie` (
+  `cat_id` int(11) NOT NULL AUTO_INCREMENT,
   `cat_nom` varchar(45) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL,
-  `cat_ordr` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `cat_ordr` int(11) NOT NULL,
+  PRIMARY KEY (`cat_id`),
+  UNIQUE KEY `cat_ordr` (`cat_ordr`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -207,8 +265,8 @@ CREATE TABLE `forum_categorie` (
 -- Structure de la table `forum_forum`
 --
 
-CREATE TABLE `forum_forum` (
-`forum_id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `forum_forum` (
+  `forum_id` int(11) NOT NULL AUTO_INCREMENT,
   `forum_cat_id` mediumint(8) NOT NULL,
   `forum_name` varchar(30) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL,
   `forum_desc` text CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL,
@@ -220,8 +278,9 @@ CREATE TABLE `forum_forum` (
   `auth_post` tinyint(4) NOT NULL,
   `auth_topic` tinyint(4) NOT NULL,
   `auth_annonce` tinyint(4) NOT NULL,
-  `auth_modo` tinyint(4) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `auth_modo` tinyint(4) NOT NULL,
+  PRIMARY KEY (`forum_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -229,8 +288,8 @@ CREATE TABLE `forum_forum` (
 -- Structure de la table `forum_membres`
 --
 
-CREATE TABLE `forum_membres` (
-`membre_id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `forum_membres` (
+  `membre_id` int(11) NOT NULL AUTO_INCREMENT,
   `membre_pseudo` varchar(30) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL,
   `membre_mdp` varchar(32) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL,
   `membre_email` varchar(250) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL,
@@ -242,8 +301,9 @@ CREATE TABLE `forum_membres` (
   `membre_inscrit` int(11) NOT NULL,
   `membre_derniere_visite` int(11) NOT NULL,
   `membre_rang` tinyint(4) DEFAULT '2',
-  `membre_post` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `membre_post` int(11) NOT NULL,
+  PRIMARY KEY (`membre_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -251,14 +311,15 @@ CREATE TABLE `forum_membres` (
 -- Structure de la table `forum_message`
 --
 
-CREATE TABLE `forum_message` (
-`post_id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `forum_message` (
+  `post_id` int(11) NOT NULL AUTO_INCREMENT,
   `post_createur` int(11) NOT NULL,
   `post_texte` text CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL,
   `post_time` int(11) NOT NULL,
   `topic_id` int(11) NOT NULL,
-  `post_forum_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `post_forum_id` int(11) NOT NULL,
+  PRIMARY KEY (`post_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -266,8 +327,8 @@ CREATE TABLE `forum_message` (
 -- Structure de la table `forum_topic`
 --
 
-CREATE TABLE `forum_topic` (
-`topic_id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `forum_topic` (
+  `topic_id` int(11) NOT NULL AUTO_INCREMENT,
   `forum_id` int(11) NOT NULL,
   `topic_titre` char(45) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL,
   `topic_createur` int(11) NOT NULL,
@@ -276,8 +337,10 @@ CREATE TABLE `forum_topic` (
   `topic_time` int(11) NOT NULL,
   `topic_last_post` int(11) NOT NULL,
   `topic_first_post` int(11) NOT NULL,
-  `topic_post` mediumint(8) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `topic_post` mediumint(8) NOT NULL,
+  PRIMARY KEY (`topic_id`),
+  UNIQUE KEY `topic_last_post` (`topic_last_post`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -285,8 +348,8 @@ CREATE TABLE `forum_topic` (
 -- Structure de la table `utilisateurs`
 --
 
-CREATE TABLE `utilisateurs` (
-`I_D` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `utilisateurs` (
+  `I_D` int(11) NOT NULL AUTO_INCREMENT,
   `prenom` varchar(15) CHARACTER SET utf8 NOT NULL,
   `nom` varchar(20) CHARACTER SET utf8 NOT NULL,
   `adresse` varchar(50) CHARACTER SET utf8 NOT NULL,
@@ -294,147 +357,27 @@ CREATE TABLE `utilisateurs` (
   `mail` varchar(50) CHARACTER SET utf8 NOT NULL,
   `tel` int(15) NOT NULL,
   `pass` varchar(40) CHARACTER SET utf8 NOT NULL,
-  `passverif` varchar(40) CHARACTER SET utf8 NOT NULL,
+  `passverif` varchar(20) CHARACTER SET utf8 NOT NULL,
   `conditions` tinyint(1) NOT NULL,
   `date_inscription` date NOT NULL,
   `civilite` varchar(15) CHARACTER SET utf8 NOT NULL,
   `photo_profil` varchar(80) NOT NULL,
-  `cle` varchar(32) CHARACTER SET utf8 NOT NULL,
-  `actif` int(1) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=latin1;
+  PRIMARY KEY (`I_D`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
 
 --
 -- Contenu de la table `utilisateurs`
 --
 
-INSERT INTO `utilisateurs` (`I_D`, `prenom`, `nom`, `adresse`, `numero_departement`, `mail`, `tel`, `pass`, `passverif`, `conditions`, `date_inscription`, `civilite`, `photo_profil`, `cle`, `actif`) VALUES
-(1, 'kjjkh', 'mokkhjh', 'jhhjkhkj', 78, 'ngoubivr@yahoo.fr', 661454328, 'AAAAAA', 'AAAAAA', 0, '0000-00-00', '', '', '', 0),
-(2, 'JHJHI', 'LHKHIUI', 'KJHKHHUI', 76, 'ngoubivr@yahoo.fr', 661454328, 'AAAAAA', 'AAAAAA', 0, '0000-00-00', '', '', '', 0),
-(3, '', 'huyiuy', 'uyiuuyi', 75, 'ngoubivr@yahoo.fr', 989878668, 'AAAAAA', 'AAAAAA', 0, '0000-00-00', '', '', '', 0),
-(4, 'UYYUTU', 'UYTUTU', 'UYTYUY', 56, 'ngoubivr@yahoo.fr', 661454328, 'AAAAAA', 'AAAAAA', 0, '0000-00-00', '', '', '', 0),
-(5, 'uytyut', 'jyutyt', 'kuuiyiy', 76056, 'ngoru@hdg', 661454328, 'ZZZZZZ', 'FFFFFF', 0, '0000-00-00', '', '', '', 0),
-(6, '', 'NFEOEJOI', 'OSIRTU', 12345, 'ngoubivr@yahoo.frJ', 989878668, 'aaaaaa', 'aaaaaa', 0, '0000-00-00', '', '', '', 0),
-(7, 'michÃ¨le', 'Aboungone', '22 avenue de la porte  ', 34567, 'ngouvictoire@yahoo.fr', 661454328, 'AAAAAAA', 'AAAAAAA', 0, '0000-00-00', '', '', '', 0),
-(8, 'zfbkza', 'test', 'unde', 90, 'a@mail.com', 123456789, '3d978f314200eb1bda01449bd477c46a816a9f06', '3d978f314200eb1bda01', 0, '0000-00-00', '', '', '', 0),
-(9, 'azert', 'eeeee', 'eeeiii', 90, 'karen09@hotmail.fr', 631995633, '3d978f314200eb1bda01449bd477c46a816a9f06', '3d978f314200eb1bda01449bd477c46a816a9f06', 0, '0000-00-00', '', '', '', 0),
-(10, 'azert', 'eeeee', 'eeeiii', 90, 'karen09@hotmail.fr', 631995633, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', 'da39a3ee5e6b4b0d3255bfef95601890afd80709', 0, '0000-00-00', '', '', '', 0),
-(11, 'azert', 'eeeee', 'eeeiii', 90, 'karen09@hotmail.fr', 631995633, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', 'da39a3ee5e6b4b0d3255bfef95601890afd80709', 0, '0000-00-00', '', '', '', 0),
-(12, 'azert', 'eeeee', 'eeeiii', 90, 'karen09@hotmail.fr', 631995633, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', 'da39a3ee5e6b4b0d3255bfef95601890afd80709', 0, '0000-00-00', '', '', '', 0),
-(13, 'azert', 'eeeee', 'eeeiii', 90, 'karen09@hotmail.fr', 631995633, 'da39a3ee5e6b4b0d3255bfef95601890afd80709', 'da39a3ee5e6b4b0d3255bfef95601890afd80709', 0, '0000-00-00', '', '', '', 0),
-(14, 'Maria', 'keena', '2 rue bis', 22, 'maria@keena.fr', 677889988, '3d978f314200eb1bda01449bd477c46a816a9f06', '3d978f314200eb1bda01449bd477c46a816a9f06', 0, '0000-00-00', '', '', '', 0),
-(15, 'pikkk', 'mikkk', '2 rue pikkk', 45, 'pikkk@mikkk.fr', 123456789, '02bf8e1953a8e9439392d2dfe7ead6d440cdc78e', '02bf8e1953a8e9439392d2dfe7ead6d440cdc78e', 0, '0000-00-00', '', '', '', 0),
-(16, 'mamaa', 'papaa', '2 rue pikkk', 45, 'mama@papa.fr', 123456789, '0d72c67e0ddd9de5fcb7c01b7160ddf901d85d50', '0d72c67e0ddd9de5fcb7c01b7160ddf901d85d50', 0, '0000-00-00', '', '', '', 0),
-(17, 'nanaa', 'papaa', '2 rue pikkk', 45, 'nana@papa.fr', 123456789, '9e434c8a3f2b2c34bcc9558b5bc9180c4943eaca', '9e434c8a3f2b2c34bcc9558b5bc9180c4943eaca', 0, '0000-00-00', '', '', '', 0),
-(18, 'guigui', 'ooooo', 'oooo rue ', 87, 'guigui@ooooo.fr', 2147483647, '58ad983135fe15c5a8e2e15fb5b501aedcf70dc2', '58ad983135fe15c5a8e2e15fb5b501aedcf70dc2', 0, '0000-00-00', '', '', '', 0),
-(19, 'kikiki', 'lilili', 'kikiki@lilili.fr', 12, 'kiki@lili.fr', 2147483647, '94cf54a9647342d64a1ab525963d4efe622c11f6', '94cf54a9647342d64a1ab525963d4efe622c11f6', 0, '0000-00-00', '', '', '', 0),
-(20, 'marina', 'marina', 'marina', 56, 'marina@marina.fr', 631995633, '275978859cd7d885a7df1c4dca6a36445a178818', '275978859cd7d885a7df1c4dca6a36445a178818', 0, '0000-00-00', '', '', '', 0),
-(21, 'isabelle', 'norae', 'lalalal', 45, 'isabelle@norae.fr', 677889988, '3d978f314200eb1bda01449bd477c46a816a9f06', '3d978f314200eb1bda01449bd477c46a816a9f06', 0, '0000-00-00', '', '', '', 0),
-(22, 'manon', 'lolilo', 'rue lolilo', 56, 'manon@lolilo.fr', 631995633, '92fc472e870b9cf61aa2b6f8bd8267f9c14f58f5', '92fc472e870b9cf61aa2b6f8bd8267f9c14f58f5', 0, '0000-00-00', '', '', '', 0);
+INSERT INTO `utilisateurs` (`I_D`, `prenom`, `nom`, `adresse`, `numero_departement`, `mail`, `tel`, `pass`, `passverif`, `conditions`, `date_inscription`, `civilite`, `photo_profil`) VALUES
+(1, 'kjjkh', 'mokkhjh', 'jhhjkhkj', 78, 'ngoubivr@yahoo.fr', 661454328, 'AAAAAA', 'AAAAAA', 0, '0000-00-00', '', ''),
+(2, 'JHJHI', 'LHKHIUI', 'KJHKHHUI', 76, 'ngoubivr@yahoo.fr', 661454328, 'AAAAAA', 'AAAAAA', 0, '0000-00-00', '', ''),
+(3, '', 'huyiuy', 'uyiuuyi', 75, 'ngoubivr@yahoo.fr', 989878668, 'AAAAAA', 'AAAAAA', 0, '0000-00-00', '', ''),
+(4, 'UYYUTU', 'UYTUTU', 'UYTYUY', 56, 'ngoubivr@yahoo.fr', 661454328, 'AAAAAA', 'AAAAAA', 0, '0000-00-00', '', ''),
+(5, 'uytyut', 'jyutyt', 'kuuiyiy', 76056, 'ngoru@hdg', 661454328, 'ZZZZZZ', 'FFFFFF', 0, '0000-00-00', '', ''),
+(6, '', 'NFEOEJOI', 'OSIRTU', 12345, 'ngoubivr@yahoo.frJ', 989878668, 'aaaaaa', 'aaaaaa', 0, '0000-00-00', '', ''),
+(7, 'michÃ¨le', 'Aboungone', '22 avenue de la porte  ', 34567, 'ngouvictoire@yahoo.fr', 661454328, 'AAAAAAA', 'AAAAAAA', 0, '0000-00-00', '', '');
 
---
--- Index pour les tables exportées
---
-
---
--- Index pour la table `annonces`
---
-ALTER TABLE `annonces`
- ADD PRIMARY KEY (`id_annonce`);
-
---
--- Index pour la table `carte_de_france`
---
-ALTER TABLE `carte_de_france`
- ADD PRIMARY KEY (`id_departement`);
-
---
--- Index pour la table `categorie`
---
-ALTER TABLE `categorie`
- ADD PRIMARY KEY (`id_produit`);
-
---
--- Index pour la table `forum_categorie`
---
-ALTER TABLE `forum_categorie`
- ADD PRIMARY KEY (`cat_id`), ADD UNIQUE KEY `cat_ordr` (`cat_ordr`);
-
---
--- Index pour la table `forum_forum`
---
-ALTER TABLE `forum_forum`
- ADD PRIMARY KEY (`forum_id`);
-
---
--- Index pour la table `forum_membres`
---
-ALTER TABLE `forum_membres`
- ADD PRIMARY KEY (`membre_id`);
-
---
--- Index pour la table `forum_message`
---
-ALTER TABLE `forum_message`
- ADD PRIMARY KEY (`post_id`);
-
---
--- Index pour la table `forum_topic`
---
-ALTER TABLE `forum_topic`
- ADD PRIMARY KEY (`topic_id`), ADD UNIQUE KEY `topic_last_post` (`topic_last_post`);
-
---
--- Index pour la table `utilisateurs`
---
-ALTER TABLE `utilisateurs`
- ADD PRIMARY KEY (`I_D`);
-
---
--- AUTO_INCREMENT pour les tables exportées
---
-
---
--- AUTO_INCREMENT pour la table `annonces`
---
-ALTER TABLE `annonces`
-MODIFY `id_annonce` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT pour la table `carte_de_france`
---
-ALTER TABLE `carte_de_france`
-MODIFY `id_departement` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2223;
---
--- AUTO_INCREMENT pour la table `categorie`
---
-ALTER TABLE `categorie`
-MODIFY `id_produit` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=98;
---
--- AUTO_INCREMENT pour la table `forum_categorie`
---
-ALTER TABLE `forum_categorie`
-MODIFY `cat_id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT pour la table `forum_forum`
---
-ALTER TABLE `forum_forum`
-MODIFY `forum_id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT pour la table `forum_membres`
---
-ALTER TABLE `forum_membres`
-MODIFY `membre_id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT pour la table `forum_message`
---
-ALTER TABLE `forum_message`
-MODIFY `post_id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT pour la table `forum_topic`
---
-ALTER TABLE `forum_topic`
-MODIFY `topic_id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT pour la table `utilisateurs`
---
-ALTER TABLE `utilisateurs`
-MODIFY `I_D` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=23;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
