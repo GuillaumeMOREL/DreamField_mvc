@@ -15,7 +15,7 @@ require("controleurs/database_connect.php");
       <input type="file" name="photo" id="photo" />
   </form></div>
 
-  <form id="form" method="post" action="http://localhost:8888/?page=deposerAnnonce">
+  <form id="form" method="post" action="http://localhost/dreamfield_mvc/?page=deposerAnnonce">
     <p>
               
             <label for="nom_produit">Selectionnez le nom de votre denrée</label><br/><br />
