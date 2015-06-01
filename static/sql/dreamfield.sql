@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Sam 30 Mai 2015 à 02:23
+-- Généré le :  Lun 01 Juin 2015 à 09:49
 -- Version du serveur :  5.6.17
 -- Version de PHP :  5.5.12
 
@@ -239,10 +239,10 @@ CREATE TABLE IF NOT EXISTS `commentaires` (
 --
 
 INSERT INTO `commentaires` (`id`, `id_sujet`, `titre`, `contenu`, `username`) VALUES
-(1, 1, 'Aucune idée', 'Je ne sais pas du tout... :s', 'Tristan Martel'),
-(2, 1, 'Moi je sais', 'Juste un lien -> openclassrooms.com :p', 'Ta maman'),
-(3, 3, 'Chauuuuuuuddddd', 'Jsuis chaud vieu ! ;)', 'Mathurin Ramart'),
-(4, 2, 'De bonnes pommes', 'Elles sont trop BONNES !!!! Tous des salopes ! <3', 'Paul Roger');
+(1, 1, 'Aucune idée', 'Je ne sais pas du tout... :s', 'michelle'),
+(2, 1, 'Moi je sais', 'Juste un lien -> openclassrooms.com :p', 'guillaume'),
+(3, 3, 'Chauuuuuuuddddd', 'Jsuis chaud vieu ! ;)', 'Thomas'),
+(4, 2, 'De bonnes pommes', 'Elles sont trop BONNES !!!! Tous des salopes ! <3', 'Jeremy');
 
 -- --------------------------------------------------------
 
@@ -256,16 +256,17 @@ CREATE TABLE IF NOT EXISTS `forum` (
   `username` varchar(20) NOT NULL,
   `question` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
 --
 -- Contenu de la table `forum`
 --
 
 INSERT INTO `forum` (`id`, `titre`, `username`, `question`) VALUES
-(1, 'Mon premier sujet', 'Mathurin', 'Comment on fait un forum ?'),
-(2, 'Qualité des pommes', 'Thomas Martin', 'Vos pommes sont-elles de première fraicheur ?'),
-(3, 'Un ptit CS ? :p', 'Guillaume Foix', 'ça vous dit une partie ?');
+(1, 'Mon premier sujet', 'Thomas', 'Comment on fait un forum ?'),
+(2, 'Qualité des pommes', 'karen', 'Vos pommes sont-elles de première fraicheur ?'),
+(3, 'Un ptit CS ? :p', 'Jeremy', 'ça vous dit une partie ?'),
+(4, 'thomas a commit', 'Thomas', 'comment réparer une base de donnée');
 
 -- --------------------------------------------------------
 
