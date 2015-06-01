@@ -34,7 +34,7 @@ if(!empty($mailconnect) AND !empty($passconnect))
         }
 
 	}else {
-    echo "passé";
+  //  echo "passé";
       header('Location: index.php?page=connexion&message=Tous les champs doivent être remplis!');
       }
     }
