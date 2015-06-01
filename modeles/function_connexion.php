@@ -1,4 +1,3 @@
-
 <?php
 require_once("controleurs/database_connect.php");
 
@@ -12,3 +11,4 @@ function verifMailPass($bdd);
 
 
 ?>
+

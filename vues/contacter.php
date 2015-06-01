@@ -1,4 +1,3 @@
-
 		<div id="container">
 			<h1 class="h1_contacter"> L'équipe DreamField </h1>
 			<p class="text_contacter"> N'hésitez pas à nous contacter en cas de problèmes sur le site ou pour d'autres éventuelles questions </p>

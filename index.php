@@ -23,10 +23,10 @@ if(isset($_POST['valider'])){
     <link rel="Stylesheet" href="static/css/Style_deposerAnnonce.css" />
     <link rel="Stylesheet" href="static/css/Style_inscription.css" />
     <link rel="Stylesheet" href="static/css/Style_redirection.css" />
-    <link rel="Stylesheet" href="static/css/Style-vendeurs.css" />
+    <link rel="Stylesheet" href="static/css/Style_vendeurs.css" />
+    <link rel="Stylesheet" href="static/css/Style_forum.css" />
     <link rel="Stylesheet" href="static/css/header.css" />
     <link rel="Stylesheet" href="static/css/footer.css" />
-    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 
     <title> DREAMFIELD</title>
 </head>
@@ -66,5 +66,7 @@ if(isset($_POST['valider'])){
         <script src="static/js/offres_sauvegardees.js"></script>
         <script src="static/js/recuperer-le-dep.js"></script> 
         <script src="static/js/depotverif.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+
 </body>
 </html>

@@ -37,5 +37,9 @@ if(isset($_POST['formconnexion']))
   //  echo "passé";
       header('Location: index.php?page=connexion&message=Tous les champs doivent être remplis!');
       }
+<<<<<<< Updated upstream
     }
 
+=======
+    }
+>>>>>>> Stashed changes

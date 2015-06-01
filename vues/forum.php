@@ -1,15 +1,11 @@
-<html>
-<head>
-	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<title>Forum</title>
-</head>
+
             <h1>Forum</h1>
     
     <?php
     	//Connexion	
 		try
 		{
-			$bdd = new PDO('mysql:host=localhost;dbname=dreamfield', 'root', '');
+			$bdd = new PDO('mysql:host=localhost;dbname=dreamfield', 'root', 'root');
 		}
 		catch (Exception $e)
 		{
@@ -34,4 +30,3 @@
 
 		?>
 		<a href="deposertopic.php?id=<?php echo $cat['id'] ?>"> crer votre topic ! !</a>
-</html>

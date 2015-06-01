@@ -40,6 +40,3 @@ header('location: inscription.php?error=empty');
 
     }
 ?>
-
-
-

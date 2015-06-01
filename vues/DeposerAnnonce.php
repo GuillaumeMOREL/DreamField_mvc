@@ -2,9 +2,7 @@
     // Tout début du code PHP. Situé en haut de la page web
     ini_set("display_errors",0);error_reporting(0);
     ?>
-
-
-
+    
 <div class="formulaire-depot">
 <p id="formulaire-depot-titre">Afin de déposer une annonce, remplissez ce formulaire:</p>
 

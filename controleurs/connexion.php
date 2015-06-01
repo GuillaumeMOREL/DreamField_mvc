@@ -1,6 +1,6 @@
 <?php
 
-require('modeles/connexion.php'); 
+require_once('modeles/connexion.php'); 
 
 
 
@@ -36,7 +36,6 @@ if(isset($_POST['formconnexion']))
       header('Location: index.php?page=connexion&message=Tous les champs doivent être remplis!');
       }
     } 
-
 
 require('vues/connexion.php');
 

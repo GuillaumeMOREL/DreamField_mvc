@@ -35,7 +35,10 @@
 	</div>
 	</a>
 	<div class="clear"></div>
+<<<<<<< Updated upstream
 <?php	
 
+=======
+>>>>>>> Stashed changes
 }
 ?>

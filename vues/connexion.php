@@ -2,7 +2,7 @@
 
     <div class="formulaire_connexion">
 
-      <form id="form_connexion" method="post" action="login.php">
+      <form id="form_connexion" method="post" action="/controleurs/connexion.php">
         <p>
 
 <?php

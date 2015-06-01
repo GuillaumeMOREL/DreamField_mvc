@@ -1,4 +1,3 @@
-
 <div id="header">    
   <div  id="top-header" class="container">  
       <a href="index.php"><img src="static/img/logo/logo.png" id="logo"></a>
@@ -41,7 +40,7 @@
           <li><a href="?page=offres" class="menu-text" >Offres</a></li>
           <li><a href="?page=deposerAnnonce" class="menu-text" >Déposer une annonce</a></li>
           <li><a href="?page=recettes" class="menu-text" >Recette</a></li> 
-          <li><a href="?page=redirection" class="menu-text" >Forum</a></li>
+          <li><a href="?page=forum" class="menu-text" >Forum</a></li>
           <li><a href="?page=aide" class="menu-text" >Aide</a></li>
           <li id="recherche">
 
