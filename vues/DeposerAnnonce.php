@@ -3,9 +3,6 @@
     ini_set("display_errors",0);error_reporting(0);
     ?>
 
-    <?php
-require("controleurs/database_connect.php");
-?>
 
 <div class="formulaire-depot">
 <p id="formulaire-depot-titre">Afin de déposer une annonce, remplissez ce formulaire:</p>
@@ -174,7 +171,7 @@ if (
 <?php ;     }
 
 
-if ($_POST['nbPoidsQuant']==0)
+if ($_POST['nbPoidsQuant']=="0")
       {
 ?>
         <script type='text/javascript'>
