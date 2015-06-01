@@ -1,6 +1,14 @@
 <?php 
 session_start();
- require("controleurs/database_connect.php");
+ require_once("controleurs/database_connect.php");
+
+if(isset($_POST['valider'])){
+    include('controleurs/inscription.php');
+}
+
+
+
+
 
 ?>
 <!DOCTYPE html>
