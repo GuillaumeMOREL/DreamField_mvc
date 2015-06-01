@@ -109,7 +109,7 @@ while ($donneeslegume = $legume->fetch())
               <br />
               <br />
               <label for="date">Date d'expiration du produit<br/> <em>(AAAA/MM/JJ)</em> </label><br />
-              <input type="date" name="dateexpiration" id="date" maxlength="10" minlength="10" placeholder="2015/12/15" class="depot" value="<?php if (isset($_POST['dateexpiration'])) echo $_POST['dateexpiration']; ?>"/>
+              <input type="date" name="dateexpiration" id="dateexpiration" maxlength="10" minlength="10" placeholder="2015/12/15" class="depot" value="<?php if (isset($_POST['dateexpiration'])) echo $_POST['dateexpiration']; ?>"/>
               <br />
               <br />
               <label for="remarque">Ajouter une remarque/description sur votre produit</label><br /><br />
@@ -210,7 +210,7 @@ if (($_POST['dateexpiration']>"2999/12/31") OR ($_POST['dateexpiration']<"2015/0
       {
 ?>
         <script type='text/javascript'>
-        $(date).css({ // on rend le champ rouge
+        $(dateexpiration).css({ // on rend le champ rouge
           borderColor : 'red',
           color : 'red'
         });
