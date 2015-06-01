@@ -1,3 +1,4 @@
+
 <div id="milieu_inscription">
 <div class="formulaire_inscription">
 <div class="photo_inscription">
@@ -14,8 +15,8 @@ if (isset($_GET['msg']))
 }
 ?> 
 </form> </div>
- <!-- <form method="post" action="?page=inscription"> -->
-    <form method="post" name="formuleire-ins_inscription" outsubmit="return verifMail()" action="register_inscription.php"> 
+<!--  <form method="post" name="formulaire-ins_inscription" outsubmit="return verifMail()" action="?page=inscription.php">  -->
+  <form method="post" name="formulaire-ins_inscription" outsubmit="return verifMail()" action="register_inscription.php"> 
 
     <p>
               <label for="prenom" class="label_inscription">Prénom :</label>

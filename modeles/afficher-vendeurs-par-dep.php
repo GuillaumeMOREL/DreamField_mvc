@@ -1,4 +1,5 @@
 
+
 <?php
 
 /*
@@ -8,8 +9,8 @@ function getInfoAnnonce($bdd){
 }
 */
 function getVendeurParDepartement($bdd, $dep){
-	$req = $bdd->query("SELECT * FROM annonces WHERE departement_annonce = ".$dep." ");
-	return $req;
+	$req = $bdd->query("SELECT * FROM annonces INNER JOIN utilisateurs ON id_annonce = I_D WHERE departement_annonce = ".$dep." ");
+	return $req->fetchAll();
 }
 
 /*

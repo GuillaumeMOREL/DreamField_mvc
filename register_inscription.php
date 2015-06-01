@@ -19,6 +19,7 @@ if(isset($_POST['valider']))
 		$passlength = strlen($pass);
 
 		if($passlength >= 20)
+
 		{
 			//echo "passe";
 			$reqmail = $bdd-> prepare('SELECT count(mail) AS nbre_mail FROM utilisateurs WHERE mail= ?');
@@ -30,7 +31,7 @@ if(isset($_POST['valider']))
          
            		if (!($_POST['pass'] === $_POST['passverif']))
           		  {
-         			header('Location: index.php?page=inscription&msg=<font color ="red">Vos mots de passe ne sont pas identiques </font>');
+         			header('Location: index.php?page=inscription&msg=Vos mots de passe ne sont pas identiques');
         	
         		} else {
 	   				$req = $bdd-> prepare('INSERT INTO utilisateurs(prenom, nom, adresse, numero_departement, mail, tel, pass, passverif, conditions) VALUES(?,?,?,?,?,?,?,?,?)');
