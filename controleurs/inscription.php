@@ -1,6 +1,6 @@
 <?php
 require_once('modeles/function_inscription.php'); 
-	global $bdd;
+	
 	if(isset($_POST['valider']))
 	{
 		$prenom =htmlspecialchars($_POST['prenom']);
@@ -18,11 +18,11 @@ if (!empty($prenom) AND !empty($nom) AND !empty($adresse) AND !empty($numero_dep
 	$passlength = strlen($pass);
 	if($passlength <= 80)
 	{
-		$email = getMail($bdd);
+		$email = getMail($bdd, $mail);
 
 	 
-
-	 if($email == 0)
+		
+	 if($email ['nbre_mail'] == 0)
 	  {
         if($pass == $passverif)
        {

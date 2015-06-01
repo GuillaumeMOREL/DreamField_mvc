@@ -1,9 +1,14 @@
+<<<<<<< Updated upstream
 <?php
 
 require_once('modeles/connexion.php'); 
 
+=======
+>>>>>>> Stashed changes
 
+<?php
 
+require_once('modeles/function_connexion.php'); 
 
 if(isset($_POST['formconnexion']))
 {
@@ -14,9 +19,9 @@ if(isset($_POST['formconnexion']))
 
     if(!empty($mailconnect) AND !empty($passconnect))
 	  {
-    	$verif = verifMailPass($bdd);
+    	$verif = verifMailPass($bdd,$mailconnect,$passconnect);
 
-       if($resultuser != FALSE )
+       if($verif != FALSE )
        {
         
          $_SESSION['id']   = $resultuser['I_D'];
