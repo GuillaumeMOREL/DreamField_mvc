@@ -6,7 +6,7 @@
 <div class="formulaire-depot">
 <p id="formulaire-depot-titre">Afin de déposer une annonce, remplissez ce formulaire:</p>
 
-  <div class=""><p class="parcourir" > Ajouter une photo de votre denrée (JPG, PNG ou GIF | max. 15 Ko) :</p>
+  <div class=""><p class="parcourir" > Ajouter une photo de votre denrée (JPG, PNG ou GIF | max. 1 Mo) :</p>
     <form class="parcourir" method="post" action="photo.php" enctype="multipart/form-data" >
       <input type="file" name="photo" id="photo" />
   </form></div>
@@ -128,8 +128,8 @@ while ($donneeslegume = $legume->fetch())
               <br />
         <div class="valider">
           <p>Appuyez sur valider pour confirmer l'inscription</p>
-          <input id="validation-depot" type="submit" name="valider" value="Valider l'inscription" />
-          <input type="reset" id="rafraichir" value="Rafraîchir" />
+          <input id="validation-depot" type="submit" name="validerDepot" value="Valider l'inscription" />
+          <input type="reset" id="rafraichirDepot" value="Rafraîchir" />
         </div>
 
     </p>
@@ -139,7 +139,7 @@ while ($donneeslegume = $legume->fetch())
 
 
 <?php
-if(isset($_POST['valider'])) {
+if(isset($_POST['validerDepot'])) {
 
 
 if (
