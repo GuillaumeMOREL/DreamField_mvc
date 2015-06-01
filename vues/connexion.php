@@ -26,10 +26,11 @@
           <br />
           
             <div id="validation_connexion">
-              <input type="submit" name="formeconnexion" value="Connexion" class="champ_input_connexion" class="validation"/>
+              <input type="submit" name="formconnexion" value="Connexion" class="champ_input_connexion" class="validation"/>
             </div>
             
         </p>
       </form>
     </div> 
   </div>
+  

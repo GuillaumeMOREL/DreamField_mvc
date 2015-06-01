@@ -7,9 +7,7 @@
 
 <h1> Voici les vendeurs dans le département: <?php echo $annonces['departement_annonce'];?> </h1>
 
-    <?php 
-
-    ?>
+    
 	<a href="#redirige sur profil du vendeurs ac l'offre" title="<?php echo $annonces['id_annonce'];?>">
 	<div class="box_vendeurs"> 
 		<div class="date">
@@ -37,7 +35,7 @@
 	</div>
 	</a>
 	<div class="clear"></div>
-	
+<?php	
 
 }
 ?>

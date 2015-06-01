@@ -1,19 +1,11 @@
-
-
 <?php
 
-/*require('modeles/function_inscription.php'); 
+require('modeles/function_inscription.php'); 
+	/*global $bdd;
+	print_r($bdd);
+	*/
 
-	$email = getMail($bdd);
-	$InfoUser = registerInfoUser($bdd);
-
-
-if (isset($_GET['msg'])) 
-{
-  echo $_GET['msg'];
-}
-
-if(isset($_POST['valider']))
+ if(isset($_POST['valider']))
 {
 	$prenom =htmlspecialchars($_POST['prenom']);
 	$nom =htmlspecialchars($_POST['nom']);
@@ -30,26 +22,19 @@ if (!empty($prenom) AND !empty($nom) AND !empty($adresse) AND !empty($numero_dep
 	$passlength = strlen($pass);
 	if($passlength <= 80)
 	{
-		$email;
-	/*	$reqmail = $bdd-> prepare('SELECT count(mail) AS nbre_mail FROM utilisateurs WHERE mail= ?');
-	    $reqmail->execute(array($mail));
-	    $result = $reqmail->fetch();   
-
-
-
+		$email = getMail($bdd);
+		$email;	 
 
 	 if($result ['nbre_mail'] == 0)
 	  {
         if($pass == $passverif)
        {
+       		$InfoUser = registerInfoUser($bdd,$prenom, $nom, $adresse, $numero_departement, $mail, $tel, $pass, $passverif, $conditions);
+       		$InfoUser;
        	 header('Location: index.php?page=connexion&message=vos identifiants ont été bien enregistrés.Vous pouvez vous connecter');
-	
-       	 	$InfoUser;
-	    $req = $bdd-> prepare('INSERT INTO utilisateurs(prenom, nom, adresse, numero_departement, mail, tel, pass, passverif, conditions) VALUES(?,?,?,?,?,?,?,?,?)');
-	  
-	    $req->execute(array($prenom, $nom, $adresse, $numero_departement,$mail, $tel, $pass, $passverif, $conditions));  
-        }
-       
+			
+       	 	
+	  	 }
          else
           {
          	header('Location: index.php?page=inscription&message=msg=<font color ="red">Vos mots de passe ne sont pas identiques </font>');
@@ -68,11 +53,7 @@ if (!empty($prenom) AND !empty($nom) AND !empty($adresse) AND !empty($numero_dep
 	else {
 	   header('Location: index.php?page=inscription&msg=tous les champs doivent être remplis!');
  	}
- }
-*/
-
-
- 
+ } 
 require('vues/inscription.php');
 
 ?>

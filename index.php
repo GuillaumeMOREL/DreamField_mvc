@@ -1,6 +1,6 @@
 <?php 
 session_start();
-require("controleurs/database_connect.php");
+ require("controleurs/database_connect.php");
 
 ?>
 <!DOCTYPE html>
@@ -56,7 +56,7 @@ require("controleurs/database_connect.php");
         <script src="static/js/carrousel.js"></script> 
         <script src="static/js/insverif.js"></script>
         <script src="static/js/offres_sauvegardees.js"></script>
-        <script src="static/js/recuperer-le-dep.js"></script>
+        <script src="static/js/recuperer-le-dep.js"></script> 
         <script src="static/js/depotverif.js"></script>
 </body>
 </html>
