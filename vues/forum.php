@@ -1,17 +1,5 @@
 <div id="container1">
             <div id="principal"><h1 id="titre_forum">Forum</h1></div>
-    
-    <?php
-    	//Connexion	
-		try
-		{
-			$bdd = new PDO('mysql:host=localhost;dbname=dreamfield', 'root', 'root');
-		}
-		catch (Exception $e)
-		{
-				die('Erreur : ' . $e->getMessage());
-		}?>
-
 
 		<div id="ecart">
 			<fieldset id="topic">
@@ -26,8 +14,6 @@
 			</br></br></br></br>
 
 		<?php
-
-
 	
 		//requête
 		$req = $bdd->query('SELECT id, titre, username FROM forum');?>

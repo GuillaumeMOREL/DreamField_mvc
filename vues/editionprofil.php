@@ -2,7 +2,7 @@
 session_start();
 try
   {
-    $bdd = new PDO('mysql:host=localhost;dbname=DreamField', 'root', '');
+    $bdd = new PDO('mysql:host=localhost;dbname=DreamField', 'root', 'root');
   }
   catch (Exception $e)
   {
@@ -138,18 +138,7 @@ try
     }
 
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8" />   
-<title> DREAMFIELD</title>
-</head>
-  <body>
-    <header>
-      <?php include("vues/header.php"); ?>
-    </header>
-<br /><br />
-<body>
+
   <div class="newprofil" align ="center">
   <form id="newform" method="post" action="" enctype="multipart/form-data">
    
@@ -190,11 +179,8 @@ try
         </form>
         <?php if(isset($msg)) { echo $msg; } ?>      
 </div>
-    <footer>
-      <?php include("vues/footer.php"); ?>
-    </footer>  
-   </body>
-</html>
+  
+
 <?php
 // si on ne s'esr pas connécté on est redirigé sur la page de connexion
   }
