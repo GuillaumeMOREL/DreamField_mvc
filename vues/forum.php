@@ -1,22 +1,11 @@
-<html>
-<head>
-	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<title>Forum</title>
-	<link rel="shortcut icon" href="../favicon.ico">
-	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
-	<link rel="stylesheet" type="text/css" href="css/demo.css" />
-	<link rel="stylesheet" type="text/css" href="css/set1.css" />
-	<link rel="stylesheet" type="text/css" href="css/style.css" />
-</head>
-<body>
-	<div id="container1">
-            <div id="principal"><h1>Forum</h1></div>
+<div id="container1">
+            <div id="principal"><h1 id="titre_forum">Forum</h1></div>
     
     <?php
     	//Connexion	
 		try
 		{
-			$bdd = new PDO('mysql:host=localhost;dbname=dreamfield', 'root', '');
+			$bdd = new PDO('mysql:host=localhost;dbname=dreamfield', 'root', 'root');
 		}
 		catch (Exception $e)
 		{
@@ -59,5 +48,4 @@
 		//fermeture de la requête
 		$req->CloseCursor();
 		?>
-		</body>
-</html>
+

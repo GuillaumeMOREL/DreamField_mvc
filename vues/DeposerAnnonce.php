@@ -11,7 +11,7 @@
       <input type="file" name="photo" id="photo" />
   </form></div>
 
-  <form id="form" method="post" action="http://localhost/dreamfield_mvc/?page=deposerAnnonce">
+  <form id="form" method="post" action="http://localhost:8888/?page=deposerAnnonce">
     <p>
               
             <label for="nom_produit">Selectionnez le nom de votre denrée</label><br/><br />
@@ -256,7 +256,7 @@ if (
   )
 {
 
-  echo "<script type='text/javascript'>document.location.replace('http://localhost/dreamfield_mvc/?page=ProfilUtilisateur.php');</script>";
+  echo "<script type='text/javascript'>document.location.replace('http://localhost:8888/?page=ProfilUtilisateur');</script>";
   $req = $bdd->prepare('INSERT INTO `DREAMFIELD`.`annonces` (`nom_produit`, `ProduitAutre`, `nbPoidsQuant`, `PoidsQuant`, `dateexpiration`, `remarque`, `prix`, `troc`) VALUES (:nom_produit, :ProduitAutre, :nbPoidsQuant, :PoidsQuant, :dateexpiration, :remarque, :prix, :troc)');
   $req->execute(array(
     

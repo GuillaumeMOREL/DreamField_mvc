@@ -2,8 +2,9 @@
 <div class="milieu_connexion">
 
     <div class="formulaire_connexion">
-      <form id="form_connexion" method="post" action="?page=connexion">
 
+      <form id="form_connexion" method="post" action="controleurs/connexion.php">
+        
         <p>
 
 <?php
