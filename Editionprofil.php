@@ -25,7 +25,7 @@ try
       $newadresse = htmlspecialchars($_POST['newadresse']);
       $insertadresse = $bdd-> prepare('UPDATE utilisateurs SET adresse= ? WHERE I_D = ?');
       $insertadresse->execute(array($newadresse, $_SESSION['id']));
-    header('Location: ProfilUtilisateur.php?id='.$_SESSION['id']);
+    header('Location: ProfilUtilisateur1.php?id='.$_SESSION['id']);
    }
   
    if(isset($_POST['newcodepost']) AND !empty($_POST['newcodepost']) AND $_POST['newcodepost'] != $result['codepost'])
@@ -34,7 +34,7 @@ try
       $newcodepost = htmlspecialchars($_POST['newcodepost']);
       $insertcodepost = $bdd-> prepare('UPDATE utilisateurs SET codepost= ? WHERE I_D = ?');
       $insertcodepost->execute(array($newcodepost, $_SESSION['id']));
-      header('Location: profilUtilisateur.php?id='.$_SESSION['id']);
+      header('Location: profilUtilisateur1.php?id='.$_SESSION['id']);
       
    }
 
@@ -45,7 +45,7 @@ try
       $insertville = $bdd-> prepare('UPDATE utilisateurs SET ville= ? WHERE I_D = ?');
       $insertville->execute(array($newville, $_SESSION['id']));
 
-      header('Location: profilUtilisateur.php?id='.$_SESSION['id']);
+      header('Location: profilUtilisateur1.php?id='.$_SESSION['id']);
    }
 
    if(isset($_POST['newmail']) AND !empty($_POST['newmail']) AND $_POST['newmail'] != $result['mail'])
@@ -54,7 +54,7 @@ try
       $newmail = htmlspecialchars($_POST['newmail']);
       $insertmail = $bdd-> prepare('UPDATE utilisateurs SET mail= ? WHERE I_D = ?');
       $insertmail->execute(array($newmail, $_SESSION['id']));
-      header('Location: profilUtilisateur.php?id='.$_SESSION['id']);
+      header('Location: profilUtilisateur1.php?id='.$_SESSION['id']);
    }
 
    if(isset($_POST['newtel']) AND !empty($_POST['newtel']) AND $_POST['newtel'] != $result['tel'])
@@ -63,7 +63,7 @@ try
       $newtel = htmlspecialchars($_POST['newtel']);
       $insertel = $bdd-> prepare('UPDATE utilisateurs SET tel= ? WHERE I_D = ?');
       $insertel->execute(array($newtel, $_SESSION['id']));
-      header('Location: profilUtilisateur.php?id='.$_SESSION['id']);
+      header('Location: profilUtilisateur1.php?id='.$_SESSION['id']);
    }
 
    if(isset($_POST['newpass']) AND !empty($_POST['newpass']) AND   isset($_POST['newpassverif']) AND !empty($_POST['newpassverif']))
@@ -76,7 +76,7 @@ try
         $insertpass = $bdd-> prepare('UPDATE utilisateurs SET pass= ? WHERE I_D = ?');
       $insertpass->execute(array($newpass, $_SESSION['id']));
 
-      header('Location: profilUtilisateur.php?id='.$_SESSION['id']);
+      header('Location: profilUtilisateur1.php?id='.$_SESSION['id']);
     
       }
       else
@@ -113,7 +113,7 @@ try
               {
                  $updateavatar = $bdd->prepare('UPDATE utilisateurs SET photo_profil = :photo_profil WHERE I_D = :I_D');
                  $updateavatar->execute(array('photo_profil' => $_SESSION['id'].".".$extensionUpload, 'I_D' => $_SESSION['id']));
-                 header('Location: profilUtilisateur.php?id='.$_SESSION['id']);
+                 header('Location: profilUtilisateur1.php?id='.$_SESSION['id']);
 
               }
               else
@@ -134,7 +134,7 @@ try
      }
      if(isset($_POST['newadresse']) AND $_POST['newadresse']== $result['adresse'] AND isset($_POST['newnumero_departement']) AND $_POST['newnumero_departement'] == $result['numero_departement'] AND isset($_POST['newmail']) AND $_POST['newmail'] == $result['mail'] AND isset($_POST['newtel']) AND $_POST['newtel'] == $result['tel'])
     {
-      //header('Location: ProfilUtilisateur.php?id='.$_SESSION['id']);
+      //header('Location: ProfilUtilisateur1.php?id='.$_SESSION['id']);
     }
 
 ?>
@@ -146,7 +146,7 @@ try
 </head>
   <body>
     <header>
-      <?php include("include/header.php"); ?>
+      <?php include("vues/header.php"); ?>
     </header>
 <br /><br />
 <body>
@@ -191,7 +191,7 @@ try
         <?php if(isset($msg)) { echo $msg; } ?>      
 </div>
     <footer>
-      <?php include("include/footer.php"); ?>
+      <?php include("vues/footer.php"); ?>
     </footer>  
    </body>
 </html>

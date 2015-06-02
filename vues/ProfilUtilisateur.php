@@ -12,12 +12,15 @@ require("controleurs/database_connect.php");
 ?>  
 <br />
 <br />
+<br />
+<br />
+<br />
   <div class="profil" align ="center">
     <h3> Nom             : <?php echo $userinfo['nom']; ?></h3>
     <h3> Prénom          : <?php echo $userinfo['prenom']; ?></h3>
     <h3> Téléphone       : <?php echo $userinfo['tel']; ?></h3>
     <h3> Adresse         : <?php echo $userinfo['adresse']; ?></h3>
-    <h3> Code postal     : <?php echo $userinfo['codepost']; ?></h3>
+    <h3> numero_departement     : <?php echo $userinfo['numero_departement']; ?></h3>
     <h3> E-mail          : <?php echo $userinfo['mail']; ?></h3>
 
     <br />
@@ -26,7 +29,7 @@ require("controleurs/database_connect.php");
    <?php
     if(isset($_SESSION['id']) AND $userinfo['I_D'] == $_SESSION['id'])
     {
-    ?> -->
+    ?> 
     <a href ="Editionprofil.php"> Modifier mon profil </a>
     <br />
     <br />

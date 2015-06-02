@@ -25,7 +25,7 @@ try
 </head>
   <body>
     <header>
-      <?php include("include/header.php"); ?>
+      <?php include("vues/header.php"); ?>
     </header>
 <br /><br />
 <body>
@@ -66,7 +66,7 @@ try
     ?>
 </div>
     <footer>
-      <?php include("include/footer.php"); ?>
+      <?php include("vues/footer.php"); ?>
     </footer>  
    </body>
 </html>
