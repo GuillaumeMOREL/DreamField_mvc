@@ -1,13 +1,3 @@
-<html>
-<head>
-	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<title>Article</title>
-	<link rel="shortcut icon" href="../favicon.ico">
-	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
-	<link rel="stylesheet" type="text/css" href="css/demo.css" />
-	<link rel="stylesheet" type="text/css" href="css/set1.css" />
-	<link rel="stylesheet" type="text/css" href="css/style.css" />
-</head>	
 	<?php
 	
 		try
@@ -73,5 +63,5 @@
                     <input type="submit" value="Envoyer" />
                 </form>
 			</fieldset></div></div>
-</html>	
+
 	

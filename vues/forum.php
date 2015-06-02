@@ -41,7 +41,7 @@
 			<fieldset>
 					<legend><?php echo $cat['titre']." de ".$cat['username'] ?></legend>
 					<h3>Date de publication : </h3>
-					<h3>Lien : <a href="sujet.php?id=<?php echo $cat['id'] ?>"> cliquez-ici !</a></h3>
+					<h3>Lien : <a href="?page=sujet&id=<?php echo $cat['id'] ?>"> cliquez-ici !</a></h3>
 				</fieldset></br><?php
 		}?></div></div><?php
 	
