@@ -1,12 +1,9 @@
+
 <div class="milieu_connexion">
 
     <div class="formulaire_connexion">
-
-<<<<<<< Updated upstream
-      <form id="form_connexion" method="post" action="/controleurs/connexion.php">
-=======
       <form id="form_connexion" method="post" action="?page=connexion">
->>>>>>> Stashed changes
+
         <p>
 
 <?php
