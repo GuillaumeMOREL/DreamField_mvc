@@ -38,12 +38,6 @@ try
     <img src="avatar/<?php echo $userinfo['photo_profil']; ?>" />
     <?php
     }
-    else
-    {
-    ?>
-    <img src="avatar/default.jpg/<?php echo $userinfo['photo_profil']; ?>" />
-    <?php
-    }
     ?>
     <br />
     <h3> Nom             : <?php echo $userinfo['nom']; ?></h3>
@@ -60,7 +54,7 @@ try
     <a href ="Editionprofil.php"> Modifier mon profil </a>
     <br />
     <br />
-    <a href="deconnexion.php"> Se déconnecter </a>
+    <a href="controleurs/deconnexion.php"> Se déconnecter </a>
     <?php
     }
     ?>
