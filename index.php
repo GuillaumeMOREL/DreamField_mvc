@@ -16,13 +16,16 @@ session_start();
     <link rel="Stylesheet" href="static/css/Style_redirection.css" />
     <link rel="Stylesheet" href="static/css/Style_vendeurs.css" />
     <link rel="Stylesheet" href="static/css/Style_forum.css" />
-    <link rel="Stylesheet" href="static/css/header.css" />
+    <link rel="Stylesheet" href="static/css/Style_profilUtilisateur.css" />
+    <link rel="Stylesheet" href="static/css/Style_editionprofil.css" />
     <link rel="Stylesheet" href="static/css/footer.css" />
+    <link rel="Stylesheet" href="static/css/header.css" />
 
-    <link rel="Stylesheet" type="text/css" href="static/css/normalize.css" />
-    <link rel="Stylesheet" type="text/css" href="static/css/demo.css" />
-    <link rel="Stylesheet" type="text/css" href="static/css/set1.css" />
-    <link rel="Stylesheet" type="text/css" href="static/css/style.css" />
+
+    <link rel="Stylesheet" type="text/css" href="static/css/Style_normalize.css" />
+    <link rel="Stylesheet" type="text/css" href="static/css/Style_demo.css" />
+    <link rel="Stylesheet" type="text/css" href="static/css/Style_set1.css" />
+    <link rel="Stylesheet" type="text/css" href="static/css/Style_style.css" />
 
     <title> DREAMFIELD</title>
 </head>

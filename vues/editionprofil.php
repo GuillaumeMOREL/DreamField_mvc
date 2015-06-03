@@ -1,13 +1,6 @@
 <?php
 session_start();
-try
-  {
-    $bdd = new PDO('mysql:host=localhost;dbname=DreamField', 'root', 'root');
-  }
-  catch (Exception $e)
-  {
-      die('Erreur : ' . $e->getMessage());
-  }
+
   //on fait une condition pour plus de sécurité
  
 //header("Location: Incription.php");
@@ -153,7 +146,7 @@ try
               <br />
               <br />
               <label class="newgrand" for="newtel"> Numero de telephone :</label>
-              <input type="tel" name="newtel" id="newtel" value="<?php echo $result['tel']; ?>" maxlength="10" minlength="10"/>
+              <input type="tel" name="newtel" id="newtel" value="<?php echo '0'.$result['tel']; ?>" maxlength="10" minlength="10"/>
               <br />
               <br />
               <label class="newgrand" for="newpass">Mot de passe :</label>

@@ -127,8 +127,8 @@ while ($donneeslegume = $legume->fetch())
               <br />
               <br />
         <div class="valider">
-          <p>Appuyez sur valider pour confirmer l'inscription</p>
-          <input id="validation-depot" type="submit" name="validerDepot" value="Valider l'inscription" />
+          <p>Appuyez sur valider pour confirmer l'envoie de l'annonce.</p>
+          <input id="validation-depot" type="submit" name="validerDepot" value="Envoyer l'annonce" />
           <input type="reset" id="rafraichirDepot" value="Rafraîchir" />
         </div>
 
