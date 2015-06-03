@@ -1,6 +1,5 @@
 <?php
-
-require_once('modeles/function_connexion.php'); 
+require('modeles/function_connexion.php'); 
 
 if(isset($_POST['formconnexion']))
 {
@@ -10,8 +9,8 @@ if(isset($_POST['formconnexion']))
       
 
     if(!empty($mailconnect) AND !empty($passconnect))
-	  {
-    	$verif = verifMailPass($bdd,$mailconnect,$passconnect);
+    {
+      $verif = verifMailPass($bdd,$mailconnect,$passconnect);
 
        if($verif != FALSE )
        {
@@ -28,7 +27,7 @@ if(isset($_POST['formconnexion']))
          header('Location: index.php?page=connexion&message=Mot de pass ou mail incorrect!');
         }
 
-	}else {
+  }else {
   
       header('Location: index.php?page=connexion&message=Tous les champs doivent être remplis!');
       }
