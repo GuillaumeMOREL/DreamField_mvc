@@ -20,32 +20,29 @@ try
   $req->execute(array($_SESSION['id']));
   $result = $req->fetch();
 
-   if(isset($_POST['newadresse']) AND !empty($_POST['newadresse']) AND $_POST['newadresse'] != $result['adresse'])
+   if(isset($_POST['newadresse']) AND !empty($_POST['newadresse']) AND $_POST['newadresse'] != $result['adresse'] OR isset($_POST['newnumero_departement']) AND !empty($_POST['newnumero_departement']) AND $_POST['newnumero_departement'] != $result['numero_departement'] OR isset($_POST['newmail']) AND !empty($_POST['newmail']) AND $_POST['newmail'] != $result['mail'] 
+       OR isset($_POST['newtel']) AND !empty($_POST['newtel']) AND $_POST['newtel'] != $result['tel'] )
    {
-      $newadresse = htmlspecialchars($_POST['newadresse']);
-      $insertadresse = $bdd-> prepare('UPDATE utilisateurs SET adresse= ? WHERE I_D = ?');
-      $insertadresse->execute(array($newadresse, $_SESSION['id']));
+       $newadresse = htmlspecialchars($_POST['newadresse']);
+       $newnumero_departement = htmlspecialchars($_POST['newnumero_departement']);
+       $newmail = htmlspecialchars($_POST['newmail']);
+       $newtel = htmlspecialchars($_POST['newtel']);
+
+      $insert = $bdd-> prepare('UPDATE utilisateurs SET adresse= ?, numero_departement= ?, mail= ?, tel= ? WHERE I_D = ?');
+      $insert->execute(array($newadresse, $newnumero_departement, $newmail, $newtel, $_SESSION['id']));
     header('Location: ProfilUtilisateur1.php?id='.$_SESSION['id']);
    }
+       
+
   
-   if(isset($_POST['newcodepost']) AND !empty($_POST['newcodepost']) AND $_POST['newcodepost'] != $result['codepost'])
+  /*if(isset($_POST['newnumero_departement']) AND !empty($_POST['newnumero_departement']) AND $_POST['newnumero_departement'] != $result['numero_departement'])
    {
   
-      $newcodepost = htmlspecialchars($_POST['newcodepost']);
-      $insertcodepost = $bdd-> prepare('UPDATE utilisateurs SET codepost= ? WHERE I_D = ?');
+      $newcodepost = htmlspecialchars($_POST['newnumero_departement']);
+      $insertcodepost = $bdd-> prepare('UPDATE utilisateurs SET numero_departement= ? WHERE I_D = ?');
       $insertcodepost->execute(array($newcodepost, $_SESSION['id']));
       header('Location: profilUtilisateur1.php?id='.$_SESSION['id']);
       
-   }
-
-   if(isset($_POST['newville']) AND !empty($_POST['newville']) AND $_POST['newville'] != $result['ville'])
-   {
-      
-      $newville= htmlspecialchars($_POST['newville']);
-      $insertville = $bdd-> prepare('UPDATE utilisateurs SET ville= ? WHERE I_D = ?');
-      $insertville->execute(array($newville, $_SESSION['id']));
-
-      header('Location: profilUtilisateur1.php?id='.$_SESSION['id']);
    }
 
    if(isset($_POST['newmail']) AND !empty($_POST['newmail']) AND $_POST['newmail'] != $result['mail'])
@@ -64,7 +61,7 @@ try
       $insertel = $bdd-> prepare('UPDATE utilisateurs SET tel= ? WHERE I_D = ?');
       $insertel->execute(array($newtel, $_SESSION['id']));
       header('Location: profilUtilisateur1.php?id='.$_SESSION['id']);
-   }
+   }*/
 
    if(isset($_POST['newpass']) AND !empty($_POST['newpass']) AND   isset($_POST['newpassverif']) AND !empty($_POST['newpassverif']))
     {  
@@ -85,8 +82,7 @@ try
       }
 
     }
-
-    
+   
     // ajouter l'avatar 
      if(isset($_FILES['avatar']) AND !empty($_FILES['avatar']['name']))
      {
@@ -132,10 +128,10 @@ try
         }
 
      }
-     if(isset($_POST['newadresse']) AND $_POST['newadresse']== $result['adresse'] AND isset($_POST['newnumero_departement']) AND $_POST['newnumero_departement'] == $result['numero_departement'] AND isset($_POST['newmail']) AND $_POST['newmail'] == $result['mail'] AND isset($_POST['newtel']) AND $_POST['newtel'] == $result['tel'])
+    /* if(isset($_POST['newadresse']) AND $_POST['newadresse']== $result['adresse'] AND isset($_POST['newnumero_departement']) AND $_POST['newnumero_departement'] == $result['numero_departement'] AND isset($_POST['newmail']) AND $_POST['newmail'] == $result['mail'] AND isset($_POST['newtel']) AND $_POST['newtel'] == $result['tel'])
     {
       //header('Location: ProfilUtilisateur1.php?id='.$_SESSION['id']);
-    }
+    }*/
 
 ?>
 <!DOCTYPE html>
@@ -196,10 +192,10 @@ try
    </body>
 </html>
 <?php
-// si on ne s'esr pas connécté on est redirigé sur la page de connexion
-  }
+}
+// si on ne s'est pas connécté on est redirigé sur la page de connexion
   else
   {
-    header("Location: connexion.php");
+    header("Location: index.php?page=connexion");
   }
 ?>

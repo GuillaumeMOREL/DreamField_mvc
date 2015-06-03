@@ -1,11 +1,3 @@
-<<<<<<< Updated upstream
-<?php
-
-require_once('modeles/connexion.php'); 
-
-=======
->>>>>>> Stashed changes
-
 <?php
 
 require_once('modeles/function_connexion.php'); 
@@ -24,8 +16,8 @@ if(isset($_POST['formconnexion']))
        if($verif != FALSE )
        {
         
-         $_SESSION['id']   = $resultuser['I_D'];
-         $_SESSION['mail'] = $resultuser['mail'];
+         $_SESSION['id']   = $verif['I_D'];
+         $_SESSION['mail'] = $verif['mail'];
 
 
         header('Location: index.php?page=ProfilUtilisateur&id='.$_SESSION['id']);
