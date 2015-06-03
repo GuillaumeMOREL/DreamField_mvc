@@ -36,7 +36,7 @@ require("controleurs/database_connect.php");
 
     <br />
     <br />
-    <a href="?page=deconnexion"> Se déconnecter </a>
+    <a href="?page=Deconnexion"> Se déconnecter </a>
   <?php  
     }
     ?> 

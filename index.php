@@ -1,5 +1,17 @@
 <?php 
 session_start();
+        if (!isset($_GET["page"]) || $_GET["page"] == "") {
+            include("controleurs/accueil.php");
+        }
+        else if (isset($_GET['page'])&& !empty($_GET['page']) && is_file('controleurs/'.$_GET['page'].'.php')) {
+            
+           include("controleurs/".$_GET["page"].".php");
+        }
+
+        else {
+            include("vues/404.php");
+        }
+
  require_once("controleurs/database_connect.php");
 ?>
 <!DOCTYPE html>
@@ -35,21 +47,6 @@ session_start();
         <?php include("vues/header.php"); ?>
     </header>
 
-		<?php 
-		if (!isset($_GET["page"]) || $_GET["page"] == "") {
-			include("controleurs/accueil.php");
-		}
-		else if (isset($_GET['page'])&& !empty($_GET['page']) && is_file('controleurs/'.$_GET['page'].'.php')) {
-			
-
-           include("controleurs/".$_GET["page"].".php");
-        }
-
-		else {
-			include("vues/404.php");
-		}
-
-		?>
 
         <div id="logo-fl">
             <a href="#"><img src="static/img/logo/fleche.png" id="logo-fleche" ></a>
