@@ -1,5 +1,5 @@
 <?php
-require('modeles/fruits.php');
+require('modeles/function_offres.php');
 
 $fruits = getFruits($bdd);
 

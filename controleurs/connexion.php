@@ -1,5 +1,6 @@
 <?php
-require('modeles/function_connexion.php'); 
+
+require_once('modeles/function_connexion.php'); 
 
 if(isset($_POST['formconnexion']))
 {
