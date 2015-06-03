@@ -2,6 +2,22 @@
   <div  id="top-header" class="container">  
       <a href="index.php"><img src="static/img/logo/logo.png" id="logo"></a>
       <div id="acces_compte">
+
+
+
+
+
+
+      <?php/*
+      if(isset($session(id)){
+         
+         echo "ok";
+      }
+      */?>
+
+
+
+
       <a class="connection_inscription_panier" href="?page=connexion">Se connecter</a>
       <a class="connection_inscription_panier" href="?page=inscription">S'inscrire </a>
 
