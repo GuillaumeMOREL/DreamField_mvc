@@ -10,6 +10,14 @@ require("controleurs/database_connect.php");
        $userinfo = $requser->fetch();
     
 ?>  
+<?php
+    if(!empty($userinfo['photo_profil']))
+    {
+    ?>
+    <img src="avatar/<?php echo $userinfo['photo_profil']; ?>" width="250" />
+    <?php
+    }
+    ?>
 <br />
 <br />
 <br />
@@ -24,13 +32,11 @@ require("controleurs/database_connect.php");
     <h3> E-mail          : <?php echo $userinfo['mail']; ?></h3>
 
     <br />
-
-
    <?php
     if(isset($_SESSION['id']) AND $userinfo['I_D'] == $_SESSION['id'])
     {
     ?> 
-    <a href ="?page=editionprofil"> Modifier mon profil </a>
+    <a href ="Editionprofil.php"> Modifier mon profil </a>
     <br />
     <br />
     <a href="?page=deconnexion"> Se déconnecter </a>
