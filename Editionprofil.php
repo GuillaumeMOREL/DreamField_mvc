@@ -114,7 +114,7 @@ try
               }
               else
               {
-                $msg = "erreur durant l'importation de votre profil!";
+                $msg = "Erreur durant l'importation de votre profil!";
               }
            }
            else
