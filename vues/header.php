@@ -7,7 +7,7 @@
       if(isset($_SESSION['id'])){ 
        /* $nomprenom = $bdd->query('SELECT prenom, nom FROM utilisateurs WHERE I_D="id"');*/
         ?>
-         <a class="connection_inscription_panier" href="?page=ProfilUtilisateur">Mon Profil</a>
+         <a class="connection_inscription_panier" href="?page=ProfilUtilisateur&id=<?php echo $_SESSION['id'];?>">Mon Profil</a>
         
       <a class="connection_inscription_panier" style="cursor:pointer" id="toggler"> Mon Panier (0) </a>
       <div id="toggle" style="display:none;  z-index: 1;"> Votre panier est vide.</div>
@@ -36,14 +36,14 @@
         </script>
 
 
-        <?php ;}
+        <?php }
          
      else{
       ?>
       <a class="connection_inscription_panier" href="?page=connexion">Se connecter</a>
       <a class="connection_inscription_panier" href="?page=inscription">S'inscrire </a>
 
-      <?php ;}
+      <?php }
       ?>
 
       </div>

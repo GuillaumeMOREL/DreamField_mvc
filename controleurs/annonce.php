@@ -1,9 +1,9 @@
 <?php
-//require('modeles/afficher-vendeurs-par-dep.php');
+require('modeles/afficher-vendeurs-par-dep.php');
 
-/*$annonce = getInfoAnnonce($bdd); */
+//$annonce = getInfoAnnonce($bdd); 
 $id = htmlspecialchars($_GET['id']);
-$dn = getVendeurParDepartement($bdd,$id);
+$dn = getVendeurParDepartement($bdd,$dep);
 var_dump($dn);
 
 require('vues/vendeurs.php');

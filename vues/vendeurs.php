@@ -1,9 +1,10 @@
 <div class="liste-offres">
-
+<!--
 <?php
+/*
 	foreach($dn as $vendeurs){
-
-?>
+}*/
+?> -->
 
 <h1> Voici les vendeurs dans le département: <?php echo $annonces['departement_annonce'];?> </h1>
 
@@ -28,10 +29,11 @@
 			<div class="produit"><?php echo $annonces['nom_produit'];?> </div>
 			<div class="categorie"><?php echo $annonces['categorie'];?></div>
 			<div class="quantite"><?php echo $annonces['quantite'];?></div>
-	<!--   <div class="departement">#departement</div> -->
+	 <!--   <div class="departement">#departement</div> -->
 			<div class="prix"><?php echo $annonces['prix'];?></div>
 			<div class="clear"></div> 
-	</div>
+		</div>
 	</div>
 	</a>
 	<div class="clear"></div>
+</div>
