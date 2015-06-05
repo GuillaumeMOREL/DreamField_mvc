@@ -139,5 +139,3 @@ while ($donneeslegume = $legume->fetch())
   </form>
  
 </div>
- 
- 

@@ -9,10 +9,6 @@ try
       die('Erreur : ' . $e->getMessage());
   }
   //on fait une condition pour plus de sécurité
- 
-//header("Location: Incription.php");
-// include("Editionprofil.php");
-
   if(isset($_SESSION['id']))
 {
 
@@ -30,38 +26,7 @@ try
 
       $insert = $bdd-> prepare('UPDATE utilisateurs SET adresse= ?, numero_departement= ?, mail= ?, tel= ? WHERE I_D = ?');
       $insert->execute(array($newadresse, $newnumero_departement, $newmail, $newtel, $_SESSION['id']));
-    header('Location: ProfilUtilisateur1.php?id='.$_SESSION['id']);
    }
-       
-
-  
-  /*if(isset($_POST['newnumero_departement']) AND !empty($_POST['newnumero_departement']) AND $_POST['newnumero_departement'] != $result['numero_departement'])
-   {
-  
-      $newcodepost = htmlspecialchars($_POST['newnumero_departement']);
-      $insertcodepost = $bdd-> prepare('UPDATE utilisateurs SET numero_departement= ? WHERE I_D = ?');
-      $insertcodepost->execute(array($newcodepost, $_SESSION['id']));
-      header('Location: profilUtilisateur1.php?id='.$_SESSION['id']);
-      
-   }
-
-   if(isset($_POST['newmail']) AND !empty($_POST['newmail']) AND $_POST['newmail'] != $result['mail'])
-   {
-      
-      $newmail = htmlspecialchars($_POST['newmail']);
-      $insertmail = $bdd-> prepare('UPDATE utilisateurs SET mail= ? WHERE I_D = ?');
-      $insertmail->execute(array($newmail, $_SESSION['id']));
-      header('Location: profilUtilisateur1.php?id='.$_SESSION['id']);
-   }
-
-   if(isset($_POST['newtel']) AND !empty($_POST['newtel']) AND $_POST['newtel'] != $result['tel'])
-   {
-      
-      $newtel = htmlspecialchars($_POST['newtel']);
-      $insertel = $bdd-> prepare('UPDATE utilisateurs SET tel= ? WHERE I_D = ?');
-      $insertel->execute(array($newtel, $_SESSION['id']));
-      header('Location: profilUtilisateur1.php?id='.$_SESSION['id']);
-   }*/
 
    if(isset($_POST['newpass']) AND !empty($_POST['newpass']) AND   isset($_POST['newpassverif']) AND !empty($_POST['newpassverif']))
     {  
@@ -73,7 +38,7 @@ try
         $insertpass = $bdd-> prepare('UPDATE utilisateurs SET pass= ? WHERE I_D = ?');
       $insertpass->execute(array($newpass, $_SESSION['id']));
 
-      header('Location: profilUtilisateur1.php?id='.$_SESSION['id']);
+      header('Location: index.php?page=ProfilUtilisateur&id='.$_SESSION['id']);
     
       }
       else
@@ -109,7 +74,7 @@ try
               {
                  $updateavatar = $bdd->prepare('UPDATE utilisateurs SET photo_profil = :photo_profil WHERE I_D = :I_D');
                  $updateavatar->execute(array('photo_profil' => $_SESSION['id'].".".$extensionUpload, 'I_D' => $_SESSION['id']));
-                 header('Location: profilUtilisateur1.php?id='.$_SESSION['id']);
+                 header('Location: index.php?page=ProfilUtilisateur&id='.$_SESSION['id']);
 
               }
               else
@@ -128,10 +93,10 @@ try
         }
 
      }
-    /* if(isset($_POST['newadresse']) AND $_POST['newadresse']== $result['adresse'] AND isset($_POST['newnumero_departement']) AND $_POST['newnumero_departement'] == $result['numero_departement'] AND isset($_POST['newmail']) AND $_POST['newmail'] == $result['mail'] AND isset($_POST['newtel']) AND $_POST['newtel'] == $result['tel'])
+    if(isset($_POST['newadresse']) AND $_POST['newadresse']== $result['adresse'] OR isset($_POST['newnumero_departement']) AND $_POST['newnumero_departement'] == $result['numero_departement'] OR isset($_POST['newmail']) AND $_POST['newmail'] == $result['mail'] OR isset($_POST['newtel']) AND $_POST['newtel'] == $result['tel'] OR isset($_FILES['avatar']))
     {
-      //header('Location: ProfilUtilisateur1.php?id='.$_SESSION['id']);
-    }*/
+      header('Location: index.php?page=ProfilUtilisateur&id='.$_SESSION['id']);
+    }
 
 ?>
 <!DOCTYPE html>
@@ -155,7 +120,7 @@ try
               <input type="text" name="newadresse" id="newadresse" class="newchamp" size="30" placeholder="Ex :2 bis rue du long des bois" value="<?php echo $result['adresse']; ?>" />
               <br />
               <br />
-              <label for="newnumero_departement"> num&eacutero d&eacutepartement :</label>
+              <label for="newnumero_departement"> num&eacute;ro d&eacute;partement :</label>
               <input type="number" name="newnumero_departement" id="newnumero_departement" class="newchamp" placeholder="Ex : 78" value="<?php echo $result['numero_departement']; ?>" min="01" max="95"/>
               <br />
               <br />
