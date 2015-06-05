@@ -36,16 +36,18 @@ require("controleurs/database_connect.php");
     if(isset($_SESSION['id']) AND $userinfo['I_D'] == $_SESSION['id'])
     {
     ?> 
-    <a href ="Editionprofil.php"> Modifier mon profil </a>
+    <div id="editionprofil">
+      <a href ="?page=editionprofil"> Modifier mon profil </a>
+    </div>
     <br />
     <br />
-    <a href="?page=deconnexion"> Se déconnecter </a>
+    <a href="?page=Deconnexion"> Se déconnecter </a>
   <?php  
     }
     ?> 
 </div> 
 
- <?php
+<?php
   }
 ?>
 

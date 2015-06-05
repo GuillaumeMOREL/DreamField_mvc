@@ -26,7 +26,6 @@ try
 
       $insert = $bdd-> prepare('UPDATE utilisateurs SET adresse= ?, numero_departement= ?, mail= ?, tel= ? WHERE I_D = ?');
       $insert->execute(array($newadresse, $newnumero_departement, $newmail, $newtel, $_SESSION['id']));
-    //header('Location: index.php?page=ProfilUtilisateur&id='.$_SESSION['id']);
    }
 
    if(isset($_POST['newpass']) AND !empty($_POST['newpass']) AND   isset($_POST['newpassverif']) AND !empty($_POST['newpassverif']))

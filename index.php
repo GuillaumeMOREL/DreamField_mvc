@@ -1,10 +1,37 @@
 <?php 
 session_start();
  require_once("controleurs/database_connect.php");
+
+ include("vues/header.php"); 
+
+		if (!isset($_GET["page"]) || $_GET["page"] == "") {
+			include("controleurs/accueil.php");
+		}
+		else if (isset($_GET['page'])&& !empty($_GET['page']) && is_file('controleurs/'.$_GET['page'].'.php')) {
+
+            include("controleurs/".$_GET["page"].".php");
+                
+        }
+
+		else {
+
+			include("vues/404.php");
+		}
+
+		?>
+
+        <div id="logo-fl">
+            <a href="#"><img src="static/img/logo/fleche.png" id="logo-fleche" ></a>
+        </div>
+<?php
+
+      include("vues/footer.php"); 
+   
 ?>
-<!DOCTYPE html>
-<html>
-<head>
+
+    <title> DREAMFIELD</title>
+
+
     <meta charset="utf-8" />   
     <link rel="Stylesheet" href="static/css/Style_accueil.css" />
     <link rel="Stylesheet" href="static/css/Style_offres.css" />
@@ -16,45 +43,16 @@ session_start();
     <link rel="Stylesheet" href="static/css/Style_redirection.css" />
     <link rel="Stylesheet" href="static/css/Style_vendeurs.css" />
     <link rel="Stylesheet" href="static/css/Style_forum.css" />
-    <link rel="Stylesheet" href="static/css/header.css" />
+    <link rel="Stylesheet" href="static/css/Style_profilUtilisateur.css" />
+    <link rel="Stylesheet" href="static/css/Style_editionprofil.css" />
     <link rel="Stylesheet" href="static/css/footer.css" />
+    <link rel="Stylesheet" href="static/css/header.css" />
 
-    <link rel="Stylesheet" type="text/css" href="static/css/normalize.css" />
-    <link rel="Stylesheet" type="text/css" href="static/css/demo.css" />
-    <link rel="Stylesheet" type="text/css" href="static/css/set1.css" />
-    <link rel="Stylesheet" type="text/css" href="static/css/style.css" />
 
-    <title> DREAMFIELD</title>
-</head>
-
-<body>
-    <header>
-        <?php include("vues/header.php"); ?>
-    </header>
-
-		<?php 
-		if (!isset($_GET["page"]) || $_GET["page"] == "") {
-			include("controleurs/accueil.php");
-		}
-		else if (isset($_GET['page'])&& !empty($_GET['page']) && is_file('controleurs/'.$_GET['page'].'.php')) {
-			
-
-           include("controleurs/".$_GET["page"].".php");
-        }
-
-		else {
-			include("vues/404.php");
-		}
-
-		?>
-
-        <div id="logo-fl">
-            <a href="#"><img src="static/img/logo/fleche.png" id="logo-fleche" ></a>
-        </div>
-
-    <footer>
-        <?php include("vues/footer.php"); ?> 
-    </footer>
+    <link rel="Stylesheet" type="text/css" href="static/css/Style_normalize.css" />
+    <link rel="Stylesheet" type="text/css" href="static/css/Style_demo.css" />
+    <link rel="Stylesheet" type="text/css" href="static/css/Style_set1.css" />
+    <link rel="Stylesheet" type="text/css" href="static/css/Style_style.css" />
       
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>  
         <script src="static/js/carrousel.js"></script> 
@@ -64,5 +62,3 @@ session_start();
         <script src="static/js/depotverif.js"></script>
         <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 
-</body>
-</html>
