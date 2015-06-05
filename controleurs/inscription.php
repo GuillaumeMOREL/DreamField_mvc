@@ -1,3 +1,4 @@
+
 <?php
 require_once('modeles/function_inscription.php'); 
 	
