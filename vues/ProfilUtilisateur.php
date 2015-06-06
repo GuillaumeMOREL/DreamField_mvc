@@ -1,4 +1,4 @@
-<?php
+class="lien_profilUtilisateur" <?php
 
   if(isset($_GET['id']) AND $_GET['id'] > 0)
      {
@@ -34,11 +34,11 @@
     ?> 
 
     <div id="mmp_profilUtilisateur" class="lien_profilUtilisateur">
-      <a href ="?page=editionprofil"> Modifier mon profil </a>
+      <a class=" lien-bis_profilUtilisateur" href ="?page=editionprofil"> Modifier mon profil </a>
     </div>
 
     <div id="deco_profilUtilisateur" class="lien_profilUtilisateur">
-      <a href="?page=Deconnexion"> Se déconnecter </a>
+      <a class=" lien-bis_profilUtilisateur" href="?page=Deconnexion"> Se déconnecter </a>
     </div>
 
   <?php  
