@@ -34,9 +34,9 @@ $fruits->closeCursor();
 	
 <?php
     while($categorie = $legumes -> fetch()){
-    
+
 ?>
-    <section class="section_fruit_legume">   
+  <section class="section_fruit_legume">   
 	<img class="img_fruit_legume" src="<?php echo $categorie['chemin_photo'];?>" alt="<?php echo $categorie['nom_produit'];?>" title="Cliquez ici pour voir les differentes ventes de ce produit" /></a> </br>
 	<h3> <?php echo $categorie['nom_produit'];?> </h3>
 	<input type="checkbox" name="legumes[]" title="cette liste permet de vous rappeler ce que vous devez acheter"/>

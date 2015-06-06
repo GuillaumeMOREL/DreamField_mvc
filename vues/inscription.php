@@ -1,4 +1,3 @@
-
 <div id="milieu_inscription">
 <div class="formulaire_inscription">
 <div class="photo_inscription">

@@ -12,5 +12,6 @@ function registerInfoUser($prenom, $nom, $adresse, $numero_departement, $mail, $
 	 $req = $bdd-> prepare('INSERT INTO utilisateurs(prenom, nom, adresse, numero_departement, mail, tel, pass, passverif, conditions, date_inscription) VALUES(?,?,?,?,?,?,?,?,?,NOW())');	  
 	    $req->execute(array($prenom, $nom, $adresse, $numero_departement,$mail, $tel, $pass, $passverif, $conditions));
 	    return $req;
+
 	}
 ?>

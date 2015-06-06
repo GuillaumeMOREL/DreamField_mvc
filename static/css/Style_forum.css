@@ -1,0 +1,31 @@
+#container_forum{
+	height: 1000px;
+	margin-top: 100px;
+
+}
+
+#newtopic_forum{
+	width:100%;
+	height:30px;
+	background-color: #ED5B69;
+}
+
+#nt_forum{
+	width: 150px;
+	height: 30px;
+	padding-top:5px;
+	margin: 0 auto;
+}
+
+#principal{
+	text-align: center;
+}
+
+textarea{
+	border: 2px solid;
+}
+
+#ecart{
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
