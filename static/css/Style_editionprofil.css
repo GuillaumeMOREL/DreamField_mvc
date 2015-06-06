@@ -1,3 +1,28 @@
-.newprofil{
+#newprofil_editionprofil{
 	margin-top: 100px;
+	height:340px;
+}
+
+#newprofil-bis_editionprofil{
+	text-align: center;
+	background-color: #C3D6DA;
+	width: 400px;
+	border-radius: 5px;
+	padding: 20px;
+	margin: 0 auto;
+
+}
+
+.label_editionprofil{
+	float: left;
+}
+
+.input_editionprofil{
+	float: right;
+	border:1px solid;
+	border-radius:5px;
+}
+
+.input-bis_editionprofil{
+	float: right;
 }
