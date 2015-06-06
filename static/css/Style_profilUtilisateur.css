@@ -1,0 +1,33 @@
+#milieu_profilUtilisateur{
+	height: 340px;
+	margin-top: 100px;
+}
+
+#profil_profilUtilisateur{
+	text-align: center;
+	background-color: #C3D6DA;
+	width: 400px;
+	border-radius: 5px;
+	padding: 20px;
+	margin: 0 auto;
+
+}
+
+.info_profilUtilisateur{
+	height: 30px;
+}
+
+.lien_profilUtilisateur{
+	background-color: #ED5B69;
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+#mmp_profilUtilisateur{
+	margin-top: 20px;
+}
+
+#deco_profilUtilisateur{
+	margin-top: 20px;
+}
