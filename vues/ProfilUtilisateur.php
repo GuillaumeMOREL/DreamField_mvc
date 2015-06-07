@@ -1,13 +1,4 @@
-<?php
-  if(isset($_GET['id']) AND $_GET['id'] > 0)
-     {
-       $getid = intval($_GET['id']); 
-       $requser = $bdd-> prepare('SELECT * FROM utilisateurs WHERE I_D = ?');
-       $requser->execute(array($getid));
-       $userinfo = $requser->fetch();
-    
-?>  
-<?php
+ <?php
     if(!empty($userinfo['photo_profil']))
     {
     ?>
@@ -53,7 +44,3 @@
 
   </div> 
 </div>
-
-<?php
-  }
-?>
