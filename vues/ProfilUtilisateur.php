@@ -1,28 +1,17 @@
-<?php
-
-require("controleurs/database_connect.php");
-
-  if(isset($_GET['id']) AND $_GET['id'] > 0)
-     {
-       $getid = intval($_GET['id']); 
-       $requser = $bdd-> prepare('SELECT * FROM utilisateurs WHERE I_D = ?');
-       $requser->execute(array($getid));
-       $userinfo = $requser->fetch();
-    
-?>  
-<?php
-    if(!empty($userinfo['photo_profil']))
+ <?php
+    if(empty($userinfo['avatar']))
     {
     ?>
-    <img src="avatar/<?php echo $userinfo['photo_profil']; ?>" width="250" />
+    <img src="avatar/<?php echo $userinfo['photo_profil']; ?>" />
+    <?php
+    }
+    else
+    {
+    ?>
+    <img src="avatar/default.jpg/<?php echo $userinfo['photo_profil']; ?>" />
     <?php
     }
     ?>
-<br />
-<br />
-<br />
-<br />
-<br />
   <div class="profil" align ="center">
     <h3> Nom             : <?php echo $userinfo['nom']; ?></h3>
     <h3> Prénom          : <?php echo $userinfo['prenom']; ?></h3>
@@ -37,17 +26,14 @@ require("controleurs/database_connect.php");
     {
     ?> 
     <div id="editionprofil">
-      <a href ="?page=editionprofil"> Modifier mon profil </a>
+      <a href ="index.php?page=editionprofil"> Modifier mon profil </a>
     </div>
     <br />
     <br />
-    <a href="?page=Deconnexion"> Se déconnecter </a>
+    <a href="index.php?page=Deconnexion"> Se déconnecter </a>
   <?php  
     }
     ?> 
 </div> 
-
-<?php
-  }
 ?>
 
