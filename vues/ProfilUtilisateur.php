@@ -1,6 +1,4 @@
-
- <?php
-class="lien_profilUtilisateur" <?php
+<?php
 
   if(isset($_GET['id']) AND $_GET['id'] > 0)
      {

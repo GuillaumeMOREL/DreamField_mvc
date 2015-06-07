@@ -1,5 +1,5 @@
 <?php
-require_once('../controleurs/database_connect.php');
+require_once('controleurs/database_connect.php');
 
 function getuser($bdd, $getid) {
 
