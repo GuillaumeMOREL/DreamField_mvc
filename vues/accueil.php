@@ -118,7 +118,7 @@
 </svg>
 
 
-  <div id="bandeau_promotions" class="container">
+  <!--<div id="bandeau_promotions" class="container">
     <div id="title">
       <a href="offres.html"><h2> Promotions </h2> </a>
     </div>
@@ -142,7 +142,7 @@
       <h2 class="subtitle"> Me. L </h2>
       <p> PRODUITS- descriptions, prix</p> </a>
     </div>
-  </div>
+  </div>-->
 
     <div id="description_association" class="container">
     <div id="content">

@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Raleway:200,500,700,800);
+/*@import url(http://fonts.googleapis.com/css?family=Raleway:200,500,700,800);
 
 @font-face {
 	font-weight: normal;
@@ -9,7 +9,7 @@
 		url('../fonts/codropsicons/codropsicons.woff') format('woff'),
 		url('../fonts/codropsicons/codropsicons.ttf') format('truetype'),
 		url('../fonts/codropsicons/codropsicons.svg#codropsicons') format('svg');
-}
+}*/
 /*
 *, *:after, *:before { -webkit-box-sizing: border-box; box-sizing: border-box; }
 .clearfix:before, .clearfix:after { content: ''; display: table; }
@@ -55,7 +55,7 @@ a:hover, a:focus {
 	font-size: 0.65em;
 }
 */
-.bgcolor-1 { background: #f0efee; }
+/*.bgcolor-1 { background: #f0efee; }
 .bgcolor-2 { background: #f9f9f9; }
 .bgcolor-3 { background: #e8e8e8; }
 .bgcolor-4 { background: #2f3238; color: #fff; }
@@ -71,7 +71,7 @@ body .nomargin-bottom {
 }
 
 /*Header */
-.codrops-header {
+/*.codrops-header {
 	padding: 3em 190px 4em;
 	letter-spacing: -1px;
 }
@@ -92,7 +92,7 @@ body .nomargin-bottom {
 }
 
 /* Demos nav */
-.codrops-demos a {
+/*.codrops-demos a {
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	font-weight: bold;
@@ -108,7 +108,7 @@ body .nomargin-bottom {
 }
 
 /* Top Navigation Style */
-.codrops-links {
+/*.codrops-links {
 	position: relative;
 	display: inline-block;
 	white-space: nowrap;
@@ -162,7 +162,7 @@ body .nomargin-bottom {
 }
 
 /* Related demos */
-.content--related {
+/*.content--related {
 	text-align: center;
 	color: #D8DADB;
 	font-weight: bold;
@@ -203,4 +203,4 @@ body .nomargin-bottom {
 	.codrops-header h1 {
 		font-size: 2.8em;
 	}
-}
+}*/

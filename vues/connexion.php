@@ -1,4 +1,3 @@
-
 <div class="milieu_connexion">
 
     <div class="formulaire_connexion">

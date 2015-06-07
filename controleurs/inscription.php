@@ -1,4 +1,3 @@
-
 <?php
 require_once('modeles/function_inscription.php'); 
 	
@@ -29,7 +28,7 @@ if (!empty($prenom) AND !empty($nom) AND !empty($adresse) AND !empty($numero_dep
        {
        		$InfoUser = registerInfoUser($prenom, $nom, $adresse, $numero_departement, $mail, $tel, $pass, $passverif, $conditions, $bdd);
        		
-       	 header('Location: index.php?page=connexion&message=vos identifiants ont été bien enregistrés.Vous pouvez vous connecter');
+       	 header('Location: index.php?page=connexion&message=Vos identifiants ont été bien enregistrés.Vous pouvez vous connecter');
 			
        	 	
 	  	 }
