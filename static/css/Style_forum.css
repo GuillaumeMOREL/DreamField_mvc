@@ -23,11 +23,45 @@
 	margin: 0 auto;
 }
 
-textarea{
-	border: 2px solid;
+#contenu-topic_forum{
+	margin-top: 30px;
 }
 
-#ecart{
-	margin-top: 5%;
-	margin-bottom: 5%;
+#contenu-topic-bis_forum{
+	height: 400px;
+	width: 220px;
+	margin: 0 auto;
+}
+
+#topic_forum{
+	height: 50px;
+}
+
+#newtopic_forum{
+	text-align: center;
+	height:300px;
+	margin-top: 50px;
+}
+
+#donnee_forum{
+	width: 300px;
+	margin: 0 auto;
+}
+
+.champ_forum{
+	border: 1px solid;
+	border-radius: 5px;
+	float: right;
+}
+
+#contenu_forum{
+	border: 2px solid;
+	border-radius: 5px;
+	font-size: 14px;
+}
+
+#valider_forum{
+	padding: 5px;
+	border: 1px solid;
+	border-radius: 5px;
 }
