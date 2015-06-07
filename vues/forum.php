@@ -1,24 +1,14 @@
 <div id="container_forum">
 
-		<div id="ecart">
-			<fieldset id="topic">
-				<div id="newtopic_forum"><h3 id="nt_forum">Nouveau Topic</h3></div>
-				<form method="post" action="deposertopic.php" >
-					Username :  <input type="text" name="username" id="username" placeholder="Tapez le username" width="150px" /></br></br>
-					Titre :  <input type="text" name="titre" id="titre" placeholder="Tapez le titre..." width="150px" /></br></br>
-					 <textarea  classs="contenu_forum" name="contenu" rows="8" cols="45">Contenu...</textarea></br></br>
-					<input type="submit" value="Envoyer" />
-				</form>
-			</fieldset>
-			</br></br>
-
 		<?php
 	
 		//requête
 		$req = $bdd->query('SELECT id, titre, username FROM forum');
 		?>
 		
-		<div id="principal">Liste des topics</div>
+		<div class="titre_forum">
+			<div id="principal" class="titre-bis_forum">Liste des topics</div>
+		</div>
 
 		<?php
 		//Parcours de la base de données
@@ -39,4 +29,21 @@
 		//fermeture de la requête
 		$req->CloseCursor();
 		?>
+
+<div id="ecart">
+			<fieldset id="topic">
+
+				<div class="titre_forum">
+					<div id="nt_forum" class="titre-bis_forum">Nouveau Topic</div>
+				</div>
+
+				<form method="post" action="deposertopic.php" >
+					Username :  <input type="text" name="username" id="username" placeholder="Tapez le username" width="150px" /></br></br>
+					Titre :  <input type="text" name="titre" id="titre" placeholder="Tapez le titre..." width="150px" /></br></br>
+					 <textarea  classs="contenu_forum" name="contenu" rows="8" cols="45">Contenu...</textarea></br></br>
+					<input type="submit" value="Envoyer" />
+				</form>
+
+			</fieldset>
+			</br></br>
 </div>

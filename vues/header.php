@@ -1,7 +1,6 @@
+<?php
 
-      <?php
-
-      if(isset($_SESSION['id'])){ 
+if(isset($_SESSION['id'])){ 
        /* $nomprenom = $bdd->query('SELECT prenom, nom FROM utilisateurs WHERE I_D="id"');*/
         ?>
 <div id="header">    
@@ -53,6 +52,7 @@
               <input id="search_data" name="saisie" type="search" placeholder="Recherche..." required />
               <a name="go" type="submit" id="logo-search" class="menu-text" value=""/><img src="static/img/logo/logo-recherche.png" id="logo-recherche"/></a>
             </form>
+            
           </li> 
     </ul> 
   </div>
