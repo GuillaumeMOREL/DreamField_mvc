@@ -43,4 +43,3 @@
         <?php if(isset($msg)) { echo $msg; } ?>
   </div>
 </div>
-
