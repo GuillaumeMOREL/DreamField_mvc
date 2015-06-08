@@ -1,7 +1,7 @@
-	<?php
+<?php
 
 		//Partie Sujet
-		$req = $bdd->query('SELECT id, titre, username, question FROM forum');?>
+		$req = $bdd->query('SELECT id, titre, username, question, date_de_publication FROM forum');?>
 
 
 		<div id="container1">
@@ -27,7 +27,7 @@
 
 
 		//Partie commentaires
-		$req = $bdd->query('SELECT id, id_sujet, titre, contenu, username FROM commentaires');?>
+		$req = $bdd->query('SELECT id, id_sujet, titre, contenu, username, date_de_publication FROM commentaires');?>
 
 		<div id="principal"><h3>Liste des commentaires</h3></div>
 
@@ -38,7 +38,7 @@
 			{ ?>
 	            <fieldset><?php echo $cat['titre'] ?> - <?php echo $cat['username']?>
 				<h4>Description : </h4><?php echo $cat['contenu'] ?>
-				<h4>Date de publication : </h4></fieldset>
+				<h4>Date de publication : <?php echo $cat['date_de_publication']?> </h4></fieldset>
 			<?php 
 			}
 		}

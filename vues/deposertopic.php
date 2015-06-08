@@ -1,6 +1,6 @@
 <?php
 
-  $req = $bdd->prepare('INSERT INTO forum(titre, username, question) VALUES(:titre, :username, :contenu)'); 
+  $req = $bdd->prepare('INSERT INTO forum(titre, username, question, date_de_publication) VALUES(:titre, :username, :contenu, NOW())'); 
 
   $req->execute(array(
         'titre' => $_POST['titre'],

@@ -3,7 +3,7 @@
 		<?php
 	
 		//requête
-		$req = $bdd->query('SELECT id, titre, username FROM forum');
+		$req = $bdd->query('SELECT id, titre, username, date_de_publication FROM forum');
 		?>
 		
 		<div class="titre_forum">
@@ -20,10 +20,10 @@
 				<fieldset id="topic_forum">
 					<div id="titre-topic_forum">
 						<a href="?page=sujet&id=<?php echo $cat['id'] ?>">
-							<legend><?php echo $cat['titre']." de ".$cat['username'] ?></legend>
+							<h3 id="titre-topic-bis_forum"><legend><?php echo $cat['titre']." de ".$cat['username'] ?></legend></h3>
 						</a>
 					</div>
-					<h3>Date de publication : </h3>
+					<div>Date de publication : <?php echo $cat['date_de_publication']?></div>
 				</fieldset>
 				</br>
 

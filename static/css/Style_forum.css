@@ -1,5 +1,5 @@
 #container_forum{
-	height: 1000px;
+	height: 100%;
 	margin-top: 80px;
 
 }
@@ -30,7 +30,7 @@
 
 #contenu-topic-bis_forum{
 	height: 100%;
-	width: 220px;
+	width: 250px;
 	margin: 0 auto;
 }
 
@@ -38,7 +38,7 @@
 	height: 50px;
 }
 
-#titre-topic_forum{
+#titre-topic-bis_forum{
 	color: blue;
 }
 
