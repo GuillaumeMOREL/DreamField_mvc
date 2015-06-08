@@ -1,0 +1,80 @@
+#container_sujet{
+	width: 700px;
+	margin: 0 auto;
+}
+
+#container-bis_sujet{
+	width: 700px;
+	margin-top: 80px;
+	margin-bottom: 60px;
+	background-color: #C3D6DA;
+	text-align: center;
+	border-radius: 5px;
+
+}
+
+.donnee_sujet{
+	height: 40px;
+	width: 400px;
+	padding-top: 10px;
+	margin: 0 auto;
+	font-family: impact;
+	font-size: 20px;
+}
+
+#ddp_sujet{
+
+}
+
+#liste_sujet{
+	height: 30px;
+	margin-top: 20px;
+	padding-top: 5px;
+	background-color: #ED5B69;
+}
+
+#principal_sujet{
+	padding-top: 20px;
+}
+
+.champ_sujet{
+	border: 1px solid;
+	border-radius: 5px;
+	float: right;
+	margin-top: 20px;
+}
+
+#contenu_sujet{
+	border: 1px solid;
+	border-radius: 5px;
+	margin: 20px;
+}
+
+.donneebis_sujet{
+	width: 400px;
+	padding-top: 5px;
+	margin: 0 auto;
+}
+
+#newcomment-titre_sujet{
+	background-color: #ED5B69;
+	height: 30px;
+}
+
+#newcomment_sujet{
+	width: 300px;
+	margin: 0 auto;
+}
+
+.newcomment-bis_sujet{
+	margin-top: 20px;
+	width: 150px;
+	float: left;
+}
+
+#envoyer_sujet{
+	margin-bottom: 20px;
+	padding: 5px;
+	border: 1px solid;
+	border-radius: 5px;
+}
