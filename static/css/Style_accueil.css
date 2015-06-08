@@ -29,7 +29,7 @@
 	/************* CARROUSEL ****************/
 
 	#main_body {
-			padding: 4em 0em 6em 0em;
+			padding: 4em 0em 0em 0em;
 	}  
 
 	.photo_carrousel {
@@ -72,56 +72,7 @@
       fill: none;
     }
 	/******************** PROMOTION ******************/
-	 #bandeau_promotions {
-		overflow: hidden;
-		padding-top: 1em; 
-		padding-bottom: 3em;
-		border-top: 1px solid #E5E5E5;		
-	}
-
-	#bandeau_promotions img
-		{
-			margin-bottom: 2em;
-		}
-		
-	#bandeau_promotions #title a {
-			font-family: helvetica;
-			letter-spacing: 1px;
-			padding-bottom: 1em;
-		}
-
-		#bandeau_promotions .subtitle {
-			font-family: helvetica;
-			font-size: 12px;
-		} 
-
-		#bandeau_promotions #promo1 {
-			display: inline-block;
-			width: 200px;
-			padding-right: 50px; 
-		}
-		
-		#bandeau_promotions #promo2 {
-			display: inline-block;
-			width: 200px;
-			padding-right: 50px;
-		}
-		
-		#bandeau_promotions #promo3 {
-			display: inline-block;
-			width: 200px;
-			padding-right: 50px;
-		}
-
-		#bandeau_promotions #promo4 {
-		display: inline-block;
-			width: 200px;
-		}
-
-	.produit{
-		height: 150px;
-		width: 150px;
-	}
+	 
 
 	/********************* DESCRIPTION ASSOC ************************/
 
@@ -131,21 +82,26 @@
 		border-top: 1px solid #E5E5E5;
 	}
 
-	#description_association .title {
-		margin-bottom: 2em;
+	#presentation-titre-bis_accueil{
+		width: 200px;
+		margin: 0 auto;
 	}
 
-	#content {
+	#presentation_accueil{
+		width: 400px;
+		margin-top: 100px;
+		padding-left: 20px;
 		float: left;
-		width: 400px;
 	}
 
-	#logo-webdesign {
-		margin-right: 60px;
-		border-left: .5px black solid;
+	#presentation-logo_accueil {
+		width:200px;
+		height: 300px;
 		float: right;
-		width: 400px;
+		margin-right: 300px;
 	}
+
+
 
 	#logo-fl{
 		width:100%;

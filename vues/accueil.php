@@ -117,47 +117,19 @@
     </g>
 </svg>
 
-
-  <!--<div id="bandeau_promotions" class="container">
-    <div id="title">
-      <a href="offres.html"><h2> Promotions </h2> </a>
-    </div>
-
-    <div id="promo1"> <a href=""><img class="produit" src="static/img/photo_fruit_legume/pomme.jpg" alt="" />
-      <h2 class="subtitle"> Mr. X </h2>
-      <p> PRODUITS- descriptions, prix</p> </a>
-    </div>
-
-    <div id="promo2"> <a href=""><img class="produit" src="static/img/photo_fruit_legume/melon.jpg" alt="" />
-      <h2 class="subtitle"> Mr. Y </h2>
-      <p> PRODUITS- descriptions, prix</p> </a>
-    </div>
-
-    <div id="promo3"> <a href=""><img class="produit" src="static/img/photo_fruit_legume/brocoli.jpg" alt="" />
-      <h2 class="subtitle"> Me. K </h2>
-      <p> PRODUITS- descriptions, prix</p> </a>
-    </div>
-
-    <div id="promo4"> <a href=""><img class="produit" src="static/img/photo_fruit_legume/framboise.jpg" alt="" />
-      <h2 class="subtitle"> Me. L </h2>
-      <p> PRODUITS- descriptions, prix</p> </a>
-    </div>
-  </div>-->
-
-    <div id="description_association" class="container">
-    <div id="content">
-      <div class="title">
-        <h2>Notre société </h2>
+  <div id="description_association" >
+      <div class="presentation-titre_accueil">
+        <h2 id="presentation-titre-bis_accueil">DreamField</h2>
       </div>
-      <p> WEbDesign est une association a but non-lucratif. 
-      Notre but ? Vous satisfaire ! </p> 
-      </br> 
-      </br>
-      <a href="#" class="">Learn More</a>
-    </div>
-    <div>
-      <div><a href="qui_sommes_nous.html"> <img id="logo-webdesign" src="static/img/logo/webdesign.png" /> </div>
-      </a>
-    </div>
+      <div>
+        <p id="presentation_accueil"> 
+        DreamField est un concept permettant d'échanger et de vendre des fruits et lègumes de particulier à particulier.
+        Si vous en avez assez des produits proposer dans les grandes surfaces, si vous voulez juste faire profiter de vos récoltes à vos voisins, et même si ce n'est que pour faire de l'argent.
+        DreamField est fait pour vous!
+        </p> 
+      </div>
+
+      <div id="presentation-logo_accueil"> <img  src="static/img/logo/logo.png" /> </div>
+      
   </div>            
 </div>

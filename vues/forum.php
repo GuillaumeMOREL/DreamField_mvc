@@ -1,4 +1,4 @@
-<div id="container_forum">
+	<div id="container_forum">
 
 		<?php
 	
@@ -18,9 +18,11 @@
 			{//mise en page?>
 
 				<fieldset id="topic_forum">
-					<a href="?page=sujet&id=<?php echo $cat['id'] ?>">
-						<legend><?php echo $cat['titre']." de ".$cat['username'] ?></legend>
-					</a>
+					<div id="titre-topic_forum">
+						<a href="?page=sujet&id=<?php echo $cat['id'] ?>">
+							<legend><?php echo $cat['titre']." de ".$cat['username'] ?></legend>
+						</a>
+					</div>
 					<h3>Date de publication : </h3>
 				</fieldset>
 				</br>
@@ -43,7 +45,7 @@
 					<div id="nt_forum" class="titre-bis_forum">Nouveau Topic</div>
 				</div>
 				
-				<form id="newtopic_forum" method="post" action="deposertopic.php" >
+				<form id="newtopic_forum" method="post" action="?page=deposertopic" >
 				<div id="donnee_forum">
 					Username :  <input class="champ_forum" id="username-donnee_forum" type="text" name="username" id="username" placeholder="Tapez le username" /></br></br>
 					Titre :  <input class="champ_forum" id="titre-donnee_forum" type="text" name="titre" id="titre" placeholder="Tapez le titre..." /></br></br>

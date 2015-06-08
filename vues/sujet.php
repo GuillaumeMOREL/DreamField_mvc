@@ -46,7 +46,7 @@
 	</br></br></br>
 	<fieldset>
 				<div id="principal"><h3>Nouveau Commentaire</h3></div>
-				<form method="post" action="deposermessage.php?id=<?php echo $_GET['id'] ?>" >
+				<form method="post" action="?page=deposermessage&id=<?php echo $_GET['id'] ?>" >
                     Username  <input type="text" name="username" id="username" placeholder="Tapez le username" width="150px" /></br></br>
                     Titre  <input type="text" name="titre" id="titre" placeholder="Tapez le titre..." width="150px" /></br></br>
                      <textarea  name="contenu" rows="8" cols="45">Contenu...</textarea></br></br>
