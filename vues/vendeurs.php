@@ -1,28 +1,28 @@
 <div style="margin-top:60px"></div>
 <div class="liste-offres">
 
+
+<h1> Voici les vendeurs dans le département: <?php echo $annonces['departement_annonce'];?> </h1>
+
+
+
 <?php
 
 	foreach($dn as $annonces){
 
 ?> 
 
-<h1> Voici les vendeurs dans le département: <?php echo $annonces['departement_annonce'];?> </h1>
 
     
 	<a href="#redirige sur profil du vendeurs ac l'offre" title="<?php echo $annonces['id_annonce'];?>">
 	<div class="box_vendeurs"> 
 		<div class="date">
-			<div>Jour</div>
-			<div>Heure</div>
+			<div><?php echo $annonces['date_annonce']; ?></div>
 		</div>	
 		<div class="image">
+
 			<div class="image-and-nb">
-				<img src="<?php echo $annonces['photo_offre'];?>" alt="<?php echo $annonces['id_annonce'];?>"/>
-				<div class="nb">
-					<div class="top-radius">&nbsp</div>
-					<div class="value radius">1</div>
-				</div>
+				<img src="/static/img/photo_fruit_legume/<?php echo $annonces['nom_produit'];?>.jpg" alt="<?php echo $annonces['id_annonce'];?>"/>
 			</div>
 		</div>
 		<div class="detail">
