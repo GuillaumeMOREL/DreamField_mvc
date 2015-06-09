@@ -26,7 +26,7 @@ if (!empty($prenom) AND !empty($nom) AND !empty($adresse) AND !empty($numero_dep
 	  {
         if($pass == $passverif)
        {
-       		$InfoUser = registerInfoUser($prenom, $nom, $adresse, $numero_departement, $mail, $tel, $pass, $passverif, $conditions, $bdd);
+       		$InfoUser = registerInfoUser($prenom, $nom, $adresse, $numero_departement, $mail, $tel, $pass, $passverif, $conditions, $photo_profil, $bdd);
        		
        	 header('Location: index.php?page=connexion&message=Vos identifiants ont été bien enregistrés.Vous pouvez vous connecter');
 			
