@@ -2,7 +2,7 @@
 <div class="liste-offres">
 
 
-<h1> Voici les vendeurs dans le département: <?php echo $annonces['departement_annonce'];?> </h1>
+<h1> Voici les vendeurs dans le département que vous avez sélectionné.</h1>
 
 
 
