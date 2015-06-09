@@ -1,52 +1,41 @@
-.liste-offres{
-	width: 900px;
-	float: left;
-	font-size:12px;
-	font-family: helvetica;
-}
-.liste-offres a{
-	cursor:pointer;
-	font-weight: bold;
-	color: silver;
-}
-.liste-offres div{
-	display: block;
+#liste-offres_vendeurs{
+	height: 100%;
+	margin-top: 70px;
 }
 
-.liste-offres a:visited{
-	color:#936;
-	text-decoration: none;
-}
-
-.liste-offres a:link{
-	text-decoration: none;
-}
-
-.liste-offres a:first-child .box_vendeurs{
+#titre_vendeurs{
+	font-size: 25px;
+	font-family: impact;
+	text-align: center;
+	letter-spacing: 2px;
+	background-color: #ED5B69;
+	height: 35px;
 	padding-top: 5px;
-	border: 0;
 }
-.liste-offres a .box_vendeurs{
-	border-top: 1px solid #CCC;
+
+#box_vendeurs{
+	width: 500px;
+	border: 0px solid;
+	text-align: center;
+	margin: 0 auto;
+
 }
-.liste-offres .box_vendeurs .date{
-	float: left;
-	width: 90px;
-	color: black;
-	font-weight: normal;
-	padding: 20px 20px 0 0;
+
+#box-bis_vendeurs{
+	margin: 50px;
+	border-radius: 5px;
+	background-color: #C3D6DA;
+	padding: 10px;
 }
-.liste-offres .box_vendeurs .image{
-	float: left;
+
+#image_vendeurs{
+	height: 200px;
 	width: 200px;
-	padding: 20px 0;
+	margin: 0 auto;
 }
-.liste-offres .box_vendeurs .detail{	
-	float: left;
-	width: 420px;
-	padding: 20px 0;
-	overflow: hidden;
-}
-.clear{
-	clear: both;
+
+#img_vendeurs{
+	height: 150px;
+	width: 150px;
+	border-radius: 5px;
 }
