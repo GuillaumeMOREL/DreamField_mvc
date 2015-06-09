@@ -1,4 +1,12 @@
+#form_offres{
+	width: 950px;
+	margin: 0 auto;
+}
+
 .section_fruit_legume{
+	width: 150px;
+	padding: 10px;
+	display: inline-block;
 }
 
 .img_fruit_legume{

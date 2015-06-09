@@ -1,17 +1,17 @@
- <?php
+<?php
     if(!empty($userinfo['photo_profil']))
-    {
-    ?>
+        {
+?>
     <img class="imgprofil" src="avatar/<?php echo $userinfo['photo_profil']; ?>" />
-    <?php
+<?php
     }
     else
-    {
-    ?>
+        {
+?>
     <img class="imgprofil" src="avatar/default.jpg/<?php echo $userinfo['photo_profil']; ?>" />
-    <?php
-    }
-    ?>
+<?php
+        }
+?>
 
 <div id="milieu_profilUtilisateur">
 

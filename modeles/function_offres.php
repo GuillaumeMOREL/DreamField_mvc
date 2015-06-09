@@ -15,8 +15,9 @@ function getRegion($bdd){
 }
 
 function registerDeposerAnnonces($bdd, $nom_produit, $ProduitAutre, $nbPoidsQuant, $PoidsQuant, $dateexpiration, $remarque, $prix, $troc){
-	$req = $bdd->prepare('INSERT INTO `DREAMFIELD`.`annonces` (`nom_produit`, `ProduitAutre`, `nbPoidsQuant`, `prix`, `dateexpiration`, `PoidsQuant`,  `remarque`,  `troc`, `date_DeposerAnnonce`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, NOW())');
+	$req = $bdd->prepare('INSERT INTO annonces(nom_produit, ProduitAutre, nbPoidsQuant, prix, dateexpiration, PoidsQuant,  remarque,  troc, date_DeposerAnnonce) VALUES (?, ?, ?, ?, ?, ?, ?, ?, NOW())');
     $req->execute(array($nom_produit, $ProduitAutre, $nbPoidsQuant, $prix, $dateexpiration, $PoidsQuant,  $remarque,  $troc));
+    return $req;
 }
 
 ?>

@@ -4,7 +4,7 @@
     
   <!--  <p> Trouver un produit dans la liste des <a href="#fruits" id="choix"> FRUITS </a><a href="#legumes" id="choix"> LEGUMES </a>  <a href="#regions" id="choix"> REGIONS </a></p>  -->
     
-<form method="GET" name="formulaire-choixdenrees" action="?page=annoncesdenrees.php"> 
+<form id="form_offres" method="GET" name="formulaire-choixdenrees" action="?page=annoncesdenrees.php"> 
 
 
 
@@ -16,7 +16,7 @@
     while($categorie = $fruits -> fetch()){
     
 ?>
-    <section class="section_fruit_legume">   
+  <section class="section_fruit_legume">   
 	<img class="img_fruit_legume" src="<?php echo $categorie['chemin_photo'];?>" alt="<?php echo $categorie['nom_produit'];?>" title="Cliquez ici pour voir les differentes ventes de ce produit" /></a> </br>
 	<h3> <?php echo $categorie['nom_produit'];?> </h3>
 	<input type="checkbox" value="<?php echo $categorie['nom_produit'];?>"  name="fruits[]" title="cette liste permet de vous rappeler ce que vous devez acheter"/>
