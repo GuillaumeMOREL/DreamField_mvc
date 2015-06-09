@@ -38,10 +38,12 @@
 #deco_profilUtilisateur{
 	margin-top: 20px;
 }
-.imgprofil{
+.imgprofil_profilUtilisateur{
+	border: 1px solid;
+	border-radius: 5px;
 	margin-top: 90px;
-	width: 200px;
-	height:200px;
+	width: 180px;
+	height:180px;
 	float: left;
-	margin-left: 250px;
+	margin-left: 80px;
 }
