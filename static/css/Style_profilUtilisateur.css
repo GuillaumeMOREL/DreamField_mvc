@@ -38,3 +38,10 @@
 #deco_profilUtilisateur{
 	margin-top: 20px;
 }
+#imgprofil{
+	margin-top: 90px;
+	width: 200px;
+	height:200px;
+	float: left;
+	margin-left: 250px;
+}

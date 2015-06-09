@@ -2,7 +2,7 @@
     if(!empty($userinfo['photo_profil']))
     {
     ?>
-    <img src="avatar/<?php echo $userinfo['photo_profil']; ?>" />
+    <img id="imgprofil" src="avatar/<?php echo $userinfo['photo_profil']; ?>" />
     <?php
     }
     else
