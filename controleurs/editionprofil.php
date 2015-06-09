@@ -1,12 +1,13 @@
 <?php
-/*require('modeles/function_editionprofil.php');*/
-session_start();
+require_once('modeles/function_editionprofil.php');
+
   //on fait une condition pour plus de sécurité
   if(isset($_SESSION['id']))
 {
   $req= $bdd-> prepare('SELECT * FROM utilisateurs WHERE I_D= ?');
   $req->execute(array($_SESSION['id']));
   $result = $req->fetch();
+  
    if(isset($_POST['newadresse']) AND !empty($_POST['newadresse']) AND $_POST['newadresse'] != $result['adresse'] OR isset($_POST['newnumero_departement']) AND !empty($_POST['newnumero_departement']) AND $_POST['newnumero_departement'] != $result['numero_departement'] OR isset($_POST['newmail']) AND !empty($_POST['newmail']) AND $_POST['newmail'] != $result['mail'] 
        OR isset($_POST['newtel']) AND !empty($_POST['newtel']) AND $_POST['newtel'] != $result['tel'] )
    {

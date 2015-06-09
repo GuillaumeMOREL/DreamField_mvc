@@ -91,7 +91,6 @@ if(isset($_SESSION['id'])){
   </div>
 
 </div>
-      <?php }
-      ?>
-
- 
+<?php 
+}
+?>

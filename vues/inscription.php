@@ -6,7 +6,7 @@
       <input type="file" name="photo" id="photo" />
 <br/>
 <br/>
- <?php
+<?php
 if (isset($_GET['msg'])) 
 {
   

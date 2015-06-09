@@ -1,10 +1,10 @@
 	<div id="container_forum">
 
-		<?php
+<?php
 	
 		//requête
-		$req = $bdd->query('SELECT id, titre, username, date_de_publication FROM forum');
-		?>
+$req = $bdd->query('SELECT id, titre, username, date_de_publication FROM forum');
+?>
 		
 		<div class="titre_forum">
 			<div id="principal" class="titre-bis_forum">Liste des topics</div>
@@ -26,14 +26,13 @@
 					<div>Date de publication : <?php echo $cat['date_de_publication']?></div>
 				</fieldset>
 				</br>
-
-			<?php
-			}?>
-
-			<?php
+<?php
+}
+?>
+<?php
 			//fermeture de la requête
-			$req->CloseCursor();
-			?>
+$req->CloseCursor();
+?>
 
 			</div>
 		</div>

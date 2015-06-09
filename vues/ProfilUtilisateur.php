@@ -38,9 +38,9 @@
       <a class=" lien-bis_profilUtilisateur" href="?page=Deconnexion"> Se déconnecter </a>
     </div>
 
-  <?php  
-    }
-    ?> 
+<?php  
+}
+?> 
 
   </div> 
 </div>

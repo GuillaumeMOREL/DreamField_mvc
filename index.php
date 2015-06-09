@@ -1,7 +1,7 @@
 <?php 
 session_start();
  require_once("controleurs/database_connect.php");
-?>
+ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -32,8 +32,7 @@ session_start();
     <header>
         <?php include("vues/header.php"); ?>
     </header>
-
-		<?php 
+<?php 
 		if (!isset($_GET["page"]) || $_GET["page"] == "") {
 			include("controleurs/accueil.php");
 		}
@@ -47,14 +46,14 @@ session_start();
 			include("vues/404.php");
 		}
 
-		?>
+?>
 
         <div id="logo-fl">
             <a href="#"><img src="static/img/logo/fleche.png" id="logo-fleche" ></a>
         </div>
 
     <footer>
-        <?php include("vues/footer.php"); ?> 
+<?php include("vues/footer.php"); ?> 
     </footer>
       
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>  

@@ -11,6 +11,4 @@ $region = getRegion($bdd);
 require('vues/offres.php');
 /*require('vues/offres.php'); */
 
-
-
 ?>

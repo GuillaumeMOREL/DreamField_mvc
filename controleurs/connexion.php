@@ -36,5 +36,4 @@ if(isset($_POST['formconnexion']))
     } 
 
 require('vues/connexion.php');
-
 ?>

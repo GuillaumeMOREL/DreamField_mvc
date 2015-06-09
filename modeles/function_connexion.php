@@ -10,4 +10,3 @@ function verifMailPass($bdd,$mailconnect,$passconnect){
 }
 
 ?>
-

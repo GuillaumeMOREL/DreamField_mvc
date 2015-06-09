@@ -11,8 +11,7 @@
      {
        echo $_GET['message'];
      }
-?>
- 
+     ?>
 <br />
 <br />
           <label for="mail" class="label_connexion" class="champ" id="mail"> Email :</label>
@@ -34,4 +33,3 @@
       </form>
     </div> 
   </div>
-  
