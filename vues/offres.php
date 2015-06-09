@@ -1,4 +1,4 @@
-   <h2 id="h2_offres">
+<h2 id="h2_offres">
     	Choisissez vos fruits dans la liste proposée:
     </h2> 
     
@@ -49,8 +49,8 @@ $fruits->closeCursor();
 $legumes->closeCursor();
 ?>
     <div id="validation_choixdenrees">
-              <input type="submit" name="formchoixdenrees"  value="Trouver les vendeurs correspondant à mes envies" />
-            </div>        
+      <input type="submit" name="formchoixdenrees"  value="Trouver les vendeurs correspondant à mes envies" />
+    </div>        
 </form>
 
 	<h2 id="h2_fruit_legume_region"> RÉGIONS </h2>

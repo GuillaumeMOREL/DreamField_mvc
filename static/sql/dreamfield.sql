@@ -1,20 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 4.1.14
+-- version 4.2.10
 -- http://www.phpmyadmin.net
 --
--- Client :  127.0.0.1
--- Généré le :  Lun 01 Juin 2015 à 09:49
--- Version du serveur :  5.6.17
--- Version de PHP :  5.5.12
+-- Client :  localhost:8889
+-- Généré le :  Mar 09 Juin 2015 à 12:16
+-- Version du serveur :  5.5.38
+-- Version de PHP :  5.6.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
 
 --
 -- Base de données :  `dreamfield`
@@ -26,8 +20,8 @@ SET time_zone = "+00:00";
 -- Structure de la table `annonces`
 --
 
-CREATE TABLE IF NOT EXISTS `annonces` (
-  `id_annonce` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `annonces` (
+`id_annonce` int(11) NOT NULL,
   `nom_produit` varchar(45) NOT NULL,
   `ProduitAutre` varchar(45) NOT NULL,
   `nbPoidsQuant` int(5) NOT NULL,
@@ -40,9 +34,8 @@ CREATE TABLE IF NOT EXISTS `annonces` (
   `photo_offre` varchar(80) NOT NULL,
   `departement_annonce` int(2) NOT NULL,
   `adresse_image` int(11) NOT NULL,
-  `extension_upload` varchar(5) NOT NULL,
-  PRIMARY KEY (`id_annonce`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=14 ;
+  `extension_upload` varchar(5) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `annonces`
@@ -69,12 +62,11 @@ INSERT INTO `annonces` (`id_annonce`, `nom_produit`, `ProduitAutre`, `nbPoidsQua
 -- Structure de la table `carte_de_france`
 --
 
-CREATE TABLE IF NOT EXISTS `carte_de_france` (
-  `id_departement` int(10) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `carte_de_france` (
+`id_departement` int(10) NOT NULL,
   `region` varchar(50) CHARACTER SET utf8 NOT NULL,
-  `departement` varchar(50) CHARACTER SET utf8 NOT NULL,
-  PRIMARY KEY (`id_departement`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2223 ;
+  `departement` varchar(50) CHARACTER SET utf8 NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=2223 DEFAULT CHARSET=latin1;
 
 --
 -- Contenu de la table `carte_de_france`
@@ -108,13 +100,12 @@ INSERT INTO `carte_de_france` (`id_departement`, `region`, `departement`) VALUES
 -- Structure de la table `categorie`
 --
 
-CREATE TABLE IF NOT EXISTS `categorie` (
-  `id_produit` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `categorie` (
+`id_produit` int(11) NOT NULL,
   `categorie_produit` varchar(100) NOT NULL,
   `nom_produit` varchar(100) NOT NULL,
-  `chemin_photo` varchar(100) NOT NULL,
-  PRIMARY KEY (`id_produit`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=98 ;
+  `chemin_photo` varchar(100) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=98 DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `categorie`
@@ -225,24 +216,30 @@ INSERT INTO `categorie` (`id_produit`, `categorie_produit`, `nom_produit`, `chem
 -- Structure de la table `commentaires`
 --
 
-CREATE TABLE IF NOT EXISTS `commentaires` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `commentaires` (
+`id` int(11) NOT NULL,
   `id_sujet` int(11) NOT NULL,
   `titre` varchar(30) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL,
   `contenu` varchar(255) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL,
   `username` varchar(20) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+  `date_de_publication` date NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
 
 --
 -- Contenu de la table `commentaires`
 --
 
-INSERT INTO `commentaires` (`id`, `id_sujet`, `titre`, `contenu`, `username`) VALUES
-(1, 1, 'Aucune idée', 'Je ne sais pas du tout... :s', 'michelle'),
-(2, 1, 'Moi je sais', 'Juste un lien -> openclassrooms.com :p', 'guillaume'),
-(3, 3, 'Chauuuuuuuddddd', 'Jsuis chaud vieu ! ;)', 'Thomas'),
-(4, 2, 'De bonnes pommes', 'Elles sont trop BONNES !!!! Tous des salopes ! <3', 'Jeremy');
+INSERT INTO `commentaires` (`id`, `id_sujet`, `titre`, `contenu`, `username`, `date_de_publication`) VALUES
+(1, 1, 'Aucune idée', 'Je ne sais pas du tout... :s', 'michelle', '0000-00-00'),
+(2, 1, 'Moi je sais', 'Juste un lien -> openclassrooms.com :p', 'guillaume', '0000-00-00'),
+(3, 3, 'Chauuuuuuuddddd', 'Jsuis chaud vieu ! ;)', 'Thomas', '0000-00-00'),
+(4, 2, 'De bonnes pommes', 'Elles sont trop BONNES !!!! Tous des salopes ! <3', 'Jeremy', '0000-00-00'),
+(7, 8, 'premierpost', 'aide', 'Guillaume', '0000-00-00'),
+(10, 12, '', 'Contenu...', '', '2015-06-08'),
+(11, 12, '', 'Contenu...', '', '2015-06-08'),
+(12, 12, '', 'Contenu...', '', '2015-06-08'),
+(13, 24, '', 'Contenu...', '', '2015-06-08'),
+(14, 24, '', 'Contenu...', '', '2015-06-08');
 
 -- --------------------------------------------------------
 
@@ -250,23 +247,20 @@ INSERT INTO `commentaires` (`id`, `id_sujet`, `titre`, `contenu`, `username`) VA
 -- Structure de la table `forum`
 --
 
-CREATE TABLE IF NOT EXISTS `forum` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `forum` (
+`id` int(11) NOT NULL,
   `titre` varchar(30) NOT NULL,
   `username` varchar(20) NOT NULL,
   `question` varchar(255) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+  `date_de_publication` date NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=latin1;
 
 --
 -- Contenu de la table `forum`
 --
 
-INSERT INTO `forum` (`id`, `titre`, `username`, `question`) VALUES
-(1, 'Mon premier sujet', 'Thomas', 'Comment on fait un forum ?'),
-(2, 'Qualité des pommes', 'karen', 'Vos pommes sont-elles de première fraicheur ?'),
-(3, 'Un ptit CS ? :p', 'Jeremy', 'ça vous dit une partie ?'),
-(4, 'thomas a commit', 'Thomas', 'comment réparer une base de donnée');
+INSERT INTO `forum` (`id`, `titre`, `username`, `question`, `date_de_publication`) VALUES
+(24, 'Premier Post', 'Guillaume', 'Aide', '2015-06-08');
 
 -- --------------------------------------------------------
 
@@ -274,13 +268,11 @@ INSERT INTO `forum` (`id`, `titre`, `username`, `question`) VALUES
 -- Structure de la table `forum_categorie`
 --
 
-CREATE TABLE IF NOT EXISTS `forum_categorie` (
-  `cat_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `forum_categorie` (
+`cat_id` int(11) NOT NULL,
   `cat_nom` varchar(45) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL,
-  `cat_ordr` int(11) NOT NULL,
-  PRIMARY KEY (`cat_id`),
-  UNIQUE KEY `cat_ordr` (`cat_ordr`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+  `cat_ordr` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -288,8 +280,8 @@ CREATE TABLE IF NOT EXISTS `forum_categorie` (
 -- Structure de la table `forum_forum`
 --
 
-CREATE TABLE IF NOT EXISTS `forum_forum` (
-  `forum_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `forum_forum` (
+`forum_id` int(11) NOT NULL,
   `forum_cat_id` mediumint(8) NOT NULL,
   `forum_name` varchar(30) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL,
   `forum_desc` text CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL,
@@ -301,9 +293,8 @@ CREATE TABLE IF NOT EXISTS `forum_forum` (
   `auth_post` tinyint(4) NOT NULL,
   `auth_topic` tinyint(4) NOT NULL,
   `auth_annonce` tinyint(4) NOT NULL,
-  `auth_modo` tinyint(4) NOT NULL,
-  PRIMARY KEY (`forum_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+  `auth_modo` tinyint(4) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -311,8 +302,8 @@ CREATE TABLE IF NOT EXISTS `forum_forum` (
 -- Structure de la table `forum_membres`
 --
 
-CREATE TABLE IF NOT EXISTS `forum_membres` (
-  `membre_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `forum_membres` (
+`membre_id` int(11) NOT NULL,
   `membre_pseudo` varchar(30) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL,
   `membre_mdp` varchar(32) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL,
   `membre_email` varchar(250) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL,
@@ -324,9 +315,8 @@ CREATE TABLE IF NOT EXISTS `forum_membres` (
   `membre_inscrit` int(11) NOT NULL,
   `membre_derniere_visite` int(11) NOT NULL,
   `membre_rang` tinyint(4) DEFAULT '2',
-  `membre_post` int(11) NOT NULL,
-  PRIMARY KEY (`membre_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+  `membre_post` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -334,15 +324,14 @@ CREATE TABLE IF NOT EXISTS `forum_membres` (
 -- Structure de la table `forum_message`
 --
 
-CREATE TABLE IF NOT EXISTS `forum_message` (
-  `post_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `forum_message` (
+`post_id` int(11) NOT NULL,
   `post_createur` int(11) NOT NULL,
   `post_texte` text CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL,
   `post_time` int(11) NOT NULL,
   `topic_id` int(11) NOT NULL,
-  `post_forum_id` int(11) NOT NULL,
-  PRIMARY KEY (`post_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+  `post_forum_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -350,8 +339,8 @@ CREATE TABLE IF NOT EXISTS `forum_message` (
 -- Structure de la table `forum_topic`
 --
 
-CREATE TABLE IF NOT EXISTS `forum_topic` (
-  `topic_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `forum_topic` (
+`topic_id` int(11) NOT NULL,
   `forum_id` int(11) NOT NULL,
   `topic_titre` char(45) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL,
   `topic_createur` int(11) NOT NULL,
@@ -360,10 +349,8 @@ CREATE TABLE IF NOT EXISTS `forum_topic` (
   `topic_time` int(11) NOT NULL,
   `topic_last_post` int(11) NOT NULL,
   `topic_first_post` int(11) NOT NULL,
-  `topic_post` mediumint(8) NOT NULL,
-  PRIMARY KEY (`topic_id`),
-  UNIQUE KEY `topic_last_post` (`topic_last_post`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+  `topic_post` mediumint(8) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -371,8 +358,8 @@ CREATE TABLE IF NOT EXISTS `forum_topic` (
 -- Structure de la table `utilisateurs`
 --
 
-CREATE TABLE IF NOT EXISTS `utilisateurs` (
-  `I_D` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `utilisateurs` (
+`I_D` int(11) NOT NULL,
   `prenom` varchar(15) CHARACTER SET utf8 NOT NULL,
   `nom` varchar(20) CHARACTER SET utf8 NOT NULL,
   `adresse` varchar(50) CHARACTER SET utf8 NOT NULL,
@@ -386,9 +373,8 @@ CREATE TABLE IF NOT EXISTS `utilisateurs` (
   `civilite` varchar(15) CHARACTER SET utf8 NOT NULL,
   `photo_profil` varchar(80) NOT NULL,
   `cle` varchar(32) CHARACTER SET utf8 NOT NULL,
-  `actif` int(1) NOT NULL,
-  PRIMARY KEY (`I_D`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=23 ;
+  `actif` int(1) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=latin1;
 
 --
 -- Contenu de la table `utilisateurs`
@@ -416,8 +402,136 @@ INSERT INTO `utilisateurs` (`I_D`, `prenom`, `nom`, `adresse`, `numero_departeme
 (19, 'kikiki', 'lilili', 'kikiki@lilili.fr', 12, 'kiki@lili.fr', 2147483647, '94cf54a9647342d64a1ab525963d4efe622c11f6', '94cf54a9647342d64a1ab525963d4efe622c11f6', 0, '0000-00-00', '', '', '', 0),
 (20, 'marina', 'marina', 'marina', 56, 'marina@marina.fr', 631995633, '275978859cd7d885a7df1c4dca6a36445a178818', '275978859cd7d885a7df1c4dca6a36445a178818', 0, '0000-00-00', '', '', '', 0),
 (21, 'isabelle', 'norae', 'lalalal', 45, 'isabelle@norae.fr', 677889988, '3d978f314200eb1bda01449bd477c46a816a9f06', '3d978f314200eb1bda01449bd477c46a816a9f06', 0, '0000-00-00', '', '', '', 0),
-(22, 'manon', 'lolilo', 'rue lolilo', 56, 'manon@lolilo.fr', 631995633, '92fc472e870b9cf61aa2b6f8bd8267f9c14f58f5', '92fc472e870b9cf61aa2b6f8bd8267f9c14f58f5', 0, '0000-00-00', '', '', '', 0);
+(22, 'manon', 'lolilo', 'rue lolilo', 56, 'manon@lolilo.fr', 631995633, '92fc472e870b9cf61aa2b6f8bd8267f9c14f58f5', '92fc472e870b9cf61aa2b6f8bd8267f9c14f58f5', 0, '0000-00-00', '', '', '', 0),
+(23, 'azerazer', 'azerazer', '', 12, '', 1234567890, '9cf95dacd226dcf43da376cdb6cbba7035218921', '9cf95dacd226dcf43da376cdb6cbba7035218921', 0, '2015-06-02', '', '', '', 0),
+(24, 'Guillaume', 'MOREL', 'La reunion', 75, 'guimorel.gm@gmail.com', 987654332, '9cf95dacd226dcf43da376cdb6cbba7035218921', '9cf95dacd226dcf43da376cdb6cbba7035218921', 0, '2015-06-06', '', '', '', 0);
 
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+--
+-- Index pour les tables exportées
+--
+
+--
+-- Index pour la table `annonces`
+--
+ALTER TABLE `annonces`
+ ADD PRIMARY KEY (`id_annonce`);
+
+--
+-- Index pour la table `carte_de_france`
+--
+ALTER TABLE `carte_de_france`
+ ADD PRIMARY KEY (`id_departement`);
+
+--
+-- Index pour la table `categorie`
+--
+ALTER TABLE `categorie`
+ ADD PRIMARY KEY (`id_produit`);
+
+--
+-- Index pour la table `commentaires`
+--
+ALTER TABLE `commentaires`
+ ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `forum`
+--
+ALTER TABLE `forum`
+ ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `forum_categorie`
+--
+ALTER TABLE `forum_categorie`
+ ADD PRIMARY KEY (`cat_id`), ADD UNIQUE KEY `cat_ordr` (`cat_ordr`);
+
+--
+-- Index pour la table `forum_forum`
+--
+ALTER TABLE `forum_forum`
+ ADD PRIMARY KEY (`forum_id`);
+
+--
+-- Index pour la table `forum_membres`
+--
+ALTER TABLE `forum_membres`
+ ADD PRIMARY KEY (`membre_id`);
+
+--
+-- Index pour la table `forum_message`
+--
+ALTER TABLE `forum_message`
+ ADD PRIMARY KEY (`post_id`);
+
+--
+-- Index pour la table `forum_topic`
+--
+ALTER TABLE `forum_topic`
+ ADD PRIMARY KEY (`topic_id`), ADD UNIQUE KEY `topic_last_post` (`topic_last_post`);
+
+--
+-- Index pour la table `utilisateurs`
+--
+ALTER TABLE `utilisateurs`
+ ADD PRIMARY KEY (`I_D`);
+
+--
+-- AUTO_INCREMENT pour les tables exportées
+--
+
+--
+-- AUTO_INCREMENT pour la table `annonces`
+--
+ALTER TABLE `annonces`
+MODIFY `id_annonce` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=14;
+--
+-- AUTO_INCREMENT pour la table `carte_de_france`
+--
+ALTER TABLE `carte_de_france`
+MODIFY `id_departement` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2223;
+--
+-- AUTO_INCREMENT pour la table `categorie`
+--
+ALTER TABLE `categorie`
+MODIFY `id_produit` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=98;
+--
+-- AUTO_INCREMENT pour la table `commentaires`
+--
+ALTER TABLE `commentaires`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=15;
+--
+-- AUTO_INCREMENT pour la table `forum`
+--
+ALTER TABLE `forum`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=25;
+--
+-- AUTO_INCREMENT pour la table `forum_categorie`
+--
+ALTER TABLE `forum_categorie`
+MODIFY `cat_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT pour la table `forum_forum`
+--
+ALTER TABLE `forum_forum`
+MODIFY `forum_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT pour la table `forum_membres`
+--
+ALTER TABLE `forum_membres`
+MODIFY `membre_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT pour la table `forum_message`
+--
+ALTER TABLE `forum_message`
+MODIFY `post_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT pour la table `forum_topic`
+--
+ALTER TABLE `forum_topic`
+MODIFY `topic_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT pour la table `utilisateurs`
+--
+ALTER TABLE `utilisateurs`
+MODIFY `I_D` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=25;
