@@ -64,7 +64,7 @@ $legumes->closeCursor();
            	<?php
     while($carte_de_france = $region -> fetch()){
 ?>
-               <option value="<?php echo $carte_de_france['region'];?>"><?php echo $carte_de_france['region'];?></option>
+               <option value="<?php echo $carte_de_france['nom_departement'];?>"><?php echo $carte_de_france['nom_departement'];?></option>
                <?php
 }
 

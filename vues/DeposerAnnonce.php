@@ -72,7 +72,7 @@ while ($donneeslegume = $legume->fetch())
             <br />
             <br />
  
- 
+            
             <div id="aCacher">
             <label for="ProduitAutre">Si vous avez sélectionné "Autre", merci de nous indiquer ci dessous le nom de votre denrée</label><br /><br />
             <input type="text" name="ProduitAutre" id="ProduitAutre" size="30" maxlength="20"  value="<?php if (isset($_POST['ProduitAutre'])) echo $_POST['ProduitAutre']; ?>" class="depot"/>
@@ -117,11 +117,11 @@ while ($donneeslegume = $legume->fetch())
               <div id="resultat" class="choix"></div>
               <br />
               <br />
-              <label for="troc">Si vous souhaitez échanger votre produit contre une autre denrée indiquez le produit désiré:          </label>
+              <label for="troc">Préciser si vous souhaitez échanger ou non votre produit contre une autre denrée indiquez le produit désiré:          </label>
               <br />
               <br />
               <input type="text" name="troc" id="troc" onclick='return verifTroc();' class="depot" placeholder="Ex : Ouvert à toutes propositions" size="30" value="<?php if (isset($_POST['troc'])) echo $_POST['troc']; ?>"/>
-               
+              
  
              
               <br />

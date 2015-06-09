@@ -1,17 +1,17 @@
-<?php
+ <?php
     if(!empty($userinfo['photo_profil']))
-        {
-?>
-    <img class="imgprofil_profilUtilisateur" src="avatar/<?php echo $userinfo['photo_profil']; ?>" />
-<?php
+    {
+    ?>
+    <img class="imgprofil" src="avatar/<?php echo $userinfo['photo_profil']; ?>" />
+    <?php
     }
     else
-        {
-?>
-    <img class="imgprofil_profilUtilisateur" src="avatar/default.jpg" />
-<?php
-        }
-?>
+    {
+    ?>
+    <img class="imgprofil" src="avatar/default.jpg/<?php echo $userinfo['photo_profil']; ?>" />
+    <?php
+    }
+    ?>
 
 <div id="milieu_profilUtilisateur">
 
@@ -38,9 +38,10 @@
       <a class=" lien-bis_profilUtilisateur" href="?page=Deconnexion"> Se déconnecter </a>
     </div>
 
-<?php  
-}
-?> 
+  <?php  
+    }
+  //  echo $annonce['nom_produit'];
+    ?> 
 
   </div> 
 </div>

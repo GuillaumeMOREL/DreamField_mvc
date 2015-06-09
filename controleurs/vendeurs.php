@@ -1,10 +1,12 @@
 <?php
 require('modeles/afficher-vendeurs-par-dep.php');
 
-//$annonce = getInfoAnnonce($bdd); 
-$id = htmlspecialchars($_GET['id']);
+if (isset($_GET['id'])) {
+$dep = htmlspecialchars($_GET['id']);
+
 $dn = getVendeurParDepartement($bdd,$dep);
-var_dump($dn);
+}
+
 
 require('vues/vendeurs.php');
 

@@ -8,4 +8,13 @@ function getuser($bdd, $getid) {
        $userinfo = $requser->fetch();
        return $userinfo;
        }
+
+
+function getAnnonceParId($bdd, $id){
+ $req = $bdd-> prepare("SELECT * FROM annonces WHERE 'id_vendeur'= ? ");
+	      $req->execute(array($id));
+	      $Annonce = $req->fetchArray();
+	      return $Annonce;
+	  }
 ?>
+

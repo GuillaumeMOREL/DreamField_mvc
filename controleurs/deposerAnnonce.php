@@ -6,6 +6,8 @@ $fruit = getFruits($bdd);
 
 $legume = getLegumes($bdd);
 
+//if(isset($_SESSION['I_D'])){
+
 if(isset($_POST['validerDepot'])) {
 
     $nom_produit = htmlspecialchars($_POST['nom_produit']);
@@ -16,14 +18,12 @@ if(isset($_POST['validerDepot'])) {
     $remarque = htmlspecialchars($_POST['remarque']);
     $prix = htmlspecialchars($_POST['prix']);
     $troc = htmlspecialchars($_POST['troc']);
+    $iduser = $_SESSION['id'];
+    $dep = getRegionUser($bdd,$iduser);
 
-                              $InfosAnnonces = registerDeposerAnnonces($bdd, $nom_produit, $ProduitAutre, $nbPoidsQuant, $PoidsQuant, $dateexpiration, $remarque, $prix, $troc);
-                               //header('Location: index.php?page=ProfilUtilisateur&mess=votre annonce été bien enregistrées.');
-                            }
-  /*    }else{
-        header('Location: index.php?page=deposerAnnonce&mess=Choississez un produit dans autres ou un fruit / legume !.');
-      }            
-}
-*/
-require('vues/DeposerAnnonce.php');
-?>
+     $InfosAnnonces = registerDeposerAnnonces($bdd,  $nom_produit, $ProduitAutre, $nbPoidsQuant, $PoidsQuant, $dateexpiration, $remarque, $prix, $troc, $iduser, $dep['numero_departement']);
+                           
+ header('Location: index.php?page=ProfilUtilisateur&id='.$_SESSION['id']);
+    }
+ 
+require('vues/deposerAnnonce.php');
