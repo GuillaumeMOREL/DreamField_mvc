@@ -6,7 +6,7 @@
 	foreach($dn as $annonces){
 ?> 
 
-	<a href="#redirige sur profil du vendeurs ac l'offre" title="<?php echo $annonces['id_annonce'];?>">
+	<a href="mailto:<?php echo $userinfo['mail']; ?>?subject=Notre affaire&cc=partenaire@antonio.net&bcc=avocat@antonio.net&body=Bonjour" title="<?php echo $annonces['id_annonce'];?>">
 		<div id="box_vendeurs"> 
 			<div id="box-bis_vendeurs">
 
@@ -29,7 +29,7 @@
 
 				<div class="prix"><?php echo $annonces['prix'];?> €</div>
 
-				<a href="mailto:<?php echo $annonces['mail']; ?>">Contacter le vendeur</a>
+				<a id="mail_vendeurs" href="mailto:<?php echo $annonces['mail']; ?>">Contacter le vendeur</a>
 			</div>
 		</div>
 		</div>

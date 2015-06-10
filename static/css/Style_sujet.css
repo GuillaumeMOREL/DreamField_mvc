@@ -33,6 +33,11 @@
 	background-color: #ED5B69;
 }
 
+#liste-bis_sujet{
+	color: #FFF;
+	letter-spacing: 2px;
+}
+
 #principal_sujet{
 	padding-top: 20px;
 }
@@ -53,6 +58,8 @@
 .donneebis_sujet{
 	width: 400px;
 	padding-top: 5px;
+	color: #FFF;
+	letter-spacing: 2px;
 	margin: 0 auto;
 }
 

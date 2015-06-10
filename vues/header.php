@@ -4,7 +4,7 @@ if(isset($_SESSION['id'])){
  
        /* $nomprenom = $bdd->query('SELECT prenom, nom FROM utilisateurs WHERE I_D="id"');*/
         ?>
-<div id="header">    
+<div id="header_header">    
   <div  id="top-header" class="container_header">  
       <a href="index.php"><img src="static/img/logo/logo.png" id="logo"></a>
       <div id="acces_compte">
@@ -64,7 +64,7 @@ if(isset($_SESSION['id'])){
           
      else{
       ?>
-<div id="header">    
+<div id="header_header">    
   <div  id="top-header" class="container_header">  
       <a href="index.php"><img src="static/img/logo/logo.png" id="logo"></a>
       <div id="acces_compte">

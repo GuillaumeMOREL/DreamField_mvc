@@ -13,5 +13,4 @@ function getVendeurParDepartement($bdd, $dep){
 	      return $dn;
 }
 
-
 ?>

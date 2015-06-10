@@ -1,29 +1,43 @@
-body{
-	font-family: helvetica;
-}
-
-#container{
+#container_contacter{
 	height:630px;
 	padding:40px;
+	margin-top: 20px;
 }
 
-.section_contacter{
-	
+.section-bis_contacter{
 	text-align: center;
+	padding: 10px;
+	width: 400px;
+	margin: 0 auto;
 	background-color: #C3D6DA;
 	border-radius: 5px;
 	display:block;
-	margin-left: 25%;
-	margin-right: 25%;
 }
 
-.h1_contacter{
-	margin-left: 10px;
+.section_contacter{
+	margin: 20px;
+}
+
+.titre-bis_contacter{
+	font-family: impact;
+	font-size: 16px;
+	letter-spacing: 2px;
+	margin-bottom: 20px;
+}
+
+.titre_contacter{
+	margin: 20px;
+	padding: 2px;
+	font-family: impact;
+	letter-spacing: 2px;
+	background-color: #ED5B69;
+	font-size: 20px;
+	text-align: center;
 }
 
 .text_contacter{
-	
-	margin-left: 100px;
+	text-align: center;
+	font-size: 18px;
 }
 
 .li_contacter{
@@ -31,7 +45,13 @@ body{
 	text-decoration: none;
 }
 
-.tel{
-	text-align: left;
-	margin-left: 30%;
+#tel_contacter{
+	text-align: center;
+}
+
+#acces_contacter{
+	border: 1px solid;
+	border-radius: 5px;
+	width: 200px;
+	margin: 0 auto;
 }

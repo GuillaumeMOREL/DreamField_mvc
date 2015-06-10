@@ -15,9 +15,9 @@
 
 .titre-bis_forum{
 	color: #FFF;
-	letter-spacing: 1px;
+	letter-spacing: 5px;
 	font-size: 17px;
-	width: 150px;
+	width: 300px;
 	height: 30px;
 	padding-top:2px;
 	margin: 0 auto;
@@ -35,16 +35,28 @@
 }
 
 #topic_forum{
-	height: 50px;
+	background-color: #C3D6DA;
+	border-radius: 5px;
+	padding: 20px;
+	width: 250px;
 }
 
 #titre-topic-bis_forum{
 	color: blue;
 }
 
-#newtopic_forum{
+#newtopic-bis_forum{
+	width: 500px;
+	margin: 0 auto;
+}
+
+#newtopic-bis_forum{
 	text-align: center;
+	background-color: #C3D6DA;
+	width: 500px;
 	height:300px;
+	padding: 20px;
+	border-radius: 5px;
 	margin-top: 50px;
 }
 

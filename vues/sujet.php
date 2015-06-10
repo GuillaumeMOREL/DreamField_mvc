@@ -31,7 +31,7 @@
 		$req = $bdd->query('SELECT id, id_sujet, titre, contenu, username, date_de_publication FROM commentaires');?>
 
 		<div id="liste_sujet">
-			<h3>Liste des commentaires :</h3>
+			<h3 id="liste-bis_sujet">Liste des commentaires :</h3>
 		</div>
 
 		<?php
