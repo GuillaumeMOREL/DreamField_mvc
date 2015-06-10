@@ -5,7 +5,7 @@ if(isset($_SESSION['id'])){
        /* $nomprenom = $bdd->query('SELECT prenom, nom FROM utilisateurs WHERE I_D="id"');*/
         ?>
 <div id="header">    
-  <div  id="top-header" class="container">  
+  <div  id="top-header" class="container_header">  
       <a href="index.php"><img src="static/img/logo/logo.png" id="logo"></a>
       <div id="acces_compte">
  
@@ -37,21 +37,21 @@ if(isset($_SESSION['id'])){
          });
         </script>
      </div>
-  </div>   
+  </div>
  
-  <div id="menu" class="container">
+  <div id="menu_header" class="container_header">
     <ul>
-          <li id="current_page_item"><a href="?page=accueil"  class="menu-text" >Accueil</a></li>
-          <li><a href="?page=offres" class="menu-text" >Offres</a></li>
-          <li><a href="?page=deposerAnnonce" class="menu-text" >Déposer une annonce</a></li>
-          <li><a href="?page=recettes" class="menu-text" >Recette</a></li> 
-          <li><a href="?page=forum" class="menu-text" >Forum</a></li>
-          <li><a href="?page=aide" class="menu-text" >Aide</a></li>
+          <li id="current_page_item"><a href="?page=accueil"  class="menu-text_header" >Accueil</a></li>
+          <li><a href="?page=offres" class="menu-text_header" >Offres</a></li>
+          <li><a href="?page=deposerAnnonce" class="menu-text_header" >Déposer une annonce</a></li>
+          <li><a href="?page=recettes" class="menu-text_header" >Recette</a></li> 
+          <li><a href="?page=forum" class="menu-text_header" >Forum</a></li>
+          <li><a href="?page=aide" class="menu-text_header" >Aide</a></li>
           <li id="recherche">
  
             <form id="search" method="post">
               <input id="search_data" name="saisie" type="search" placeholder="Recherche..." required />
-              <a name="go" type="submit" id="logo-search" class="menu-text" value=""/><img src="static/img/logo/logo-recherche.png" id="logo-recherche"/></a>
+              <a name="go" type="submit" id="logo-search" class="menu-text_header" value=""/><img src="static/img/logo/logo-recherche.png" id="logo-recherche"/></a>
             </form>
              
           </li> 
@@ -65,7 +65,7 @@ if(isset($_SESSION['id'])){
      else{
       ?>
 <div id="header">    
-  <div  id="top-header" class="container">  
+  <div  id="top-header" class="container_header">  
       <a href="index.php"><img src="static/img/logo/logo.png" id="logo"></a>
       <div id="acces_compte">
  
@@ -74,19 +74,19 @@ if(isset($_SESSION['id'])){
      </div>
   </div>   
  
-  <div id="menu" class="container">
+  <div id="menu_header" class="container_header">
     <ul>
-          <li id="current_page_item"><a href="?page=accueil"  class="menu-text" >Accueil</a></li>
-          <li><a href="?page=offres" class="menu-text" >Offres</a></li>
-       <!--   <li><a href="?page=deposerAnnonce" class="menu-text" >Déposer une annonce</a></li> -->
-          <li><a href="?page=recettes" class="menu-text" >Recette</a></li> 
-          <li><a href="?page=forum" class="menu-text" >Forum</a></li>
-          <li><a href="?page=aide" class="menu-text" >Aide</a></li>
+          <li id="current_page_item"><a href="?page=accueil"  class="menu-text_header" >Accueil</a></li>
+          <li><a href="?page=offres" class="menu-text_header" >Offres</a></li>
+       <!--   <li><a href="?page=deposerAnnonce" class="menu-text_header" >Déposer une annonce</a></li> -->
+          <li><a href="?page=recettes" class="menu-text_header" >Recette</a></li> 
+          <li><a href="?page=forum" class="menu-text_header" >Forum</a></li>
+          <li><a href="?page=aide" class="menu-text_header" >Aide</a></li>
           <li id="recherche">
  
             <form id="search" method="post">
               <input id="search_data" name="saisie" type="search" placeholder="Recherche..." required />
-              <a name="go" type="submit" id="logo-search" class="menu-text" value=""/><img src="static/img/logo/logo-recherche.png" id="logo-recherche"/></a>
+              <a name="go" type="submit" id="logo-search" class="menu-text_header" value=""/><img src="static/img/logo/logo-recherche.png" id="logo-recherche"/></a>
             </form>
           </li> 
     </ul> 

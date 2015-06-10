@@ -1,81 +1,81 @@
-<h2 id="h2_offres">
-    	Choisissez vos fruits dans la liste proposée:
-    </h2> 
-    
-  <!--  <p> Trouver un produit dans la liste des <a href="#fruits" id="choix"> FRUITS </a><a href="#legumes" id="choix"> LEGUMES </a>  <a href="#regions" id="choix"> REGIONS </a></p>  -->
-    
-<form id="form_offres" method="GET" name="formulaire-choixdenrees" action="?page=annoncesdenrees.php"> 
+<div id="container_offres">
+  <div id="container-bis_offres">
 
+    <div id="titre_offres">
+      Choisissez vos produits dans la liste proposée:
+    </div> 
+        
+      <!--  <p> Trouver un produit dans la liste des <a href="#fruits" id="choix"> FRUITS </a><a href="#legumes" id="choix"> LEGUMES </a>  <a href="#regions" id="choix"> REGIONS </a></p>  -->
+        
+    <form id="form_offres" method="GET" name="formulaire-choixdenrees" action="?page=annoncesdenrees.php"> 
 
+      <div class="titre-bis_offres"> FRUITS </div>
+      <div class="offres_offres">
 
-    <h2 id="h2_fruit_legume_region"> FRUITS </h2>
+    <?php
+      while($categorie = $fruits -> fetch()){
+    ?>
+      <section class="section_fruit_legume_offres">   
+      	<img class="img_fruit_legume_offres" src="<?php echo $categorie['chemin_photo'];?>" alt="<?php echo $categorie['nom_produit'];?>" title="Cliquez ici pour voir les differentes ventes de ce produit" /></a> </br>
+      	<h3> <?php echo $categorie['nom_produit'];?> </h3>
+      	<input type="checkbox" value="<?php echo $categorie['nom_produit'];?>"  name="fruits[]" title="cette liste permet de vous rappeler ce que vous devez acheter"/>
+      	Ajouter au panier 
+    	</section>
 
-<?php
+    <?php
+      } 
+      $fruits->closeCursor();
+    ?>
 
+    	<div class="titre-bis_offres"> LEGUMES </div>
 
-    while($categorie = $fruits -> fetch()){
-    
-?>
-  <section class="section_fruit_legume">   
-	<img class="img_fruit_legume" src="<?php echo $categorie['chemin_photo'];?>" alt="<?php echo $categorie['nom_produit'];?>" title="Cliquez ici pour voir les differentes ventes de ce produit" /></a> </br>
-	<h3> <?php echo $categorie['nom_produit'];?> </h3>
-	<input type="checkbox" value="<?php echo $categorie['nom_produit'];?>"  name="fruits[]" title="cette liste permet de vous rappeler ce que vous devez acheter"/>
-	Ajouter au panier 
-	</section>
-<?php
-} 
+    <?php
+      while($categorie = $legumes -> fetch()){
+    ?>
 
-$fruits->closeCursor();
-?>
-	
+      <section class="section_fruit_legume_offres">   
+      	<img class="img_fruit_legume_offres" src="<?php echo $categorie['chemin_photo'];?>" alt="<?php echo $categorie['nom_produit'];?>" title="Cliquez ici pour voir les differentes ventes de ce produit" /></a> </br>
+      	<h3> <?php echo $categorie['nom_produit'];?> </h3>
+      	<input type="checkbox" name="legumes[]" value="<?php echo $categorie['nom_produit'];?>" title="cette liste permet de vous rappeler ce que vous devez acheter"/>
+      	Ajouter au panier 
+    	</section>
 
+    <?php
+    } 
+    $legumes->closeCursor();
+    ?>
+    </div>
 
-	<h2 id="h2_fruit_legume_region"> LEGUMES </h2>
+    </form>
 
-	
-<?php
-    while($categorie = $legumes -> fetch()){
+    <form method="post" action="traitement.php">
+      <p id="choix_offres">
+        <label id="titre-choix_region" for="region">Dans quel région habitez-vous ?</label><br />
+          <select id="differente-region_offres" name="regions" id="regions">
+            <optgroup label="">
 
-?>
-  <section class="section_fruit_legume">   
-	<img class="img_fruit_legume" src="<?php echo $categorie['chemin_photo'];?>" alt="<?php echo $categorie['nom_produit'];?>" title="Cliquez ici pour voir les differentes ventes de ce produit" /></a> </br>
-	<h3> <?php echo $categorie['nom_produit'];?> </h3>
-	<input type="checkbox" name="legumes[]" value="<?php echo $categorie['nom_produit'];?>" title="cette liste permet de vous rappeler ce que vous devez acheter"/>
-	Ajouter au panier 
-	</section>
-<?php
-} 
+              <?php
+                while($carte_de_france = $region -> fetch())
+                {
+              ?>
+              <div >
+              <option value="<?php echo $carte_de_france['nom_departement'];?>"><?php echo $carte_de_france['nom_departement'];?></option><br />
+              </div>
+    <?php
+    }
+    $region->closeCursor();
+    ?>
+        <br />
 
-$legumes->closeCursor();
-?>
-    <div id="validation_choixdenrees">
-      <input type="submit" name="formchoixdenrees"  value="Trouver les vendeurs correspondant à mes envies" />
-    </div>        
-</form>
+            </optgroup>
+          </select>
 
-	<h2 id="h2_fruit_legume_region"> RÉGIONS </h2>
+      </p>
+          <div id="validation-choixdenrees_offres">
+            <input id="validation-choixdenrees-bis_offres" type="submit" name="formchoixdenrees"  value="Trouver les vendeurs correspondant à mes envies" />
+          </div>
 
-<form method="post" action="traitement.php">
-   <p>
-       <label for="region">Dans quel région habitez-vous ?</label><br />
-       <select name="regions" id="regions">
-           <optgroup label="">
-
-           	<?php
-    while($carte_de_france = $region -> fetch()){
-?>
-               <option value="<?php echo $carte_de_france['nom_departement'];?>"><?php echo $carte_de_france['nom_departement'];?></option>
-               <?php
-}
-
-
-
-$region->closeCursor();
-?>
-
-           </optgroup>
-       </select>
-   </p>
-</form>
-	
+    </form>
+  </div>
+</div>
    
