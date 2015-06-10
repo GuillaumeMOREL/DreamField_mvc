@@ -1,3 +1,5 @@
+<div id="milieu_profilUtilisateur">
+
  <?php
     if(!empty($userinfo['photo_profil']))
     {
@@ -12,8 +14,6 @@
     <?php
     }
     ?>
-
-<div id="milieu_profilUtilisateur">
 
   <div id="profil_profilUtilisateur" >
     <h3 class="info_profilUtilisateur"> Nom             : <?php echo $userinfo['nom']; ?></h3>
@@ -71,7 +71,5 @@
       }
   }
     ?>
-    
-
   </div> 
 </div>

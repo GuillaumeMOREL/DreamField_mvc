@@ -2,7 +2,7 @@
 require_once('controleurs/database_connect.php');
 
 function getsession($bdd){
- $req= $bdd-> prepare('SELECT * FROM utilisateurs WHERE I_D= ?');
+  $req= $bdd-> prepare('SELECT * FROM utilisateurs WHERE I_D= ?');
   $req->execute(array($_SESSION['id']));
   $result = $req->fetch();
   return $result;

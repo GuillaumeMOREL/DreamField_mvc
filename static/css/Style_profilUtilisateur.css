@@ -1,5 +1,5 @@
 #milieu_profilUtilisateur{
-	height: 345px;
+	height: 100%;
 	margin-top: 70px;
 }
 
@@ -38,10 +38,10 @@
 #deco_profilUtilisateur{
 	margin-top: 20px;
 }
-.imgprofil_profilUtilisateur{
+.imgprofil{
 	border: 1px solid;
 	border-radius: 5px;
-	margin-top: 90px;
+	margin-top: 30px;
 	width: 180px;
 	height:180px;
 	float: left;
