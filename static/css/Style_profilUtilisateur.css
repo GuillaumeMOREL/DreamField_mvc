@@ -10,7 +10,6 @@
 	border-radius: 5px;
 	padding: 20px;
 	margin: 0 auto;
-
 }
 
 .info_profilUtilisateur{
@@ -26,7 +25,7 @@
 
 .lien-bis_profilUtilisateur{
 	color: #FFF;
-	letter-spacing: 1px;
+	letter-spacing: 2px;
 	text-decoration: none;
 	font-size: 15px;
 }
@@ -38,6 +37,7 @@
 #deco_profilUtilisateur{
 	margin-top: 20px;
 }
+
 .imgprofil{
 	border: 1px solid;
 	border-radius: 5px;
@@ -46,4 +46,9 @@
 	height:180px;
 	float: left;
 	margin-left: 80px;
+}
+
+#modifAnnonce_profilUtilisateur{
+	border: 1px solid;
+	border-radius: 5px;
 }
