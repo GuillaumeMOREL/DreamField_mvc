@@ -2,7 +2,7 @@
 		float:top;
 		margin-left: auto;
 		margin-right: auto;
-		width: 1000;
+		width: 1000px;
 	}
 	#toggle{
 		height:300px; width: 260px; background-color: white; border:1px solid black; margin:1em;text-align:center; position: absolute;
