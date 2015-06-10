@@ -38,10 +38,40 @@
       <a class=" lien-bis_profilUtilisateur" href="?page=Deconnexion"> Se déconnecter </a>
     </div>
 
-  <?php  
-    }
-  //  echo $annonce['nom_produit'];
-    ?> 
+
+    <div id="deco_profilUtilisateur" class="lien_profilUtilisateur">
+      <a class=" lien-bis_profilUtilisateur"> Mes annonces </a>
+    </div>
+
+    <?php
+      foreach($ann as $Annonce){
+        ?>
+        <div id="box_vendeurs"> 
+      <div id="box-bis_vendeurs">
+    <div class="detail_vendeurs">
+
+        <div class="produit"><?php echo $Annonce['nom_produit'];?> </div>
+        <div class="produit"><?php echo $Annonce['ProduitAutre'];?> </div>
+
+        <div class="date">
+          <div><?php echo $Annonce['date_annonce']; ?></div>
+        </div>  
+
+        <div class="quantite"><?php echo $Annonce['nbPoidsQuant']. ' '.$Annonce['PoidsQuant'];?></div>
+
+        <div class="prix"><?php echo $Annonce['prix'];?> €</div>
+
+        <input id="ModifAnnonce" type="submit" name="ModifAnnonce" value="Modifier mon annonce" />
+
+      </div>
+      </div>
+      </div>
+
+    <?php
+      }
+  }
+    ?>
+    
 
   </div> 
 </div>

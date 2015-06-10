@@ -10,11 +10,19 @@ function getuser($bdd, $getid) {
        }
 
 
-function getAnnonceParId($bdd, $id){
+/*function getAnnonceParId($bdd, $id){
  $req = $bdd-> prepare("SELECT * FROM annonces WHERE 'id_vendeur'= ? ");
 	      $req->execute(array($id));
 	      $Annonce = $req->fetchArray();
 	      return $Annonce;
-	  }
+	  }*/
+
+	  function getAnnonceParId($bdd, $getid){
+ $req = $bdd-> prepare("SELECT * FROM annonces, utilisateurs WHERE id_vendeur = I_D AND I_D = ?");
+	      $req->execute(array( $getid));
+	      $ann = $req->fetchAll();
+	      return $ann;
+}
+
 ?>
 
