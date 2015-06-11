@@ -49,9 +49,13 @@ if(isset($_SESSION['id'])){
           <li><a href="?page=aide" class="menu-text_header" >Aide</a></li>
           <li id="recherche">
  
-            <form id="search" method="post">
+            <form id="search" method="post" action="?page=search">
               <input id="search_data" name="saisie" type="search" placeholder="Recherche..." required />
-              <a name="go" type="submit" id="logo-search" class="menu-text_header" value=""/><img src="static/img/logo/logo-recherche.png" id="logo-recherche"/></a>
+              <select name="categorie">
+                <option value="annonces">Annonces</option>
+                <option value="users">Utilisateur</option>
+              </select>
+              <input border=0 src="static/img/logo/logo-recherche.png" width="20px" height="20px" type=image Value=submit align="middle" name="submit"> 
             </form>
              
           </li> 
@@ -84,9 +88,13 @@ if(isset($_SESSION['id'])){
           <li><a href="?page=aide" class="menu-text_header" >Aide</a></li>
           <li id="recherche">
  
-            <form id="search" method="post">
+            <form id="search" method="post" action="?page=search">
               <input id="search_data" name="saisie" type="search" placeholder="Recherche..." required />
-              <a name="go" type="submit" id="logo-search" class="menu-text_header" value=""/><img src="static/img/logo/logo-recherche.png" id="logo-recherche"/></a>
+              <select name="categorie">
+                <option value="annonces">Annonces</option>
+                <option value="users">Utilisateur</option>
+              </select>
+              <input border=0 src="static/img/logo/logo-recherche.png" width="20px" height="20px" type=image Value=submit align="middle" name="submit"> 
             </form>
           </li> 
     </ul> 

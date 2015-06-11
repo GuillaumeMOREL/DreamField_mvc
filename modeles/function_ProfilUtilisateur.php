@@ -17,7 +17,7 @@ function getuser($bdd, $getid) {
 	      return $Annonce;
 	  }*/
 
-	  function getAnnonceParId($bdd, $getid){
+function getAnnonceParId($bdd, $getid){
  $req = $bdd-> prepare("SELECT * FROM annonces, utilisateurs WHERE id_vendeur = I_D AND I_D = ?");
 	      $req->execute(array( $getid));
 	      $ann = $req->fetchAll();
@@ -34,5 +34,19 @@ $requser = $bdd-> prepare('DELETE FROM utilisateurs WHERE I_D=?');
        $requser->execute(array($id));
 }
 
+function getusername($bdd, $getnom) {
+
+       $requser = $bdd-> prepare('SELECT * FROM utilisateurs WHERE nom= ?');
+       $requser->execute(array($getnom));
+       //$userinfo = $requser->fetch();
+       return $requser;
+       }
+function getuserprenom($bdd, $getprenom) {
+
+       $requser = $bdd-> prepare('SELECT * FROM utilisateurs WHERE prenom= ?');
+       $requser->execute(array($getprenom));
+       $userinfo = $requser->fetch();
+       return $userinfo;
+       }
 ?>
 

@@ -40,6 +40,12 @@ function getAllAnnonces($bdd){
           //$ann = $req->fetchAll();
           return $req;
           }
+function getAnnonceParNomProduit($bdd, $produit){
+ $req = $bdd-> prepare("SELECT * FROM annonces WHERE nom_produit = ?");
+          $req->execute(array( $produit));
+          //$dn = $req->fetchAll();
+          return $req;
+}
 
 function getVendeurParDepartementEtNomProduit($bdd, $dep, $produit){
  $req = $bdd-> prepare("SELECT * FROM annonces, utilisateurs WHERE departement_annonce = ? AND nom_produit = ?");

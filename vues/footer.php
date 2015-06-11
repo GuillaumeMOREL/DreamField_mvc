@@ -7,7 +7,6 @@
               <li><a href="?page=qui_sommes_nous" class="text-footer" > Qui sommes nous </a></li>
               <li><a href="?page=contacter" class="text-footer" > Nous contacter </a></li>
               <li><a href="?page=plan_du_site" class="text-footer" > Plan du site </a></li> 
-              <li><a href="?page=charte_de_confidentialite" class="text-footer" > Charte de confidentialité </a></li>
 <?php if (isset($_SESSION['admin']) and $_SESSION['admin']=1):?>
               <li> <a href="?page=BOindex" class="text-footer">Back-office</a></li>
 <?php endif; ?>
