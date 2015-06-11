@@ -61,7 +61,7 @@
 
         <div class="prix"><?php echo $Annonce['prix'];?> €</div>
 
-        <input id="modifAnnonce_profilUtilisateur" type="submit" name="ModifAnnonce" value="Modifier mon annonce" />
+        <input id="modifAnnonce_profilUtilisateur" onclick="document.location.href='?page=editionAnnonce';" type="submit" name="ModifAnnonce" value="Modifier mon annonce" />
 
       </div>
       </div>
