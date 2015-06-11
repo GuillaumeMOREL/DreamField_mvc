@@ -37,9 +37,9 @@ elseif(isset($_POST['afficherannonces']))
 
 		<form class="Boform" method="post" action="?page=BOindex">
 			<input type="hidden" name="formfull" value="1"/>
-				<li><?php echo $announce['id_annonce'] ?></li>
+				<li>id annonces:<?php echo $announce['id_annonce'] ?></li>
 				<li><?php echo $announce['nom_produit'] ?></li>
-				<li><?php echo $announce['id_vendeur'] ?></li>
+				<li>id vendeur:<?php echo $announce['id_vendeur'] ?></li>
 		<!--	<li><?php //echo $announce['admin'] ?></li>
 				<li><?php //echo $announce['I_D'] ?></li>-->
       		<input type="hidden" name="idann" value="<?php echo $announce['id_annonce'] ?>"/>

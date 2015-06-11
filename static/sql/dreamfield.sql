@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  localhost:8889
--- Généré le :  Mar 09 Juin 2015 à 19:28
+-- Généré le :  Jeu 11 Juin 2015 à 19:29
 -- Version du serveur :  5.5.38
 -- Version de PHP :  5.6.2
 
@@ -46,8 +46,7 @@ INSERT INTO `annonces` (`id_annonce`, `nom_produit`, `ProduitAutre`, `nbPoidsQua
 (18, 'avocat', '', 11, 20, '2015-06-13', 'unite', 'De très bonne qualité, n''hésitez pas !', 'Argent de préférence', '', 78, 0, '', 28, '2015-06-09'),
 (19, 'cassis', '', 7, 13, '2015-06-14', 'kg', '. . .', 'en échange de fruits svp', '', 75, 0, '', 26, '2015-06-09'),
 (20, 'prune', '', 21, 30, '2015-06-15', 'unite', 'Vends plusieurs lots de prune..\r\n\r\n', 'Argent ou melon', '', 78, 0, '', 25, '2015-06-09'),
-(21, 'poireau', '', 15, 45, '2015-06-19', 'unite', '', 'Non', '', 78, 0, '', 25, '2015-06-09'),
-(22, 'AutreAliment', 'graine de tournesole', 80, 25, '2015-06-26', 'g', 'Hmm que c''est bon !', 'En échange de monnaie merci !', '', 78, 0, '', 27, '2015-06-09');
+(21, 'poireau', '', 15, 45, '2015-06-19', 'unite', '', 'Non', '', 78, 0, '', 25, '2015-06-09');
 
 -- --------------------------------------------------------
 
@@ -59,7 +58,7 @@ CREATE TABLE `carte_de_france` (
 `id_departement` int(10) NOT NULL,
   `numero_departement` varchar(2) NOT NULL,
   `nom_departement` varchar(50) CHARACTER SET utf8 NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2223 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=97 DEFAULT CHARSET=latin1;
 
 --
 -- Contenu de la table `carte_de_france`
@@ -427,6 +426,7 @@ CREATE TABLE `utilisateurs` (
 `I_D` int(11) NOT NULL,
   `prenom` varchar(15) CHARACTER SET utf8 NOT NULL,
   `nom` varchar(20) CHARACTER SET utf8 NOT NULL,
+  `admin` int(1) NOT NULL,
   `adresse` varchar(50) CHARACTER SET utf8 NOT NULL,
   `numero_departement` int(2) NOT NULL,
   `mail` varchar(50) CHARACTER SET utf8 NOT NULL,
@@ -439,17 +439,19 @@ CREATE TABLE `utilisateurs` (
   `photo_profil` varchar(80) NOT NULL,
   `cle` varchar(32) CHARACTER SET utf8 NOT NULL,
   `actif` int(1) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=latin1;
 
 --
 -- Contenu de la table `utilisateurs`
 --
 
-INSERT INTO `utilisateurs` (`I_D`, `prenom`, `nom`, `adresse`, `numero_departement`, `mail`, `tel`, `pass`, `passverif`, `conditions`, `date_inscription`, `civilite`, `photo_profil`, `cle`, `actif`) VALUES
-(25, 'Karen', 'Desmars', '22 avenue de Paris', 78, 'karen09@hotmail.fr', 631995633, '92fc472e870b9cf61aa2b6f8bd8267f9c14f58f5', '92fc472e870b9cf61aa2b6f8bd8267f9c14f58f5', 0, '2015-06-09', '', 'default.jpg', '', 0),
-(26, 'Guillaume', 'MOREL', '2 rue de la rose', 75, 'guimorel.gm@gmail.com', 987654321, '9cf95dacd226dcf43da376cdb6cbba7035218921', '9cf95dacd226dcf43da376cdb6cbba7035218921', 0, '2015-06-09', '', 'default.jpg', '', 0),
-(27, 'Jérémy', 'Pineau', '2 bis rue du long des bois', 78, 'jeremy.pineau@free.fr', 679456627, '9cf95dacd226dcf43da376cdb6cbba7035218921', '9cf95dacd226dcf43da376cdb6cbba7035218921', 0, '2015-06-09', '', 'default.jpg', '', 0),
-(28, 'isabelle', 'bernardini', '13 rue de la begonne', 78, 'isabelle@mail.fr', 789853648, 'e6ee3fd5c2f53f4faab3f3c3d07faf72f23289ed', 'e6ee3fd5c2f53f4faab3f3c3d07faf72f23289ed', 0, '2015-06-09', '', 'default.jpg', '', 0);
+INSERT INTO `utilisateurs` (`I_D`, `prenom`, `nom`, `admin`, `adresse`, `numero_departement`, `mail`, `tel`, `pass`, `passverif`, `conditions`, `date_inscription`, `civilite`, `photo_profil`, `cle`, `actif`) VALUES
+(25, 'Karen', 'Desmars', 1, '22 avenue de Paris', 78, 'karen09@hotmail.fr', 631995633, '92fc472e870b9cf61aa2b6f8bd8267f9c14f58f5', '92fc472e870b9cf61aa2b6f8bd8267f9c14f58f5', 0, '2015-06-09', '', 'default.jpg', '', 0),
+(26, 'Guillaume', 'MOREL', 1, '2 rue de la rose', 75, 'guimorel.gm@gmail.com', 987654321, '9cf95dacd226dcf43da376cdb6cbba7035218921', '9cf95dacd226dcf43da376cdb6cbba7035218921', 0, '2015-06-09', '', 'default.jpg', '', 0),
+(30, 'Jérémy', 'Pineau', 0, '2 bis rue du long des bois', 78, 'jeremy.pineau@free.fr', 679456627, '9cf95dacd226dcf43da376cdb6cbba7035218921', '9cf95dacd226dcf43da376cdb6cbba7035218921', 0, '2015-06-11', '', 'default.jpg', '', 0),
+(31, 'ABOUNGONE', 'Michèle', 0, '22 avenue de la porte', 75, 'ngouvictoire@yahoo.fr', 661454328, '2d2929e0f1bca99d9652924ce73b7969d33ff429', '2d2929e0f1bca99d9652924ce73b7969d33ff429', 0, '2015-06-11', '', 'default.jpg', '', 0),
+(32, 'Thomas', 'Martin', 0, '69 avenue de la belle gabrielle', 94, 'thomas.martin1995@yahoo.fr', 651359548, '1d5f29d807ee33b3f42481108436c7026584cb3d', '1d5f29d807ee33b3f42481108436c7026584cb3d', 0, '2015-06-11', '', 'default.jpg', '', 0),
+(33, 'colin', 'verneuil', 0, '6 avenue Richelieu', 13, 'colin@vernueil.fr', 785436543, 'a59e375e7e163c060ec5103e61f24bf008661a68', 'a59e375e7e163c060ec5103e61f24bf008661a68', 0, '2015-06-11', '', 'default.jpg', '', 0);
 
 --
 -- Index pour les tables exportées
@@ -534,7 +536,7 @@ MODIFY `id_annonce` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=23;
 -- AUTO_INCREMENT pour la table `carte_de_france`
 --
 ALTER TABLE `carte_de_france`
-MODIFY `id_departement` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2223;
+MODIFY `id_departement` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=97;
 --
 -- AUTO_INCREMENT pour la table `categorie`
 --
@@ -579,4 +581,4 @@ MODIFY `topic_id` int(11) NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT pour la table `utilisateurs`
 --
 ALTER TABLE `utilisateurs`
-MODIFY `I_D` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=29;
+MODIFY `I_D` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=34;
