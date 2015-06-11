@@ -1,0 +1,25 @@
+.recettes{
+	width: 850px;
+	margin: 0 auto;
+}
+.recettesbis{
+	width: 250px;
+	margin: 10px;
+	display: inline-block;
+}
+.titreRecette{
+
+	margin-top: 10px;
+	width: 200px;
+	text-align: center;
+}
+
+.imageRecette{
+	margin-top: 130px;
+    overflow:hidden;
+    -webkit-border-radius:111px;
+    -moz-border-radius:111px;
+    border-radius:111px;
+    width:200px;
+    height:200px;
+}

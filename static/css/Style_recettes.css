@@ -1,3 +1,48 @@
-.recettes{
-	margin-top: 50px;
+#recetteEntiere{
+	width: 700px;
+	margin: 0 auto;
+}
+#recetteEntierebis{
+	margin-left: 20px;
+}
+#titre_Recette{
+	margin-top: 100px;
+	padding-bottom: 20px;
+}
+section{
+	padding: 10px;
+	background-color: #C3D6DA;
+	margin-top: 10px;
+	border-radius: 5px;
+}
+#photo_Recette{
+	vertical-align: top;
+	margin-top: 20px;
+	width: 250px;
+	height: 250px;
+	float:left;
+	border-radius: 5px;
+}
+.paragraphe_Ingredients{
+	line-height: 20pt;
+	padding-left: 30px;
+}
+#titre_Preparation{
+	padding-bottom: 20px;
+}
+#preparation{
+	width: 350px;
+	display: inline-block;
+	margin: 10px;
+}
+#ingredients{
+	
+	margin-top: 250px;
+	position: absolute;
+	display:block;
+	text-align: center;
+	width: 230px;
+}
+#titre_Ingredients{
+	padding-bottom: 20px;
 }
