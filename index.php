@@ -23,6 +23,7 @@ error_reporting(-1);
     <link rel="Stylesheet" href="static/css/Style_sujet.css" />
     <link rel="Stylesheet" href="static/css/Style_profilUtilisateur.css" />
     <link rel="Stylesheet" href="static/css/Style_editionprofil.css" />
+    <link rel="Stylesheet" href="static/css/Style_editionAnnonce.css" />
     <link rel="Stylesheet" href="static/css/footer.css" />
     <link rel="Stylesheet" href="static/css/header.css" />
 
