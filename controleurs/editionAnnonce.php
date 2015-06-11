@@ -4,9 +4,10 @@ require_once('modeles/function_editionAnnonce.php');
   //on fait une condition pour plus de sécurité
   if(isset($_SESSION['id']))
 {
-   $req= $bdd-> prepare('SELECT * FROM annonces, utilisateurs WHERE id_vendeur = I_D AND I_D = ?');
-  $req->execute(array($_SESSION['id']));
-  $result = $req->fetch();
+  $editionAnnonce = getsession($bdd);
+  // $req= $bdd-> prepare('SELECT * FROM annonces, utilisateurs WHERE id_vendeur = I_D AND I_D = ?');
+//  $req->execute(array($_SESSION['id']));
+ // $result = $req->fetch();
   
    if(isset($_POST['newnbPoidsQuant']) AND !empty($_POST['newnbPoidsQuant']) AND $_POST['newnbPoidsQuant'] != $result['nbPoidsQuant'] OR isset($_POST['newPoidsQuant']) AND !empty($_POST['newPoidsQuant']) AND $_POST['newPoidsQuant'] != $result['PoidsQuant'] OR isset($_POST['newremarque']) AND !empty($_POST['newremarque']) AND $_POST['newremarque'] != $result['remarque'] 
        OR isset($_POST['newprix']) AND !empty($_POST['newprix']) AND $_POST['newprix'] != $result['prix'] OR isset($_POST['newtroc']) AND !empty($_POST['newtroc']) AND $_POST['newtroc'] != $result['troc'] )

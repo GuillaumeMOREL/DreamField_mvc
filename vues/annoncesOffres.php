@@ -28,7 +28,7 @@
 		<div class="detail">
 			<h2 class="nom-vendeurs"><?php echo $elements['prenom'].' '.$elements['nom'];?></h2>
 			<div class="produit"><?php echo $elements['nom_produit'];?> </div>
-			<!-- <div class="categorie"><?php echo $elements['categorie'];?></div> -->
+			<!-- <div class="categorie"><?php //echo $elements['categorie'];?></div> -->
 			<div class="quantite"><?php echo $elements['nbPoidsQuant']. ' '.$elements['PoidsQuant'];?></div>
 	 <!--   <div class="departement">#departement</div> -->
 			<div class="prix"><?php echo $elements['prix'];?> €</div>

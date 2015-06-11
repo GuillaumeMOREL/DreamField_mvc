@@ -9,10 +9,10 @@ $region = getRegion($bdd);
 
 
 
-if(isset($_POST['formchoixdenrees'])and (!empty($_POST['legumes']) OR !empty($_POST['1']))){
+if(isset($_POST['formchoixdenrees'])and (!empty($_POST['legumes']) OR !empty($_POST['nom_departement']))){
 	
 
-$donnees = getVendeurParDepartementEtNomProduit($bdd, $_POST['dep'], $_POST['1']);
+$donnees = getVendeurParDepartementEtNomProduit($bdd, $_POST['nom_departement'], $produit);
 
 
 

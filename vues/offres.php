@@ -19,7 +19,7 @@
       <section class="section_fruit_legume_offres">   
       	<img class="img_fruit_legume_offres" src="<?php echo $categorie['chemin_photo'];?>" alt="<?php echo $categorie['nom_produit'];?>" title="Cliquez ici pour voir les differentes ventes de ce produit" /></a> </br>
       	<h3> <?php echo $categorie['nom_produit'];?> </h3>
-      	<input type="checkbox" value="<?php echo $categorie['nom_produit'];?>"  name="<?php echo $tour?>" title="cette liste permet de vous rappeler ce que vous devez acheter"/>
+      	<input type="checkbox" value="<?php echo $categorie['nom_produit'];?>"  name="fruits" title="cette liste permet de vous rappeler ce que vous devez acheter"/>
       	Ajouter au panier 
     	</section>
 
