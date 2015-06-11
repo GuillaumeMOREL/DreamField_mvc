@@ -6,7 +6,7 @@
 	foreach($dn as $annonces){
 ?> 
 
-	<a href="mailto:<?php echo $userinfo['mail']; ?>?subject=Notre affaire&cc=partenaire@antonio.net&bcc=avocat@antonio.net&body=Bonjour" title="<?php echo $annonces['id_annonce'];?>">
+	<a href="mailto:<?php echo $userinfo['mail']; ?>" title="<?php echo $annonces['id_annonce'];?>">
 		<div id="box_vendeurs"> 
 			<div id="box-bis_vendeurs">
 
