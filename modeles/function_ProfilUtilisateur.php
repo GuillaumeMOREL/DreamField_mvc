@@ -23,6 +23,16 @@ function getuser($bdd, $getid) {
 	      $ann = $req->fetchAll();
 	      return $ann;
 }
+function getAllUsers($bdd) {
+ $requser = $bdd-> prepare('SELECT * FROM utilisateurs');
+       $requser->execute(array());
+       //$user = $requser->fetch();
+       return $requser;
+       }
+function suppUsers($bdd, $id){
+$requser = $bdd-> prepare('DELETE FROM utilisateurs WHERE I_D=?');
+       $requser->execute(array($id));
+}
 
 ?>
 

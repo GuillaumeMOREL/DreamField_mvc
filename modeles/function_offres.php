@@ -27,10 +27,30 @@ function registerDeposerAnnonces($bdd, $nom_produit, $ProduitAutre, $nbPoidsQuan
     $req->execute(array($nom_produit, $ProduitAutre, $nbPoidsQuant, $PoidsQuant, $dateexpiration, $remarque, $prix, $troc, $iduser, $dep));
 
 }
-/*
-function recupererInfoUserVersAnnonce($bdd){
-    $req = $bdd->prepare('INSERT INTO `annonces` (`id_annonce`, `departement_annonce` SELECT `I_D`, `numero_departement` FROM utilisateurs) VALUES (?,?)');
-    $req->execute(array($id_annonce, $departement_annonce));
+
+function getVendeurParDepartement($bdd, $dep){
+ $req = $bdd-> prepare("SELECT * FROM annonces, utilisateurs WHERE id_vendeur = I_D AND departement_annonce = ?");
+          $req->execute(array($dep));
+          $dn = $req->fetchAll();
+          return $dn;
 }
-*/
+function getAllAnnonces($bdd){
+ $req = $bdd-> prepare("SELECT * FROM annonces, utilisateurs WHERE id_vendeur = I_D ORDER BY prix");
+          $req->execute(array());
+          $ann = $req->fetchAll();
+          return $ann;
+          }
+
+function getVendeurParDepartementEtNomProduit($bdd, $dep, $produit){
+ $req = $bdd-> prepare("SELECT * FROM annonces, utilisateurs WHERE departement_annonce = ? AND nom_produit = ?");
+          $req->execute(array($dep, $produit));
+          $dn = $req->fetchAll();
+          return $dn;
+}
+function suppAnnonce($bdd, $id){
+$reqannonce = $bdd-> prepare('DELETE FROM annonces WHERE id_annonce=?');
+       $reqannonce->execute(array($id));
+}
+
+//function getAnnoncesTriees ($bdd, $dep, )
 ?>

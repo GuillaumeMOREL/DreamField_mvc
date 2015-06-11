@@ -18,6 +18,7 @@ if(isset($_POST['formconnexion']))
         
          $_SESSION['id']   = $verif['I_D'];
          $_SESSION['mail'] = $verif['mail'];
+         $_SESSION['admin'] = $verif['admin'];
          
 
 

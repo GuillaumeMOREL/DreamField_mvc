@@ -26,6 +26,7 @@ error_reporting(-1);
     <link rel="Stylesheet" href="static/css/Style_editionAnnonce.css" />
     <link rel="Stylesheet" href="static/css/footer.css" />
     <link rel="Stylesheet" href="static/css/header.css" />
+    <link rel="Stylesheet" href="static/css/Style-BOindex.css" />
 
     <link rel="Stylesheet" href="static/css/aide.css" />
 
