@@ -1,4 +1,4 @@
-<?php if (!isset($_POST['afficherannonce']) and !isset($_POST['afficherusers']))
+<?php if (!isset($_POST['afficherannonces']) and !isset($_POST['afficherusers']))
 { ?>
 		
 	
@@ -13,9 +13,8 @@
 
 }
 elseif(isset($_POST['afficherusers'])) 
-	{ ?>
-	
-	<?php while ($utilisateurs = $users->fetch()) {?>
+	{
+		while ($utilisateurs = $users->fetch()) {?>
 
 		<form class="Boform" method="post" action="?page=BOindex">
 			<input type="hidden" name="formrempli" value="1"/>
@@ -33,18 +32,17 @@ elseif(isset($_POST['afficherusers']))
 		 
 
 elseif(isset($_POST['afficherannonces'])) 
-	{ ?>
-	
-	<?php while ($announce = $annonces->fetch()) {?>
+	{ 
+	 while ($announce = $annonces->fetch()) {?>
 
 		<form class="Boform" method="post" action="?page=BOindex">
-			<input type="hidden" name="formrempli" value="1"/>
+			<input type="hidden" name="formfull" value="1"/>
 				<li><?php echo $announce['id_annonce'] ?></li>
 				<li><?php echo $announce['nom_produit'] ?></li>
 				<li><?php echo $announce['id_vendeur'] ?></li>
-		<!--	<li><?php //echo $annonce['admin'] ?></li>
-				<li><?php //echo $utilisateurs['I_D'] ?></li>-->
-      		<input type="hidden" name="id" value="<?php echo $utilisateurs['I_D'] ?>"/>
+		<!--	<li><?php //echo $announce['admin'] ?></li>
+				<li><?php //echo $announce['I_D'] ?></li>-->
+      		<input type="hidden" name="idann" value="<?php echo $announce['id_annonce'] ?>"/>
       	<input type="submit" value="Supprimer"  name="delete" />
     	</form>
 

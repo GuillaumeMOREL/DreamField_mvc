@@ -27,7 +27,8 @@
 
 				<div class="quantite"><?php echo $annonces['nbPoidsQuant']. ' '.$annonces['PoidsQuant'];?></div>
 
-				<div class="prix"><?php echo $annonces['prix'];?> €</div>
+				<div class="prix"><?php echo $annonces['prix'];?> € / <div class="prix"><?php echo $annonces['PoidsQuant'];?></div></div>
+
 
 				<a id="mail_vendeurs" href="mailto:<?php echo $annonces['mail']; ?>">Contacter le vendeur</a>
 			</div>

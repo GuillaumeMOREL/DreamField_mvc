@@ -35,10 +35,10 @@ function getVendeurParDepartement($bdd, $dep){
           return $dn;
 }
 function getAllAnnonces($bdd){
- $req = $bdd-> prepare("SELECT * FROM annonces, utilisateurs WHERE id_vendeur = I_D ORDER BY prix");
+ $req = $bdd-> prepare("SELECT * FROM annonces");
           $req->execute(array());
-          $ann = $req->fetchAll();
-          return $ann;
+          //$ann = $req->fetchAll();
+          return $req;
           }
 
 function getVendeurParDepartementEtNomProduit($bdd, $dep, $produit){
@@ -47,9 +47,9 @@ function getVendeurParDepartementEtNomProduit($bdd, $dep, $produit){
           $dn = $req->fetchAll();
           return $dn;
 }
-function suppAnnonce($bdd, $id){
+function suppAnnonces($bdd, $idann){
 $reqannonce = $bdd-> prepare('DELETE FROM annonces WHERE id_annonce=?');
-       $reqannonce->execute(array($id));
+       $reqannonce->execute(array($idann));
 }
 
 //function getAnnoncesTriees ($bdd, $dep, )

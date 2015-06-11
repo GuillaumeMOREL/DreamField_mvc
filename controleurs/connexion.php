@@ -27,7 +27,7 @@ if(isset($_POST['formconnexion']))
 
      }else  {
        
-         header('Location: index.php?page=connexion&message=Mot de pass ou mail incorrect!');
+         header('Location: index.php?page=connexion&message=Mot de passe ou mail incorrect!');
         }
 
   }else {
