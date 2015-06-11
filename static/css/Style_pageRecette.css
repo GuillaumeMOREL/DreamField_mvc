@@ -16,9 +16,6 @@
 
 .imageRecette{
 	margin-top: 130px;
-    overflow:hidden;
-    -webkit-border-radius:111px;
-    -moz-border-radius:111px;
     border-radius:111px;
     width:200px;
     height:200px;
