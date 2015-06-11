@@ -54,6 +54,7 @@
 	#menu_header{
 		position:absolute;
 		background: #56BD78;
+		padding-top: 5px;
 		border-top: 1px solid #47A665;
 		width: 100%;
 		margin-bottom: 20px;
@@ -61,7 +62,7 @@
 
 #menu_header ul {
 
-	height:33px;
+	height:25px;
 	margin: 0 auto;
 	width:1000px;
 	padding: 10px 0px 10px 60px;

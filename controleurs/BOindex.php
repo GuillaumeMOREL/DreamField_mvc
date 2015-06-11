@@ -16,8 +16,3 @@ $users=getAllUsers($bdd);
 
 require ("vues/BOindex.php");
 ?>
-
-
-
-
-
