@@ -18,6 +18,7 @@ error_reporting(-1);
     <link rel="Stylesheet" href="static/css/Style_inscription.css" />
     <link rel="Stylesheet" href="static/css/Style_redirection.css" />
     <link rel="Stylesheet" href="static/css/Style_vendeurs.css" />
+    <link rel="Stylesheet" href="static/css/Style_recettes.css" />
     <link rel="Stylesheet" href="static/css/Style_forum.css" />
     <link rel="Stylesheet" href="static/css/Style_sujet.css" />
     <link rel="Stylesheet" href="static/css/Style_profilUtilisateur.css" />
