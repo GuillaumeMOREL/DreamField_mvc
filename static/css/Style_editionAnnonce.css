@@ -1,0 +1,55 @@
+#newAnnonce_editionAnnonce{
+	margin-top: 100px;
+	height: 100%;
+}
+
+#newAnnonce-bis_editionAnnonce{
+	text-align: center;
+	background-color: #C3D6DA;
+	width: 500px;
+	border-radius: 5px;
+	padding: 20px;
+	margin: 0 auto;
+
+}
+
+.label_editionAnnonce{
+	float: left;
+}
+
+#remarque-bis_editionAnnonce{
+	border: 1px solid;
+	border-radius: 5px;
+}
+
+#newprix_editionAnnonce{
+	width: 200px;
+	margin: 0  auto;
+	}
+
+#newprix-bis_editionAnnonce{
+	text-align: center;
+}
+
+#inputprix_editionAnnonce{
+	margin-left: 3px;
+	border: 1px solid;
+	border-radius: 5px;
+}
+
+.input_editionAnnonce{
+	border:1px solid;
+	border-radius:5px;
+}
+
+#newtroc_editionAnnonce{
+	margin: 30px;
+}
+
+#newtroc-bis_editionAnnonce{
+	margin-bottom: 30px;
+}
+
+.input-bis_editionAnnonce{
+	float: center;
+}
