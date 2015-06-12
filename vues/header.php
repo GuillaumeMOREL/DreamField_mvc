@@ -81,7 +81,7 @@ if(isset($_SESSION['id'])){
   <div id="menu_header" class="container_header">
     <ul>
           <li id="current_page_item"><a href="?page=accueil"  class="menu-text_header" >Accueil</a></li>
-          <li><a href="?page=offres" class="menu-text_header" >Offres</a></li>
+          <li><a z-index="1" href="?page=offres" class="menu-text_header" >Offres</a></li>
        <!--   <li><a href="?page=deposerAnnonce" class="menu-text_header" >Déposer une annonce</a></li> -->
           <li><a href="?page=recettes" class="menu-text_header" >Recette</a></li> 
           <li><a href="?page=forum" class="menu-text_header" >Forum</a></li>
