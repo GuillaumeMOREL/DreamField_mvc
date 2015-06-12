@@ -19,6 +19,13 @@ if(isset($_POST['formconnexion']))
          $_SESSION['id']   = $verif['I_D'];
          $_SESSION['mail'] = $verif['mail'];
          $_SESSION['admin'] = $verif['admin'];
+         $_SESSION['tel'] = $verif['tel'];
+         $_SESSION['adresse'] = $verif['adresse'];
+         $_SESSION['numero_departement'] = $verif['numero_departement'];
+         $_SESSION['nom'] = $verif['nom'];
+         $_SESSION['prenom'] = $verif['prenom'];
+         $_SESSION['photo_profil'] = $verif['photo_profil'];
+
          
 
 
